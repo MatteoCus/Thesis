@@ -1,21 +1,61 @@
 % Acronyms
-\newacronym[description={\glslink{apig}{Application Program Interface}}]
-    {api}{API}{Application Program Interface}
 
-\newacronym[description={\glslink{umlg}{Unified Modeling Language}}]
-    {uml}{UML}{Unified Modeling Language}
+
+% \newacronym[description={\glslink{apig}{Application Program Interface}}]
+%     {api}{API}{Application Program Interface}
+
+% \newacronym[description={\glslink{umlg}{Unified Modeling Language}}]
+%     {uml}{UML}{Unified Modeling Language}
+
+\newacronym[description={\glslink{pwag}{Progressive Web App}}]
+    {pwa}{PWA}{Progressive Web App}
 
 % Glossary entries
-\newglossaryentry{apig} {
-    name=\glslink{api}{API},
-    text=Application Program Interface,
-    sort=api,
-    description={in informatica con il termine \emph{Application Programming Interface API} (ing. interfaccia di programmazione di un'applicazione) si indica ogni insieme di procedure disponibili al programmatore, di solito raggruppate a formare un set di strumenti specifici per l'espletamento di un determinato compito all'interno di un certo programma. La finalità è ottenere un'astrazione, di solito tra l'hardware e il programmatore o tra software a basso e quello ad alto livello semplificando così il lavoro di programmazione}
+
+% \newglossaryentry{apig} {
+%     name=\glslink{api}{API},
+%     text=Application Program Interface,
+%     sort=api,
+%     description={in informatica con il termine \emph{Application Programming Interface API} (ing. interfaccia di programmazione di un'applicazione) si indica ogni insieme di procedure disponibili al programmatore, di solito raggruppate a formare un set di strumenti specifici per l'espletamento di un determinato compito all'interno di un certo programma. La finalità è ottenere un'astrazione, di solito tra l'hardware e il programmatore o tra software a basso e quello ad alto livello semplificando così il lavoro di programmazione}
+% }
+
+% \newglossaryentry{umlg} {
+%     name=\glslink{uml}{UML},
+%     text=UML,
+%     sort=uml,
+%     description={in ingegneria del software \emph{UML, Unified Modeling Language} (ing. linguaggio di modellazione unificato) è un linguaggio di modellazione e specifica basato sul paradigma object-oriented. L'\emph{UML} svolge un'importantissima funzione di ``lingua franca'' nella comunità della progettazione e programmazione a oggetti. Gran parte della letteratura di settore usa tale linguaggio per descrivere soluzioni analitiche e progettuali in modo sintetico e comprensibile a un vasto pubblico}
+% }
+
+\newglossaryentry{pwag} {
+    name=\glslink{pwa}{\textit{Progressive Web App}},
+    text=Progressive Web App,
+    sort=pwa,
+    description={in informatica con il termine \textit{"Progressive Web App"} (it. applicazione web progressiva) si indica un'applicazione sviluppata utilizzando tecnologie utilizzate solitamente per lo sviluppo web, ma che offre un'esperienza utente simile a quella di un'app nativa:
+    \begin{itemize}
+        \item Come un sito web, può funzionare su piattaforme e dispositivi diversi utilizzando un unico codice sorgente;
+        \item Come un'app specifica per una piattaforma, può essere installata sul dispositivo, può operare offline e in background, e può integrarsi con il dispositivo e con altre app installate.
+    \end{itemize}
+    \cite{site:pwa-mdn}}
 }
 
-\newglossaryentry{umlg} {
-    name=\glslink{uml}{UML},
-    text=UML,
-    sort=uml,
-    description={in ingegneria del software \emph{UML, Unified Modeling Language} (ing. linguaggio di modellazione unificato) è un linguaggio di modellazione e specifica basato sul paradigma object-oriented. L'\emph{UML} svolge un'importantissima funzione di ``lingua franca'' nella comunità della progettazione e programmazione a oggetti. Gran parte della letteratura di settore usa tale linguaggio per descrivere soluzioni analitiche e progettuali in modo sintetico e comprensibile a un vasto pubblico}
+\newglossaryentry{controllo-qualita}{
+    name=Controllo qualità,
+    text=Controllo qualità,
+    sort=qc,
+    description={con il termine "controllo qualità" si indica un processo metodico e sistematico implementato all'interno di un'organizzazione al fine di garantire che i prodotti o i servizi offerti rispettino degli standard di qualità stabiliti a priori. \\
+    Questo processo coinvolge l'applicazione di tecniche, strumenti e protocolli specifici per valutare la conformità di un prodotto o servizio alle specifiche e ai requisiti prefissati.}
+}
+
+\newglossaryentry{filiera-produttiva}{
+    name=Filiera produttiva,
+    text=Filiera produttiva,
+    sort=filiera-produttiva,
+    description={con il termine "filiera produttiva" si indica la sequenza delle lavorazioni (detta anche filiera tecnologico-produttiva), effettuate in successione, al fine di trasformare le materie prime in un prodotto finito (ingl. \textit{supply chain}). \\ 
+    Le diverse imprese sono integrate tra loro (ai fini della realizzazione di un prodotto):
+    \begin{itemize}
+        \item \textbf{Verticalmente}: se svolgono una o più attività della filiera;
+        \item \textbf{Orizzontalmente}: se operano allo stesso stadio di un ciclo produttivo.
+    \end{itemize}
+    Con la globalizzazione dell’economia, esse possono essere situate in paesi e continenti diversi.\\
+    \cite{site:filiera-produttiva-treccani}}
 }
