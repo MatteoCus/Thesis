@@ -65,7 +65,7 @@
    <dc:title><rdf:Alt><rdf:li xml:lang="x-default">Tesi_Matteo_Cusin</rdf:li></rdf:Alt></dc:title>
    <dc:creator><rdf:Seq><rdf:li>Matteo Cusin</rdf:li></rdf:Seq></dc:creator>
    <dc:language><rdf:Bag><rdf:li>it-IT</rdf:li></rdf:Bag></dc:language>
-   <dc:description><rdf:Alt><rdf:li xml:lang="x-default">Relazione finale relativa all'applicazione ADeQA, sviluppata durante il periodo di tirocinio curricolare presso TriZeta</rdf:li></rdf:Alt></dc:description>
+   <dc:description><rdf:Alt><rdf:li xml:lang="x-default">Relazione finale relativa all'applicazione ADeQA, sviluppata durante il periodo di tirocinio curricolare presso Trizeta</rdf:li></rdf:Alt></dc:description>
    <dc:subject><rdf:Bag><rdf:li>keyword1</rdf:li>
      <rdf:li>keyword2</rdf:li>
      <rdf:li>keyword3</rdf:li></rdf:Bag></dc:subject>
