@@ -3,13 +3,22 @@
 
 Questo capitolo si occupa di fornire informazioni in merito a \textit{\textbf{Trizeta}}, azienda ospitante del tirocinio, al settore in cui essa opera (quindi anche ai beni e servizi offerti), 
 al suo rapporto con l'introduzione di novità / con il miglioramento di processi e strumenti già in uso ed ai processi in essa utilizzati. \\
-Le informazioni riportate di seguito sono frutto di osservazioni personali e dialoghi avuti nel corso del tirocinio.
+Le informazioni riportate di seguito sono frutto di osservazioni personali, dialoghi avuti nel corso del tirocinio e ricerche svolte in totale autonomia.
 
 \section{Introduzione all'azienda ospitante}
 
 % In questa sezione descriverò brevemente l'azienda, indicandone dimensioni, ubicazione, figure presenti all'interno dell'organico, gruppo commerciale di cui fa parte.
 \textit{\textbf{Trizeta}} è una \textit{software house}\footnote{\gls{software-house}}, ovvero un'azienda che si occupa dello sviluppo e della commercializzazione di \textit{software}, specializzata nella consulenza e nello sviluppo
-di prodotti per aziende che desiderano l'automazione (totale o parziale) delle proprie attività industriali (compresa la gestione del magazzino); essa consente inoltre alle aziende clienti di gestire le proprie risorse digitali multimediali (i cosiddetti \textit{digital assets}\footnote{\gls{digital-asset}}). \\
+di prodotti per aziende che desiderano l'automazione (totale o parziale) delle proprie attività industriali (compresa la gestione del magazzino); essa consente inoltre alle aziende clienti di gestire le proprie risorse digitali multimediali (i cosiddetti \textit{digital assets}\footnote{\gls{digital-asset}}).
+\vspace{-20mm}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{images/adesuite.png}
+        \vspace{-15mm}
+        \caption[Caption for LOF]{Interfaccia di un gestionale \textit{\textbf{Trizeta}}\footnotemark}
+    \end{figure}
+    \footnotetext{Fonte: \url{https://trizeta.com/ade-mes/}}
+
 L'azienda è ubicata a \textit{Monselice (Padova)} e dispone all'incirca di una decina di dipendenti \textit{IT}\footnote{\gls{it}} (informatici) tra loro eterogenei per anni di esperienza nel settore informatico, età anagrafica, e 
 \textit{stack} tecnologico\footnote{\gls{tech-stack}} abitualmente utilizzato (tecnologie utilizzate e ambito di utilizzo delle stesse). \\
 Recentemente \textit{\textbf{Trizeta}} è entrata a far parte di \textit{SYS-DAT Group}: è un gruppo di aziende specializzate nello sviluppo e manutenzione di prodotti \textit{software} rivolti ad aziende appartenenti a vari settori quali 
@@ -21,12 +30,24 @@ il settore moda (settore di origine di \textit{SYS-DAT}, azienda fondatrice del 
 % In questa sezione descriverò brevemente i prodotti ed i servizi offerti dall'azienda che ho potuto vedere (mi focalizzerò su un prodotto in particolare, dato che il software che ho prodotto nel corso del tirocinio andrà ad essere integrato con esso).
 % Terminerò la sezione indicando la clientela a cui l'azienda si rivolge.
 Come già indicato nella sezione precedente, \textit{\textbf{Trizeta}} intrattiene relazioni commerciali esclusivamente di tipo \textit{B2B}\footnote{\gls{b2bg}}: questa visione si riflette inevitabilmente sui prodotti offerti
-e sull'insieme dei requisiti utente soddisfatti dai prodotti di seguito elencati.
+e sull'insieme dei requisiti utente soddisfatti dai prodotti di seguito elencati (che costituiscono una parte della \textit{suite} aziendale):
 
 \begin{itemize}
     \item \textit{ADeWMS}: è un \textit{WMS}\footnote{\gls{wmsg}} (gestionale relativo al contenuto e alle attività di magazzino) in grado di integrarsi con software \textit{ERP}\footnote{\gls{erpg}} e gestire ordini commerciali, consegne e relativa documentazione;
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.9\textwidth]{images/wms.jpg}
+        \caption[Caption for LOF]{Funzionamento di un \textit{software \glslink{wmsg}{WMS}} \footnotemark}
+    \end{figure}
+    {\footnotetext{Fonte: \href{https://www.logisticaefficiente.it/wiki-logistica/magazzino/wms-warehouse-management-system.html}{Logistica efficiente}}}
     \item \textit{P4NDOR4}: è un \textit{DAM}\footnote{\gls{damg}} (gestionale per \glslink{digital-asset}{\textit{digital assets}} aziendali) con possibilità di richiedere delle risorse direttamente a \textit{\textbf{Trizeta}};
-    \item \textit{ADeMES}
+    \item \textit{ADeMES}: è un \textit{MES}\footnote{\gls{mesg}} (\textit{software} di gestione delle attività produttive aziendali) di particolare interesse in quanto direttamente coinvolto ai fini del tirocinio. \\
+    \textit{ADeMES} è dotato delle seguenti caratteristiche (rilevanti ai fini del tirocinio):
+    \begin{itemize}
+        \item Presenza di un'area personale per ogni operatore (lavoratore in produzione);
+        \item Lista di "fasi" di lavorazione attive;
+        \item Possibilità di allegare documenti e note testuali ad ogni fase di lavorazione attiva.
+    \end{itemize}
 \end{itemize}
 
 \section{Processi interni}
