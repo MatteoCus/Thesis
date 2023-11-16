@@ -15,7 +15,7 @@ di prodotti per aziende che desiderano l'automazione (totale o parziale) delle p
         \centering
         \includegraphics[width=0.7\textwidth]{images/adesuite.png}
         \vspace{-15mm}
-        \caption[Caption for LOF]{Interfaccia di un gestionale \textit{\textbf{Trizeta}}\footnotemark}
+        \caption[Interfaccia di un gestionale \textit{\textbf{Trizeta}}]{Interfaccia di un gestionale \textit{\textbf{Trizeta}}\footnotemark}
     \end{figure}
     \footnotetext{Fonte: \href{https://trizeta.com/ade-mes/}{https://trizeta.com}}
 
@@ -38,7 +38,7 @@ Di seguito, un breve elenco di software che ho potuto visionare personalmente e,
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.9\textwidth]{images/wms.jpg}
-        \caption[Caption for LOF]{Attività gestite da un \textit{software \glslink{wmsg}{WMS}} \footnotemark}
+        \caption[Funzionalità di un \textit{software WMS}]{Attività gestite da un \textit{software \glslink{wmsg}{WMS}} \footnotemark}
     \end{figure}
     {\footnotetext{Fonte: \href{https://www.logisticaefficiente.it/wiki-logistica/magazzino/wms-warehouse-management-system.html}{https://www.logisticaefficiente.it}}}
     
@@ -46,7 +46,7 @@ Di seguito, un breve elenco di software che ho potuto visionare personalmente e,
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.85\textwidth]{images/dam.png}
-        \caption[Caption for LOF]{Funzionalità di un \textit{software \glslink{damg}{DAM}} \footnotemark}
+        \caption[Funzionalità di un \textit{software DAM}]{Funzionalità di un \textit{software \glslink{damg}{DAM}} \footnotemark}
     \end{figure}
     {\footnotetext{Fonte: \href{https://vitolavecchia.altervista.org/che-cose-come-funzione-e-vantaggi-della-gestione-delle-risorse-digitali-dam-in-informatica/}{https://vitolavecchia.altervista.org/}}}
 
@@ -54,7 +54,7 @@ Di seguito, un breve elenco di software che ho potuto visionare personalmente e,
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.55\textwidth]{images/mes.png}
-        \caption[Caption for LOF]{Funzionalità di un \textit{software \glslink{mesg}{MES}} \footnotemark}
+        \caption[Funzionalità di un \textit{software MES}]{Funzionalità di un \textit{software \glslink{mesg}{MES}} \footnotemark}
     \end{figure}
     {\footnotetext{Fonte: \href{https://www.systema.com/blog/build-or-buy-your-next-mes}{https://www.systema.com}}}
 
@@ -99,14 +99,34 @@ e consentire una risposta rapida alle variazioni delle esigenze del cliente anch
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.9\textwidth]{images/agile.png}
-            \caption[Caption for LOF]{Attività di un periodo \hyperref[app:agile]{agile} \footnotemark}
+            \caption[Attività di sviluppo durante un periodo agile]{Attività di sviluppo durante un periodo \hyperref[app:agile]{agile} \footnotemark}
         \end{figure}
         {\footnotetext{Fonte: \href{https://mlsdev.com/blog/agile-sdlc}{https://mlsdev.com}}}
-    \item \textbf{Manutenzione}: per quanto riguarda la manutenzione dei prodotti, l'azienda ospitante si avvale di un sistema di \textit{ticketing} per la gestione delle segnalazioni (disservizi o anomalie) e comunicazione
-        della loro risoluzione, limitando al minimo i contatti sincroni (non sempre possibili in tempi utili alla risoluzione del problema).
+    \item \textbf{Manutenzione}
+        \begin{itemize}
+            \item Risoluzione di problemi: l'azienda ospitante si avvale di un sistema di \textit{ticketing} per la gestione delle segnalazioni (disservizi o anomalie) e comunicazione
+                della loro risoluzione, limitando al minimo i contatti sincroni (non sempre possibili in tempi utili alla risoluzione del problema);
+            \item Cambiamenti evolutivi: in \textit{\textbf{Trizeta}} i cambiamenti evolutivi possono avere origine da un'esigenza espressa da un cliente, da un'idea di un dipendente o dall'aggiornamento di librerie e \textit{framework} utilizzati; 
+                la valutazione di un cambiamento è (per quanto ho potuto osservare) un momento in cui ognuno può esprimere un parere motivato. 
+        \end{itemize}
 \end{itemize}
 
 
 \section{Rapporto con l'innovazione}
 
 % In questa sezione descriverò quello che, in base alle mie osservazioni e all'esperienza dovuta alle attività di tirocinio, è il rapporto dell'azienda con tutto ciò che riguarda il miglioramento di processi / attività / prodotti già esistenti o l'introduzione di novità.
+\textit{\textbf{Trizeta}} ha manifestato a più riprese il suo rapporto con l'innovazione\footnote{\gls{innovazione}} (ovvero l'introduzione di novità e il miglioramento di processi e tecnologie impiegati) nel corso del rapporto lavorativo intercorso:
+\begin{itemize}
+    \item \textit{ADeGO}: questo \textit{software} è stato sviluppato per consentire servizi di assistenza da remoto tramite \textbf{realtà aumentata}\footnote{\gls{realta-aumentata}} (una tecnica per aggiungere informazioni alla realtà circostante all'utente, utilizzando adeguati supporti visivi), 
+        un settore non ancora diventato \textit{mainstream} ma a mio avviso molto promettente in ottica sanitaria, militare e industriale dato il ridotto movimento fisico e le tempistiche richieste per ottenere il contenuto informativo;
+    \item Sperimentazione: al termine delle attività di tirocinio, ho potuto provare ad integrare il prodotto sviluppato con la libreria di componenti grafici \textit{DevExtreme}; ho potuto riferire al responsabile del tirocinio un parere personale in merito alla semplicità di adozione e all'apporto che 
+        essa potrebbe dare ai prodotti aziendali in base al suo uso.
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/tree-list.png}
+    \caption[Componente grafico \textit{TreeList} di \textit{DevExtreme}]{Componente grafico \textit{TreeList} di \textit{DevExtreme}\footnotemark}
+\end{figure}
+{\footnotetext{Fonte: \href{https://js.devexpress.com/Angular/}{https://js.devexpress.com}}}
+L'innovazione aziendale, dato l'ultimo punto del precedente elenco, è strettamente legata ai tirocini curricolari: il tempo a disposizione degli \textit{stagisti} è usato anche per eseguire operazioni di prototipazione, 
+valutando più o meno in profondità strumenti da poter adottare per futuri progetti e acquisendo un minimo di esperienza nell'ambito.
