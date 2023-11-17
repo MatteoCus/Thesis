@@ -53,33 +53,33 @@ L'obiettivo del prodotto è consentire all'utente (operatore in linea di produzi
 
 Si farà riferimento ai requisiti secondo le seguenti notazioni:
 \begin{itemize}
-    \item "O" per i requisiti obbligatori, vincolanti in quanto obiettivo primario richiesto dal committente;
-    \item "D" per i requisiti desiderabili, non vincolanti o strettamente necessari, ma dal riconoscibile valore aggiunto;
-    \item "F" per i requisiti facoltativi, rappresentanti valore aggiunto non strettamente competitivo.
+    \item \textbf{O} per i requisiti obbligatori, vincolanti in quanto obiettivo primario richiesto dal committente;
+    \item \textbf{D} per i requisiti desiderabili, non vincolanti o strettamente necessari, ma dal riconoscibile valore aggiunto;
+    \item \textbf{F} per i requisiti facoltativi, rappresentanti valore aggiunto non strettamente competitivo.
 \end{itemize}
 
 Le sigle precedentemente indicate saranno seguite da una coppia sequenziale di numeri, identificativo del requisito.
 Di seguito, la lista degli obiettivi di tirocinio:
 \begin{itemize}
-    \item Obbligatori
+    \item \textbf{Obbligatori}
         \begin{itemize}
-            \item O01: comprensione dei requisiti utente da soddisfare;
-            \item O02: studio dell'interfaccia dell'applicazione \textit{ADeMES}, che verrà integrata con il prodotto da sviluppare durante il tirocinio;
-            \item O03: acquisizione dela sufficiente dimestichezza con i concetti di base del \textit{framework Angular};
-            \item O04: progettazione dell'interfaccia grafica in base allo stile dell'interfaccia dell'applicazione \textit{ADeMES};
-            \item O05: sviluppo di una versione di base dell'applicazione \textit{web} che consenta di eseguire le operazioni \textit{CRUD} sui dati di qualità;  
-            \item O06: \textit{live demo} della web application in un ambiente simulato;
-            \item O07: studio e scelta (motivata) della tecnologia per la fruizione dell'applicazione in lingua inglese.
+            \item \textbf{O01}: comprensione dei requisiti utente da soddisfare;
+            \item \textbf{O02}: studio dell'interfaccia dell'applicazione \textit{ADeMES}, che verrà integrata con il prodotto da sviluppare durante il tirocinio;
+            \item \textbf{O03}: acquisizione dela sufficiente dimestichezza con i concetti di base del \textit{framework Angular};
+            \item \textbf{O04}: progettazione dell'interfaccia grafica in base allo stile dell'interfaccia dell'applicazione \textit{ADeMES};
+            \item \textbf{O05}: sviluppo di una versione di base dell'applicazione \textit{web} che consenta di eseguire le operazioni \textit{CRUD} sui dati di qualità;  
+            \item \textbf{O06}: \textit{live demo} della web application in un ambiente simulato;
+            \item \textbf{O07}: studio e scelta (motivata) della tecnologia per la fruizione dell'applicazione in lingua inglese.
         \end{itemize}
-    \item Desiderabili
+    \item \textbf{Desiderabili}
         \begin{itemize}
-            \item D01: ottimizzazione dei servizi \glslink{restg}{REST} esposti.
+            \item \textbf{D01}: ottimizzazione dei servizi \glslink{restg}{REST} esposti.
         \end{itemize}
-    \item Facoltativi
+    \item \textbf{Facoltativi}
         \begin{itemize}
-            \item F01: ottimizzazione dell'esperienza utente per compatibilità con \textit{ADeMES};
-            \item F02: ottimizzazione dell'interfaccia grafica, per rendere quanto più simile il prodotto a \textit{ADeMES};
-            \item F03: possibilità di fruizione dell'applicazione in lingua spagnola.
+            \item \textbf{F01}: ottimizzazione dell'esperienza utente per compatibilità con \textit{ADeMES};
+            \item \textbf{F02}: ottimizzazione dell'interfaccia grafica, per rendere quanto più simile il prodotto a \textit{ADeMES};
+            \item \textbf{F03}: possibilità di fruizione dell'applicazione in lingua spagnola.
         \end{itemize}
 \end{itemize}
 
@@ -88,9 +88,70 @@ Di seguito, la lista degli obiettivi di tirocinio:
 \section{Vincoli}
 
 % In questa sezione descriverò (entrando nei particolari, rispetto alla sezione precedente) le condizioni imposte ed i risultati prefissati.
-Il progetto si focalizza quindi sullo sviluppo di codice prettamente \textit{front-end}\footnote{\gls{frontend}}
+Il progetto si focalizza sullo sviluppo di codice prettamente \textit{front-end}\footnote{\gls{frontend}} e questo aspetto caratterizza le condizioni imposte per lo svolgimento del lavoro e le aspettative sul risultato:
+\begin{itemize}
+    \item Il prodotto deve essere sviluppato usando il \textit{framework Angular} alla versione 16;
+    \item Il prodotto deve essere una \glslink{pwa}{PWA};
+    \item Il prodotto deve essere utilizzabile dagli operatori di linea produttiva tramite dispositivi mobili (obbligatoriamente tramite \textit{tablet}, facoltativamente tramite \textit{smartphone});
+    \item Il prodotto deve poter essere eseguibile in modalità \textit{standalone}\footnote{\gls{standalone}} e deve potersi integrare nel software \textit{ADeMES} mediante un elemento \texttt{<iframe>} \textit{HTML}.
+\end{itemize}
 
 \section{Pianificazione}
+La pianificazione delle attività, redatta anticipatamente rispetto all'inizio del progetto e disponibile di seguito, è stata rispettata per la maggior parte del tempo: solamente l'interfacciamento coi servizi \glslink{rest}{REST}
+di scrittura dati è avvenuto in ritardo, data l'assenza temporanea degli stessi. \\
+Di seguito, la suddivisione delle attività pianificate con base settimanale:
+
+\begin{itemize}
+    \item \textbf{Prima Settimana (40 ore)}
+    \begin{itemize}
+        \item Incontro con persone coinvolte nel progetto per discutere i requisiti e le richieste relativamente al sistema da sviluppare;
+        \item Verifica credenziali e strumenti di lavoro assegnati;
+        \item Presa visione dell’infrastruttura esistente;
+        \item Formazione sulle tecnologie adottate.
+    \end{itemize}
+    \item \textbf{Seconda Settimana - (40 ore)} 
+    \begin{itemize}
+        \item Analisi e mappatura dei servizi \glslink{rest}{REST} esistenti;
+        \item Documentazione dell'analisi dei servizi \glslink{rest}{REST} esistenti.
+    \end{itemize}
+    \item \textbf{Terza Settimana - (40 ore)} 
+    \begin{itemize}
+        \item Analisi interfaccia/esperienza utente della \textit{web application};
+        \item Documentazione dell'analisi dell'interfaccia della \textit{web application};
+        \item Preparazione di un prototipo dimostrativo.
+    \end{itemize}
+    \item \textbf{Quarta Settimana - (40 ore)} 
+    \begin{itemize}
+        \item Scelta della tecnologia e del \textit{framework} da utilizzare;
+        \item Conclusione della documentazione di analisi;
+        \item Documentazione delle scelte progettuali;
+        \item Predisposizione infrastruttura della \textit{web application}.
+    \end{itemize}
+    \item \textbf{Quinta Settimana - (40 ore)} 
+    \begin{itemize}
+        \item Documentazione delle scelte progettuali;
+        \item Sviluppo \textit{web application} ed interfacciamento con i servizi \glslink{rest}{REST} di lettura dati.
+    \end{itemize}
+    \item \textbf{Sesta Settimana - (40 ore)} 
+    \begin{itemize}
+        \item Conclusione della documentazione delle scelte progettuali;
+        \item Sviluppo \textit{web application} ed interfacciamento con i servizi \glslink{rest}{REST} di scrittura dati.
+    \end{itemize}
+    \item \textbf{Settima Settimana - (40 ore)} 
+    \begin{itemize}
+        \item Collaudo \glslink{pwa}{PWA};
+        \item \textit{Test} e correzione degli eventuali errori;
+        \item Stesura della documentazione finale.
+    \end{itemize}
+    \item \textbf{Ottava Settimana - Conclusione (40 ore)} 
+    \begin{itemize}
+        \item Conclusione del collaudo della \glslink{pwa}{PWA};
+        \item Conclusione \textit{test} e correzione degli eventuali errori;
+        \item Conclusione della stesura della documentazione finale.
+    \end{itemize}
+\end{itemize}
+
+
 
 \section{Scelta del tirocinio}
 
