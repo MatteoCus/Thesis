@@ -44,16 +44,53 @@ e gli \textit{output} (semilavorati o prodotti finiti).
     \caption[Schema sintesi del concetto di \textit{black-box}]{Schema sintesi del concetto di \textit{black-box}\footnotemark}
 \end{figure}
 \footnotetext{Fonte: \href{https://www.quora.com/Machine-learning-classifier-is-a-black-box-Why-does-everyone-still-use-it-1}{https://www.quora.com}}
-Ogni fase è associata a un insieme di caratteristiche (dette "attributi") relative ai prodotti in uscita dalla stessa: esse sono di interesse per comprendere se la lavorazione ha prodotto articoli utilizzabili nelle fasi successive / nello stoccaggio degli stessi o meno.
+Ogni fase è associata a un insieme di caratteristiche (dette "attributi") relative ai prodotti in uscita dalla stessa: esse sono di interesse per comprendere se la lavorazione ha prodotto articoli utilizzabili nelle fasi successive / nello stoccaggio degli stessi o meno. \\
 Non è noto a priori il numero nè il tipo di attributi associati a una determinata fase di lavorazione: sono tutte informazioni ottenibili tramite l'utilizzo di servizi \textit{backend}\footnote{\gls{backend}} (relativi alla struttura ed alla logica di persistenza) esposti dal tutor aziendale con una
-serie di \textit{API\footnote{\gls{apig}} REST\footnote{\gls{restg}}} (astrazioni che consentono di eseguire operazioni sui dati di dominio in una architettura \textit{client - server}).
+serie di \textit{API\footnote{\gls{apig}} REST\footnote{\gls{restg}}} (astrazioni che consentono di eseguire operazioni sui dati di dominio in una architettura \textit{client - server}). \\
+L'obiettivo del prodotto è consentire all'utente (operatore in linea di produzione) di inserire, modificare, eliminare e visualizzare dati di controllo qualità per le fasi desiderate (in gergo tecnico, eseguire le operazioni \textit{CRUD}, ovvero \textit{"Create", "Read", "Update" e"Delete"}, sui dati di qualità).
 
 \section{Obiettivi}
+
+Si farà riferimento ai requisiti secondo le seguenti notazioni:
+\begin{itemize}
+    \item "O" per i requisiti obbligatori, vincolanti in quanto obiettivo primario richiesto dal committente;
+    \item "D" per i requisiti desiderabili, non vincolanti o strettamente necessari, ma dal riconoscibile valore aggiunto;
+    \item "F" per i requisiti facoltativi, rappresentanti valore aggiunto non strettamente competitivo.
+\end{itemize}
+
+Le sigle precedentemente indicate saranno seguite da una coppia sequenziale di numeri, identificativo del requisito.
+Di seguito, la lista degli obiettivi di tirocinio:
+\begin{itemize}
+    \item Obbligatori
+        \begin{itemize}
+            \item O01: comprensione dei requisiti utente da soddisfare;
+            \item O02: studio dell'interfaccia dell'applicazione \textit{ADeMES}, che verrà integrata con il prodotto da sviluppare durante il tirocinio;
+            \item O03: acquisizione dela sufficiente dimestichezza con i concetti di base del \textit{framework Angular};
+            \item O04: progettazione dell'interfaccia grafica in base allo stile dell'interfaccia dell'applicazione \textit{ADeMES};
+            \item O05: sviluppo di una versione di base dell'applicazione \textit{web} che consenta di eseguire le operazioni \textit{CRUD} sui dati di qualità;  
+            \item O06: \textit{live demo} della web application in un ambiente simulato;
+            \item O07: studio e scelta (motivata) della tecnologia per la fruizione dell'applicazione in lingua inglese.
+        \end{itemize}
+    \item Desiderabili
+        \begin{itemize}
+            \item D01: ottimizzazione dei servizi \glslink{restg}{REST} esposti.
+        \end{itemize}
+    \item Facoltativi
+        \begin{itemize}
+            \item F01: ottimizzazione dell'esperienza utente per compatibilità con \textit{ADeMES};
+            \item F02: ottimizzazione dell'interfaccia grafica, per rendere quanto più simile il prodotto a \textit{ADeMES};
+            \item F03: possibilità di fruizione dell'applicazione in lingua spagnola.
+        \end{itemize}
+\end{itemize}
+
+
 
 \section{Vincoli}
 
 % In questa sezione descriverò (entrando nei particolari, rispetto alla sezione precedente) le condizioni imposte ed i risultati prefissati.
 Il progetto si focalizza quindi sullo sviluppo di codice prettamente \textit{front-end}\footnote{\gls{frontend}}
+
+\section{Pianificazione}
 
 \section{Scelta del tirocinio}
 
