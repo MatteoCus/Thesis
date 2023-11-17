@@ -17,8 +17,8 @@ In base a quanto ho potuto osservare e capire durante il periodo di \textit{stag
         \vspace{-20mm}
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.7\textwidth]{images/ademes.png}
-            \vspace{-15mm}
+            \includegraphics[width=0.8\textwidth]{images/ademes.png}
+            \vspace{-20mm}
             \caption[Interfaccia del \textit{software ADeMES}]{Interfaccia del \textit{software ADeMES} \textit{\textbf{Trizeta}}\footnotemark}
         \end{figure}
         \footnotetext{Fonte: \href{https://trizeta.com/ade-mes/}{https://trizeta.com}}
@@ -28,17 +28,26 @@ In base a quanto ho potuto osservare e capire durante il periodo di \textit{stag
         e sulle abilità richieste per l'esecuzione delle attività lavorative; l'azienda ospitante fornisce quindi una formazione di base e valuta quali sono le reazioni agli stimoli (lavorativi e non) in funzione dell'inserimento del tirocinante nel \textit{team} aziendale, data la formazione ricevuta.
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.7\textwidth]{images/dashboard.png}
-            % \vspace{-15mm}
+            \includegraphics[width=0.8\textwidth]{images/dashboard.png}
             \caption[Interfaccia del prodotto \textit{ADeQA}]{Interfaccia del prodotto \textit{ADeQA}, oggetto del tirocinio}
         \end{figure}
 \end{itemize}
 \section{Problematiche poste in essere}
 
-In questa sezione descriverò quali problemi, a livello macroscopico, il prodotto software da me sviluppato ha consentito di superare.
+% In questa sezione descriverò quali problemi, a livello macroscopico, il prodotto software da me sviluppato ha consentito di superare.
+Scopo delle attività di \textit{stage} è la creazione di una \glslink*{pwag}{\textit{progressive web app}} per la raccolta di dati relativi al controllo della qualità delle linee produttive di aziende manifatturiere.
+Ogni linea produttiva è costituita da un insieme di "fasi" di lavorazione: ogni fase di lavorazione è considerabile come una \textit{black-box}\footnote{\gls{black-box}} di cui si conoscono gli \textit{input} (materia prima o semilavorati in ingresso)
+e gli \textit{output} (semilavorati o prodotti finiti).
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{images/black-box.png}
+    \caption[Schema sintesi del concetto di \textit{black-box}]{Schema sintesi del concetto di \textit{black-box}\footnotemark}
+\end{figure}
+\footnotetext{Fonte: \href{https://www.quora.com/Machine-learning-classifier-is-a-black-box-Why-does-everyone-still-use-it-1}{https://www.quora.com}}
+Ogni fase è associata a un insieme di caratteristiche (dette "attributi") relative alla qualità dei prodotti in uscita dalla fase, di interesse per comprendere se la lavorazione ha prodotto articoli utilizzabili nelle fasi successive / nello stoccaggio degli stessi o meno.
 
 \section{Vincoli e obiettivi}
-
+ 
 In questa sezione descriverò (entrando nei particolari, rispetto alla sezione precedente) le condizioni imposte ed i risultati prefissati.
 
 \section{Scelta del tirocinio}
