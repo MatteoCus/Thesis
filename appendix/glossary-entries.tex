@@ -1,8 +1,11 @@
 % Acronyms
 
 
-% \newacronym[description={\glslink{apig}{Application Program Interface}}]
-%     {api}{API}{Application Program Interface}
+\newacronym[description={\glslink{apig}{Application Program Interface}}]
+    {api}{API}{Application Program Interface}
+
+\newacronym[description={\glslink{restg}{Representational State Transfer}}]
+    {rest}{REST}{Representational State Transfer}
 
 % \newacronym[description={\glslink{umlg}{Unified Modeling Language}}]
 %     {uml}{UML}{Unified Modeling Language}
@@ -30,12 +33,31 @@
 
 % Glossary entries
 
-% \newglossaryentry{apig} {
-%     name=\glslink{api}{API},
-%     text=Application Program Interface,
-%     sort=api,
-%     description={in informatica con il termine \emph{Application Programming Interface API} (ing. interfaccia di programmazione di un'applicazione) si indica ogni insieme di procedure disponibili al programmatore, di solito raggruppate a formare un set di strumenti specifici per l'espletamento di un determinato compito all'interno di un certo programma. La finalità è ottenere un'astrazione, di solito tra l'hardware e il programmatore o tra software a basso e quello ad alto livello semplificando così il lavoro di programmazione}
-% }
+\newglossaryentry{apig} {
+    name=\glslink{api}{API},
+    text=Application Program Interface,
+    sort=api,
+    description={in informatica con il termine \emph{Application Programming Interface} (ing. interfaccia di programmazione di un'applicazione) si indicano regole e specifiche per la comunicazione tra software. \\
+    Tali regole fungono da interfaccia tra i vari software e ne facilitano l’interazione, allo stesso modo in cui l’interfaccia utente facilita l’interazione tra uomo e computer. \\
+    \cite{site:api-treccani}
+    }
+}
+
+\newglossaryentry{restg} {
+    name=\glslink{rest}{REST},
+    text=Representational State Transfer,
+    sort=rest,
+    description={in informatica con il termine \emph{Representational State Transfer} (è uno stile architetturale dotato dei seguenti principi: 
+    \begin{enumerate}
+        \item \textbf{Assenza di stato}: ogni richiesta del \textit{client} al \textit{server} deve contenere tutte le informazioni necessarie per comprendere e elaborare la richiesta. \\ Lo stato del \textit{client} non è memorizzato sul \textit{server} tra le richieste;
+        \item \textbf{Architettura \textit{client-server}}: il sistema è diviso in due parti indipendenti: il \textit{client}, che si occupa dell'interfaccia utente e delle interazioni dell'utente, e il \textit{server}, che gestisce la logica aziendale e conserva le risorse;
+        \item \textbf{Possibilità di salvare in \textit{cache} le risposte}: le risposte del \textit{server} devono essere esplicitamente contrassegnate come \textit{cacheable} o \textit{non cacheable}. \\ Ciò consente ai \textit{client} di memorizzare in modo efficiente le risorse e migliorare le prestazioni complessive del sistema;
+        \item \textbf{Interfaccia uniforme}: l'interfaccia tra il \textit{client} e il \textit{server} per l'ottenimento della stessa risorsa deve essere uniforme, non importa da dove proviene la richiesta;
+        \item \textbf{Sistema stratificato}: l'architettura può essere suddivisa in livelli, con ogni livello che svolge un ruolo specifico.
+    \end{enumerate}
+    \cite{site:rest-ibm}
+    }
+}
 
 % \newglossaryentry{umlg} {
 %     name=\glslink{uml}{UML},
@@ -186,5 +208,23 @@
     sort=black-box,
     description= {con il termine \textit{"black box"} si intende un dispositivo con riferimento alle sole caratteristiche esterne, in particolare alle funzioni di trasferimento tra grandezze di ingresso o di uscita, ignorando cioè del tutto la costituzione interna. \\
     \cite{site:black-box-treccani}
+    }
+}
+
+\newglossaryentry{frontend}{
+    name=\textit{Frontend},
+    text=\textit{Frontend},
+    sort=front-end,
+    description= {con il termine \textit{"frontend"} si intende la parte visibile all'utente di un programma e con cui egli può interagire, tipicamente un'interfaccia utente.\\
+    \cite{site:frontend-wiki}
+    }
+}
+
+\newglossaryentry{backend}{
+    name=\textit{Backend},
+    text=\textit{Backend},
+    sort=back-end,
+    description= {con il termine \textit{"backend"} si intende la parte non visibile all'utente di un programma, che elabora e gstisce i dati generati dall'interfaccia grafica.\\
+    \cite{site:backend-wiki}
     }
 }
