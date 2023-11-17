@@ -188,4 +188,9 @@
 \newcommand{\classdesc}[2]{\item[\textbf{#1:}] #2}
 
 \chaptertitlefont{\huge}
-\chapternumberfont{\LARGE} 
+\chapternumberfont{\LARGE}
+
+\makeatletter
+\@removefromreset{footnote}{chapter}
+\newcommand\footnoteref[1]{\protected@xdef\@thefnmark{\ref{#1}}\@footnotemark}
+\makeatother
