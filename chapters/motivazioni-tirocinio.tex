@@ -1,4 +1,4 @@
-\newpage \ \thispagestyle{empty} \newpage
+% \newpage \ \thispagestyle{empty} \newpage
 
 \chapter{Motivazioni alla base del tirocinio}
 \label{cap:motivazioni-tirocinio}
@@ -35,13 +35,13 @@ In base a quanto ho potuto osservare e capire durante il periodo di \textit{stag
 \section{Problematiche poste in essere}
 
 % In questa sezione descriverò quali problemi, a livello macroscopico, il prodotto software da me sviluppato ha consentito di superare.
-Scopo delle attività di \textit{stage} è la creazione di una \glslink*{pwag}{\textit{progressive web app}} per la raccolta di dati relativi al controllo della qualità delle linee produttive di aziende manifatturiere.
+Scopo delle attività di \textit{stage} è la creazione di una \glslink{pwag}{\textit{progressive web app}} per la raccolta di dati relativi al controllo della qualità delle linee produttive di aziende manifatturiere.
 Ogni linea produttiva è costituita da un insieme di "fasi" di lavorazione: ogni fase di lavorazione è considerabile come una \textit{black-box}\footnote{\gls{black-box}} di cui si conoscono gli \textit{input} (materia prima o semilavorati in ingresso)
 e gli \textit{output} (semilavorati o prodotti finiti).
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{images/black-box.png}
-    \caption[Schema sintesi del concetto di \textit{black-box}]{Schema sintesi del concetto di \textit{black-box}\footnotemark}
+    \caption[Schema sintesi del concetto di \textit{black-box}]{Schema sintesi del concetto di \glslink{black-box}{\textit{black-box}} \footnotemark}
 \end{figure}
 \footnotetext{Fonte: \href{https://www.quora.com/Machine-learning-classifier-is-a-black-box-Why-does-everyone-still-use-it-1}{https://www.quora.com}}
 Ogni fase è associata a un insieme di caratteristiche (dette "attributi") relative ai prodotti in uscita dalla stessa: esse sono di interesse per comprendere se la lavorazione ha prodotto articoli utilizzabili nelle fasi successive / nello stoccaggio degli stessi o meno. \\
@@ -91,13 +91,15 @@ Di seguito, la lista degli obiettivi di tirocinio:
 Il progetto si focalizza sullo sviluppo di codice prettamente \textit{front-end}\footnote{\gls{frontend}} e questo aspetto caratterizza le condizioni imposte per lo svolgimento del lavoro e le aspettative sul risultato:
 \begin{itemize}
     \item Il prodotto deve essere sviluppato usando il \textit{framework Angular} alla versione 16;
-    \item Il prodotto deve essere una \glslink{pwa}{PWA};
+    \item Il prodotto deve essere una \glslink{pwag}{PWA};
+    \item Il prodotto deve fare uso delle \glslink{apig}{API} messe a disposizione da \textit{\textbf{Trizeta}};
     \item Il prodotto deve essere utilizzabile dagli operatori di linea produttiva tramite dispositivi mobili (obbligatoriamente tramite \textit{tablet}, facoltativamente tramite \textit{smartphone});
-    \item Il prodotto deve poter essere eseguibile in modalità \textit{standalone}\footnote{\gls{standalone}} e deve potersi integrare nel software \textit{ADeMES} mediante un elemento \texttt{<iframe>} \textit{HTML}.
+    \item Il prodotto deve poter essere eseguibile in modalità \textit{standalone}\footnote{\gls{standalone}} e deve potersi integrare nel software \textit{ADeMES} mediante un elemento \texttt{<iframe>} \textit{HTML};
+    \item Deve essere redatto un manuale utente che  descriva interfaccia grafica ed esperienza utente del \textit{software} sviluppato.
 \end{itemize}
 
 \section{Pianificazione}
-La pianificazione delle attività, redatta anticipatamente rispetto all'inizio del progetto e disponibile di seguito, è stata rispettata per la maggior parte del tempo: solamente l'interfacciamento coi servizi \glslink{rest}{REST}
+La pianificazione delle attività, redatta anticipatamente rispetto all'inizio del progetto e disponibile di seguito, è stata rispettata per la maggior parte del tempo: solamente l'interfacciamento coi servizi \glslink{restg}{REST}
 di scrittura dati è avvenuto in ritardo, data l'assenza temporanea degli stessi. \\
 Di seguito, la suddivisione delle attività pianificate con base settimanale:
 
@@ -111,8 +113,8 @@ Di seguito, la suddivisione delle attività pianificate con base settimanale:
     \end{itemize}
     \item \textbf{Seconda Settimana - (40 ore)} 
     \begin{itemize}
-        \item Analisi e mappatura dei servizi \glslink{rest}{REST} esistenti;
-        \item Documentazione dell'analisi dei servizi \glslink{rest}{REST} esistenti.
+        \item Analisi e mappatura dei servizi \glslink{restg}{REST} esistenti;
+        \item Documentazione dell'analisi dei servizi \glslink{restg}{REST} esistenti.
     \end{itemize}
     \item \textbf{Terza Settimana - (40 ore)} 
     \begin{itemize}
@@ -130,29 +132,79 @@ Di seguito, la suddivisione delle attività pianificate con base settimanale:
     \item \textbf{Quinta Settimana - (40 ore)} 
     \begin{itemize}
         \item Documentazione delle scelte progettuali;
-        \item Sviluppo \textit{web application} ed interfacciamento con i servizi \glslink{rest}{REST} di lettura dati.
+        \item Sviluppo \textit{web application} ed interfacciamento con i servizi \glslink{restg}{REST} di lettura dati.
     \end{itemize}
     \item \textbf{Sesta Settimana - (40 ore)} 
     \begin{itemize}
         \item Conclusione della documentazione delle scelte progettuali;
-        \item Sviluppo \textit{web application} ed interfacciamento con i servizi \glslink{rest}{REST} di scrittura dati.
+        \item Sviluppo \textit{web application} ed interfacciamento con i servizi \glslink{restg}{REST} di scrittura dati.
     \end{itemize}
     \item \textbf{Settima Settimana - (40 ore)} 
     \begin{itemize}
-        \item Collaudo \glslink{pwa}{PWA};
+        \item Collaudo \glslink{pwag}{PWA};
         \item \textit{Test} e correzione degli eventuali errori;
         \item Stesura della documentazione finale.
     \end{itemize}
     \item \textbf{Ottava Settimana - Conclusione (40 ore)} 
     \begin{itemize}
-        \item Conclusione del collaudo della \glslink{pwa}{PWA};
+        \item Conclusione del collaudo della \glslink{pwag}{PWA};
         \item Conclusione \textit{test} e correzione degli eventuali errori;
         \item Conclusione della stesura della documentazione finale.
     \end{itemize}
 \end{itemize}
 
+La pianificazione, in termini di quantità di ore di lavoro, è stata così distribuita: \\
+
+    \begin{tabularx}{\textwidth}{|c|X|}
+        \hline
+        \textbf{Durata in ore} & \textbf{Descrizione dell'attività} \\ \hline
+        
+        \textbf{40} & \textbf{Formazione sulle tecnologie} \\	 
+        \hline
+        
+        \textbf{200} & \textbf{Definizione architettura di riferimento e relativa documentazione} \\ \hdashline 
+        \multirow{3}{0cm}\\ 
+         & 
+        \textit{Analisi del problema e del dominio applicativo} \\
+         & 
+        \textit{Progettazione della piattaforma e relativi test} \\
+         & 
+        \textit{Stesura documentazione relativa ad analisi e progettazione} \\
+        \hline
+        
+        \textbf{80} & \textbf{Collaudo Finale}  \\ \hdashline 
+        \multirow{4}{0cm}\\ 
+         & 
+        \textit{Collaudo} \\
+         & 
+        \textit{Stesura documentazione finale} \\
+         & 
+        \textit{Incontro di presentazione della piattaforma con gli stakeholders} \\
+         & 
+        \textit{Live demo di tutto il lavoro di stage} \\
+        \hline
+        
+        \textbf{Totale ore} & \multicolumn{1}{|c|}{\textbf{320}} \\ \hline
+        
+    \end{tabularx}
+
+    Di seguito è riportato il diagramma di Gantt relativo al piano di lavoro previsto.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.9\textwidth]{images/gantt.png}
+        \caption[Diagramma \textit{Gantt} di suddivisione delle attività]{Diagramma \textit{Gantt} di suddivisione delle attività}
+    \end{figure}
 
 
 \section{Scelta del tirocinio}
-
-In questa sezione descriverò le motivazioni che mi hanno portato a scegliere il progetto di tirocinio curricolare, indicando punti a favore e punti a sfavore a monte della scelta.
+% In questa sezione descriverò le motivazioni che mi hanno portato a scegliere il progetto di tirocinio curricolare, indicando punti a favore e punti a sfavore a monte della scelta.
+La scelta del progetto di tirocinio curricolare offerto da \textit{\textbf{Trizeta}} è stata dettata dalle seguenti motivazioni:
+\begin{itemize}
+    \item \textbf{Introduzione al mondo del lavoro (ambito informatico)}: nonostante i tirocini curricolari sostenuti nel corso della mia carriera scolastica, prima di questo \textit{stage} non avevo mai avuto occasione di lavorare in ambito informatico, 
+            probabilmente per timore di non essere in grado di affrontare le sfide dello sviluppo di prodotti \textit{software};
+    \item \textbf{Desiderio di conoscenza di una realtà locale}: avendo frequentato un istituto di istruzione superiore limitrofo alla sede aziendale, ho sempre sentito nominare \textit{\textbf{Trizeta}} dai docenti e dai compagni di studi dato il suo 
+        coinvolgimento in attività didattiche organizzate dall'istituto scolastico;
+    \item \textbf{Curiosità per lo sviluppo \textit{frontend}}: nel corso della mia esperienza universitaria, la progettazione e realizzazione di interfacce grafiche è stata piuttosto essenziale e non si è mai confrontata con vere e proprie
+        richieste da parte di utenti finali o \glslink{stakeholder}{\textit{stakeholders}} che avessero ben chiari i bisogni e le esigenze a cui dare risposta;
+    \item ciao.
+\end{itemize}
