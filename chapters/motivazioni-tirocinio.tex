@@ -10,10 +10,10 @@ descrivendo i vincoli, gli obiettivi e le esigenze che il progetto proposto punt
 % In questa sezione descriverò il rapporto che l'azienda ha nei confronti dei tirocini (universitari e non) dal punto di vista delle tecnologie, dei prodotti, del mercato e dal punto di vista di investimento sulle risorse umane.
 In base a quanto ho potuto osservare e capire durante il periodo di \textit{stage}, la strategia di gestione dei tirocini curricolari dell'azienda ospitante persegue i seguenti obiettivi:
 \begin{itemize}
-    \item \glslink{innovazione}{Innovazione}: come riportato al termine della sezione \hyperref[sec:innovazione]{1.4}, l'introduzione di miglioramenti e novità negli strumenti e nelle tecnologie utilizzate (motivata da esigenze produttive o di mercato)
-    può avvalersi (come nel mio caso) del parere motivato del tirocinante, tenendo conto del grado di maturità e delle caratteristiche del lavoro svolto per \textit{testare} le novità da introdurre;
-    \item \textbf{Integrazione di prodotti esistenti}: il parco \textit{software \textbf{Trizeta}} è vasto ed eterogeneo e la clientela richiede spesso l'implementazione di nuove funzionalità per rispondere a nuove esigenze; un modo per eseguire
-        una prima integrazione di tali funzionalità (in versione beta o di \textit{proof of concept}) si basa sul lavoro di uno o più tirocinanti;
+    \item \glslink{innovazione}{Innovazione}: come riportato al termine della sezione \hyperref[sec:innovazione]{§1.4}, l'introduzione di miglioramenti e novità negli strumenti e nelle tecnologie utilizzate (motivata da esigenze produttive o di mercato)
+    può avvalersi, come nel mio caso, del parere motivato del tirocinante tenendo conto del grado di maturità e delle caratteristiche del lavoro svolto per \textit{testare} le novità da introdurre;
+    \item \textbf{Integrazione di prodotti esistenti}: il parco \textit{software \textbf{Trizeta}} è vasto (in relazione alle dimensioni dell'azienda) ed eterogeneo e la clientela richiede spesso l'implementazione di nuove funzionalità per rispondere a nuove esigenze; un modo per eseguire
+        una prima integrazione di tali funzionalità (in versione \textit{beta} o di \textit{proof of concept}) si basa sul lavoro di uno o più tirocinanti;
         \vspace{-20mm}
         \begin{figure}[H]
             \centering
@@ -22,10 +22,10 @@ In base a quanto ho potuto osservare e capire durante il periodo di \textit{stag
             \caption[Interfaccia del \textit{software ADeMES}]{Interfaccia del \textit{software ADeMES} \textit{\textbf{Trizeta}}\footnotemark}
         \end{figure}
         \footnotetext{Fonte: \href{https://trizeta.com/ade-mes/}{https://trizeta.com}}
-    \item \textbf{Creazione di nuovi prodotti}: in base alle stesse motivazioni espresse al punto precedente, è possibile che la risposta alle nuove esigenze della clientela non sia possibile direttamente all'interno dei prodotti già esistenti (per separazione di ambito o
+    \item \textbf{Creazione di nuovi prodotti}: è possibile che la risposta alle nuove esigenze della clientela non sia possibile direttamente all'interno dei prodotti già esistenti (per separazione di ambito o
         per non compromettere la mantenibilità dei prodotti esistenti): in questo caso, concordando lo \glslink{tech-stack}{\textit{stack} tecnologico} da usare, lo \textit{stagista} può implementare un prodotto prototipale \textit{ex-novo} in base alle indicazioni ricevute;
     \item \textbf{Valutazione delle competenze} del tirocinante: il periodo di tirocinio è occasione di introduzione del tirocinante nel contesto aziendale e, per quanto riguarda la mia esperienza, formazione sulla visione aziendale, sui processi in atto, sulle tecnologie utilizzate
-        e sulle abilità richieste per l'esecuzione delle attività lavorative; l'azienda ospitante fornisce quindi una formazione di base e valuta quali sono le reazioni agli stimoli (lavorativi e non) in funzione dell'inserimento del tirocinante nel \textit{team} aziendale, data la formazione ricevuta.
+        e sulle abilità richieste per l'esecuzione delle attività lavorative; l'azienda ospitante fornisce quindi una formazione di base e valuta quali sono le reazioni agli stimoli (lavorativi e non) in funzione dell'inserimento del tirocinante nel \textit{team} aziendale.
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.8\textwidth]{images/dashboard.png}
@@ -69,7 +69,8 @@ Di seguito, la lista degli obiettivi di tirocinio:
             \item \textbf{O04}: progettazione dell'interfaccia grafica in base allo stile dell'interfaccia dell'applicazione \textit{ADeMES};
             \item \textbf{O05}: sviluppo di una versione di base dell'applicazione \textit{web} che consenta di eseguire le operazioni \textit{CRUD} sui dati di qualità;  
             \item \textbf{O06}: \textit{live demo} della web application in un ambiente simulato;
-            \item \textbf{O07}: studio e scelta (motivata) della tecnologia per la fruizione dell'applicazione in lingua inglese.
+            \item \textbf{O07}: studio e scelta (motivata) della tecnologia per la fruizione dell'applicazione in lingua inglese;
+            \item \textbf{O08}: il \textit{software} deve poter essere eseguibile in modalità \textit{standalone}\footnote{\gls{standalone}} e deve potersi integrare nel software \textit{ADeMES} mediante un elemento \texttt{<iframe>} \textit{HTML}.
         \end{itemize}
     \item \textbf{Desiderabili}
         \begin{itemize}
@@ -94,14 +95,12 @@ Il progetto si focalizza sullo sviluppo di codice prettamente \textit{front-end}
     \item Il prodotto deve essere una \glslink{pwag}{PWA};
     \item Il prodotto deve fare uso delle \glslink{apig}{API} messe a disposizione da \textit{\textbf{Trizeta}};
     \item Il prodotto deve essere utilizzabile dagli operatori di linea produttiva tramite dispositivi mobili (obbligatoriamente tramite \textit{tablet}, facoltativamente tramite \textit{smartphone});
-    \item Il prodotto deve poter essere eseguibile in modalità \textit{standalone}\footnote{\gls{standalone}} e deve potersi integrare nel software \textit{ADeMES} mediante un elemento \texttt{<iframe>} \textit{HTML};
     \item Deve essere redatto un manuale utente che  descriva interfaccia grafica ed esperienza utente del \textit{software} sviluppato.
 \end{itemize}
 
 \section{Pianificazione}
 La pianificazione delle attività, redatta anticipatamente rispetto all'inizio del progetto e disponibile di seguito, è stata rispettata per la maggior parte del tempo: solamente l'interfacciamento coi servizi \glslink{restg}{REST}
-di scrittura dati è avvenuto in ritardo, data l'assenza temporanea degli stessi. \\
-Di seguito, la suddivisione delle attività pianificate con base settimanale:
+di scrittura dati è avvenuto in ritardo, data l'assenza temporanea degli stessi.
 
 \begin{itemize}
     \item \textbf{Prima Settimana (40 ore)}
@@ -165,33 +164,33 @@ La pianificazione, in termini di quantità di ore di lavoro, è stata così dist
         \textbf{200} & \textbf{Definizione architettura di riferimento e relativa documentazione} \\ \hdashline 
         \multirow{3}{0cm}\\ 
          & 
-        \textit{Analisi del problema e del dominio applicativo} \\
+        {Analisi del problema e del dominio applicativo} \\
          & 
-        \textit{Progettazione della piattaforma e relativi test} \\
+        {Progettazione della piattaforma e relativi test} \\
          & 
-        \textit{Stesura documentazione relativa ad analisi e progettazione} \\
+        {Stesura documentazione relativa ad analisi e progettazione} \\
         \hline
         
         \textbf{80} & \textbf{Collaudo Finale}  \\ \hdashline 
         \multirow{4}{0cm}\\ 
          & 
-        \textit{Collaudo} \\
+        {Collaudo} \\
          & 
-        \textit{Stesura documentazione finale} \\
+        {Stesura documentazione finale} \\
          & 
-        \textit{Incontro di presentazione della piattaforma con gli stakeholders} \\
+        {Incontro di presentazione della piattaforma con gli stakeholders} \\
          & 
-        \textit{Live demo di tutto il lavoro di stage} \\
+        {Live demo di tutto il lavoro di stage} \\
         \hline
         
         \textbf{Totale ore} & \multicolumn{1}{|c|}{\textbf{320}} \\ \hline
         
-    \end{tabularx}
-
-    Di seguito è riportato il diagramma di Gantt relativo al piano di lavoro previsto.
+    \end{tabularx} \\
+    
+    Di seguito è riportato il diagramma di \textit{Gantt} relativo al piano di lavoro previsto.
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.9\textwidth]{images/gantt.png}
+        \includegraphics[width=0.95\textwidth]{images/gantt.png}
         \caption[Diagramma \textit{Gantt} di suddivisione delle attività]{Diagramma \textit{Gantt} di suddivisione delle attività}
     \end{figure}
 
@@ -204,7 +203,23 @@ La scelta del progetto di tirocinio curricolare offerto da \textit{\textbf{Trize
             probabilmente per timore di non essere in grado di affrontare le sfide dello sviluppo di prodotti \textit{software};
     \item \textbf{Desiderio di conoscenza di una realtà locale}: avendo frequentato un istituto di istruzione superiore limitrofo alla sede aziendale, ho sempre sentito nominare \textit{\textbf{Trizeta}} dai docenti e dai compagni di studi dato il suo 
         coinvolgimento in attività didattiche organizzate dall'istituto scolastico;
-    \item \textbf{Curiosità per lo sviluppo \textit{frontend}}: nel corso della mia esperienza universitaria, la progettazione e realizzazione di interfacce grafiche è stata piuttosto essenziale e non si è mai confrontata con vere e proprie
-        richieste da parte di utenti finali o \glslink{stakeholder}{\textit{stakeholders}} che avessero ben chiari i bisogni e le esigenze a cui dare risposta;
-    \item ciao.
+    \item \textbf{Curiosità per lo sviluppo \textit{frontend}}: nel corso della mia esperienza universitaria, la progettazione e la realizzazione di interfacce grafiche sono state piuttosto scarne e non si sono mai confrontate con vere e proprie
+        richieste da parte di utenti finali o \glslink{stakeholder}{\textit{stakeholders}} che avessero ben chiari i bisogni e le esigenze a cui dare risposta.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/figma-editor.jpg}
+    \caption[Interfaccia del \textit{software Figma}]{Interfaccia del \textit{software Figma}, usato per la progettazione dell'interfaccia utente\footnotemark}
+\end{figure}
+\footnotetext{Fonte: \href{https://www.toponseek.com/blogs/figma-la-gi/}{https://www.toponseek.com}}
+
+Queste motivazioni (ed il contesto personale in cui ho svolto le attività lavorative) mi hanno consentito di definire una serie di obiettivi personali per quanto riguarda la scelta dell'azienda, il tema delle attività e l'acquisizione di conoscenze e competenze:
+\begin{itemize}
+    \item Entrare a far parte di un contesto lavorativo positivo e stimolante;
+    \item Comprendere i processi interni adottati da un'azienda specializzata nello sviluppo \textit{software}; 
+    \item Acquisire dimestichezza con la progettazione di interfacce grafiche per dispositivi tra loro eterogenei;
+    \item Ampliare le mie conoscenze in relazione al framework \textit{Angular}, già utilizzato all'interno di alcuni progetti didattici;
+    \item Capire le tempistiche di adattamento alla nuova \textit{routine} quotidiana;
+    \item Acquisire esperienza nella gestione del tempo al di fuori dell'orario lavorativo.
 \end{itemize}
