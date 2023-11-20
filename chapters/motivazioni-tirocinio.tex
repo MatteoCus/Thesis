@@ -10,8 +10,8 @@ descrivendo i vincoli, gli obiettivi e le esigenze che il progetto proposto punt
 % In questa sezione descriverò il rapporto che l'azienda ha nei confronti dei tirocini (universitari e non) dal punto di vista delle tecnologie, dei prodotti, del mercato e dal punto di vista di investimento sulle risorse umane.
 In base a quanto ho potuto osservare e capire durante il periodo di \textit{stage}, la strategia di gestione dei tirocini curricolari dell'azienda ospitante persegue i seguenti obiettivi:
 \begin{itemize}
-    \item \glslink{innovazione}{Innovazione}: come riportato al termine della sezione \hyperref[sec:innovazione]{§1.4}, l'introduzione di miglioramenti e novità negli strumenti e nelle tecnologie utilizzate (motivata da esigenze produttive o di mercato)
-    può avvalersi, come nel mio caso, del parere motivato del tirocinante tenendo conto del grado di maturità e delle caratteristiche del lavoro svolto per \textit{testare} le novità da introdurre;
+    \item \textbf{Innovazione}: come riportato al termine della sezione \hyperref[sec:innovazione]{§1.4}, l'\glslink{innovazione}{innovazione} (ovvero l'introduzione di miglioramenti e novità) negli strumenti e nelle tecnologie utilizzate, motivata da esigenze produttive o di mercato,
+    può avvalersi (come nel mio caso) del parere motivato del tirocinante tenendo conto del grado di maturità e delle caratteristiche del lavoro svolto per \textit{testare} le novità da introdurre;
     \item \textbf{Integrazione di prodotti esistenti}: il parco \textit{software \textbf{Trizeta}} è vasto (in relazione alle dimensioni dell'azienda) ed eterogeneo e la clientela richiede spesso l'implementazione di nuove funzionalità per rispondere a nuove esigenze; un modo per eseguire
         una prima integrazione di tali funzionalità (in versione \textit{beta} o di \textit{proof of concept}) si basa sul lavoro di uno o più tirocinanti;
         \vspace{-20mm}
@@ -23,7 +23,7 @@ In base a quanto ho potuto osservare e capire durante il periodo di \textit{stag
         \end{figure}
         \footnotetext{Fonte: \href{https://trizeta.com/ade-mes/}{https://trizeta.com}}
     \item \textbf{Creazione di nuovi prodotti}: è possibile che la risposta alle nuove esigenze della clientela non sia possibile direttamente all'interno dei prodotti già esistenti (per separazione di ambito o
-        per non compromettere la mantenibilità dei prodotti esistenti): in questo caso, concordando lo \glslink{tech-stack}{\textit{stack} tecnologico} da usare, ho potuto implementare un prodotto prototipale \textit{ex-novo} in base alle indicazioni ricevute;
+        per non compromettere la mantenibilità dei prodotti esistenti): in questo caso, concordando lo \glslink{tech-stack}{\textit{stack} tecnologico} (l'insieme delle tecnologie) da usare, ho potuto implementare un prodotto prototipale \textit{ex-novo} in base alle indicazioni ricevute;
     \item \textbf{Valutazione delle competenze} del tirocinante: il periodo di tirocinio è occasione di introduzione del tirocinante nel contesto aziendale e, per quanto riguarda la mia esperienza, formazione sulla visione aziendale, sui processi in atto, sulle tecnologie utilizzate
         e sulle abilità richieste per l'esecuzione delle attività lavorative; l'azienda ospitante fornisce quindi una formazione di base e valuta quali sono le reazioni agli stimoli (lavorativi e non) in funzione dell'inserimento del tirocinante nel \textit{team} aziendale.
         \begin{figure}[H]
@@ -35,9 +35,9 @@ In base a quanto ho potuto osservare e capire durante il periodo di \textit{stag
 \section{Problematiche poste in essere}
 
 % In questa sezione descriverò quali problemi, a livello macroscopico, il prodotto software da me sviluppato ha consentito di superare.
-Scopo delle mie attività di \textit{stage} è la creazione di una \glslink{pwag}{\textit{progressive web app}} per la raccolta di dati relativi al controllo della qualità delle linee produttive di aziende manifatturiere.
-Ogni linea produttiva è costituita da un insieme di "fasi" di lavorazione: ogni fase di lavorazione è considerabile come una \textit{black-box}\footnote{\gls{black-box}} di cui si conoscono gli \textit{input} (materia prima o semilavorati in ingresso)
-e gli \textit{output} (semilavorati o prodotti finiti).
+Scopo delle mie attività di \textit{stage} è la creazione di una \glslink{pwag}{\textit{progressive web app}}, ovvero un'applicazione \textit{web} che mette a disposizione funzionalità aggiuntive rispetto a quelle offerte da un sito \textit{web} (ad esempio, la fruizione dei servizi anche in modalità \textit{offline}) per la raccolta di dati relativi al controllo della qualità delle linee produttive di aziende manifatturiere. \\
+Ogni linea produttiva è costituita da un insieme di "fasi" di lavorazione: ogni fase di lavorazione è considerabile come una \textit{black-box}\footnote{\gls{black-box}}, ovvero un processo di cui si conoscono gli \textit{input} (materia prima o semilavorati in ingresso)
+e gli \textit{output} (semilavorati o prodotti finiti) ma non il funzionamento interno.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{images/black-box.png}
@@ -46,7 +46,7 @@ e gli \textit{output} (semilavorati o prodotti finiti).
 \footnotetext{Fonte: \href{https://www.quora.com/Machine-learning-classifier-is-a-black-box-Why-does-everyone-still-use-it-1}{https://www.quora.com}}
 Ogni fase è associata a un insieme di caratteristiche (dette "attributi") relative ai prodotti in uscita dalla stessa: esse sono di interesse per comprendere se la lavorazione ha prodotto articoli utilizzabili nelle fasi successive / nello stoccaggio degli stessi o meno. \\
 Non è noto a priori il numero nè il tipo di attributi associati a una determinata fase di lavorazione: sono tutte informazioni ottenibili tramite l'utilizzo di servizi \textit{backend}\footnote{\gls{backend}} (relativi alla struttura ed alla logica di persistenza) esposti dal tutor aziendale con una
-serie di \textit{API\footnote{\gls{apig}} REST\footnote{\gls{restg}}} (astrazioni che consentono di eseguire operazioni sui dati di dominio in una architettura \textit{client - server}). \\
+serie di \textit{API\footnote{\gls{apig}} REST\footnote{\gls{restg}}} (astrazioni che consentono di eseguire operazioni sui dati di dominio in una architettura \textit{client - server}, con la possibilità di salvare le risposte ottenute, senza memorizzare lo stato del software \textit{client}). \\
 L'obiettivo del prodotto è consentire all'utente (operatore in linea di produzione) di inserire, modificare, eliminare e visualizzare dati di controllo qualità per le fasi desiderate (in gergo tecnico, eseguire le operazioni \textit{CRUD}, ovvero \textit{"Create", "Read", "Update" e"Delete"}, sui dati di qualità).
 
 \section{Obiettivi}
@@ -69,11 +69,12 @@ Di seguito, la lista degli obiettivi di tirocinio:
             \item \textbf{O05}: sviluppo di una versione di base dell'applicazione \textit{web} che consenta di eseguire le operazioni \textit{CRUD} sui dati di qualità;  
             \item \textbf{O06}: \textit{live demo} della web application in un ambiente simulato;
             \item \textbf{O07}: studio e scelta (motivata) della tecnologia per la fruizione dell'applicazione in lingua inglese;
-            \item \textbf{O08}: il \textit{software} deve poter essere eseguibile in modalità \textit{standalone}\footnote{\gls{standalone}} e deve potersi integrare nel software \textit{ADeMES} mediante un elemento \texttt{<iframe>} \textit{HTML}.
+            \item \textbf{O08}: il \textit{software} deve potersi integrare nel software ADeMES mediante un elemento \texttt{<iframe>} \textit{HTML};
+            \item \textbf{O09}: il \textit{software} deve poter essere eseguibile in modalità \textit{standalone}\footnote{\gls{standalone}} (in questo caso, in grado di funzionare anche senza l'ausilio del \textit{software ADeMES}).
         \end{itemize}
     \item \textbf{Desiderabili}
         \begin{itemize}
-            \item \textbf{D01}: ottimizzazione dei servizi \glslink{restg}{REST} esposti.
+            \item \textbf{D01}: ottimizzazione dei servizi esposti.
         \end{itemize}
     \item \textbf{Facoltativi}
         \begin{itemize}
@@ -88,17 +89,17 @@ Di seguito, la lista degli obiettivi di tirocinio:
 \section{Vincoli}
 
 % In questa sezione descriverò (entrando nei particolari, rispetto alla sezione precedente) le condizioni imposte ed i risultati prefissati.
-Il progetto si focalizza sullo sviluppo di codice \textit{front-end}\footnote{\gls{frontend}} e questo aspetto caratterizza le condizioni imposte per lo svolgimento del lavoro e le aspettative sul risultato:
+Il progetto si focalizza sullo sviluppo di codice relativo all'interfaccia grafica e questo aspetto caratterizza le condizioni imposte per lo svolgimento del lavoro e le aspettative sul risultato:
 \begin{itemize}
     \item Il prodotto deve essere sviluppato usando il \textit{framework Angular} alla versione 16;
-    \item Il prodotto deve essere una \glslink{pwag}{PWA};
-    \item Il prodotto deve fare uso delle \glslink{apig}{API} messe a disposizione da \textit{\textbf{Trizeta}};
+    \item Il prodotto deve essere una \glslink{pwag}{\textit{Progressive Web App}} (applicazione \textit{web} installabile come se fosse un'applicazione nativa);
+    \item Il prodotto deve fare uso delle \glslink{apig}{API} messe a disposizione da \textit{\textbf{Trizeta}}, ovvero delle regole di comunicazione tra \glslink{frontend}{\textit{frontend}} (interfaccia grafica) e \glslink{backend}{\textit{backend}} (\textit{software di modellazione e memorizzazione dei dati di dominio});
     \item Il prodotto deve essere utilizzabile dagli operatori di linea produttiva tramite dispositivi mobili (obbligatoriamente tramite \textit{tablet}, facoltativamente tramite \textit{smartphone});
     \item Deve essere redatto un manuale utente che  descriva interfaccia grafica ed esperienza utente del \textit{software} sviluppato.
 \end{itemize}
 
 \section{Pianificazione}
-Ho rispettato la pianificazione delle attività, redatta anticipatamente rispetto all'inizio del progetto e disponibile di seguito, per la maggior parte del tempo di tirocinio: solamente l'interfacciamento coi servizi \glslink{restg}{REST}
+Ho rispettato la pianificazione delle attività, redatta anticipatamente rispetto all'inizio del progetto e disponibile di seguito, per la maggior parte del tempo di tirocinio: solamente l'interfacciamento coi servizi
 di scrittura dati è avvenuto in ritardo, data l'assenza temporanea degli stessi.
 
 \begin{itemize}
@@ -111,8 +112,8 @@ di scrittura dati è avvenuto in ritardo, data l'assenza temporanea degli stessi
     \end{itemize}
     \item \textbf{Seconda Settimana - (40 ore)} 
     \begin{itemize}
-        \item Analisi e mappatura dei servizi \glslink{restg}{REST} esistenti;
-        \item Documentazione dell'analisi dei servizi \glslink{restg}{REST} esistenti.
+        \item Analisi e mappatura dei servizi esistenti;
+        \item Documentazione dell'analisi dei servizi esposti.
     \end{itemize}
     \item \textbf{Terza Settimana - (40 ore)} 
     \begin{itemize}
@@ -130,22 +131,22 @@ di scrittura dati è avvenuto in ritardo, data l'assenza temporanea degli stessi
     \item \textbf{Quinta Settimana - (40 ore)} 
     \begin{itemize}
         \item Documentazione delle scelte progettuali;
-        \item Sviluppo \textit{web application} ed interfacciamento con i servizi \glslink{restg}{REST} di lettura dati.
+        \item Sviluppo \textit{web application} ed interfacciamento con i servizi di lettura dati esposti.
     \end{itemize}
     \item \textbf{Sesta Settimana - (40 ore)} 
     \begin{itemize}
         \item Conclusione della documentazione delle scelte progettuali;
-        \item Sviluppo \textit{web application} ed interfacciamento con i servizi \glslink{restg}{REST} di scrittura dati.
+        \item Sviluppo \textit{web application} ed interfacciamento con i servizi di scrittura dati esposti.
     \end{itemize}
     \item \textbf{Settima Settimana - (40 ore)} 
     \begin{itemize}
-        \item Collaudo \glslink{pwag}{PWA};
+        \item Collaudo dell'applicazione;
         \item \textit{Test} e correzione degli eventuali errori;
         \item Stesura della documentazione finale.
     \end{itemize}
     \item \textbf{Ottava Settimana - Conclusione (40 ore)} 
     \begin{itemize}
-        \item Conclusione del collaudo della \glslink{pwag}{PWA};
+        \item Conclusione del collaudo dell'applicazione;
         \item Conclusione \textit{test} e correzione degli eventuali errori;
         \item Conclusione della stesura della documentazione finale.
     \end{itemize}
@@ -153,39 +154,42 @@ di scrittura dati è avvenuto in ritardo, data l'assenza temporanea degli stessi
 
 La pianificazione, in termini di quantità di ore di lavoro, è stata così distribuita: \\
 
-    \begin{tabularx}{\textwidth}{|c|X|}
-        \hline
-        \textbf{Durata in ore} & \textbf{Descrizione dell'attività} \\ \hline
-        
-        \textbf{40} & \textbf{Formazione sulle tecnologie} \\	 
-        \hline
-        
-        \textbf{200} & \textbf{Definizione architettura di riferimento e relativa documentazione} \\ \hdashline 
-        \multirow{3}{0cm}\\ 
-         & 
-        {Analisi del problema e del dominio applicativo} \\
-         & 
-        {Progettazione della piattaforma e relativi test} \\
-         & 
-        {Stesura documentazione relativa ad analisi e progettazione} \\
-        \hline
-        
-        \textbf{80} & \textbf{Collaudo Finale}  \\ \hdashline 
-        \multirow{4}{0cm}\\ 
-         & 
-        {Collaudo} \\
-         & 
-        {Stesura documentazione finale} \\
-         & 
-        {Incontro di presentazione della piattaforma con gli stakeholders} \\
-         & 
-        {Live demo di tutto il lavoro di stage} \\
-        \hline
-        
-        \textbf{Totale ore} & \multicolumn{1}{|c|}{\textbf{320}} \\ \hline
-        
-    \end{tabularx} \\
+    \begin{table}[H]
+        \begin{tabularx}{\textwidth}{|c|X|}
+            \hline
+            \textbf{Durata in ore} & \textbf{Descrizione dell'attività} \\ \hline
+            
+            \textbf{40} & \textbf{Formazione sulle tecnologie} \\	 
+            \hline
+            
+            \textbf{200} & \textbf{Definizione architettura di riferimento e relativa documentazione} \\ \hdashline 
+            \multirow{3}{0cm}\\ 
+            & 
+            {Analisi del problema e del dominio applicativo} \\
+            & 
+            {Progettazione della piattaforma e relativi \textit{test}} \\
+            & 
+            {Stesura documentazione relativa ad analisi e progettazione} \\
+            \hline
+            
+            \textbf{80} & \textbf{Collaudo Finale}  \\ \hdashline 
+            \multirow{4}{0cm}\\ 
+            & 
+            {Collaudo} \\
+            & 
+            {Stesura documentazione finale} \\
+            & 
+            {Incontro di presentazione della piattaforma con gli \textit{stakeholders}} \\
+            & 
+            {\textit{Live demo} di tutto il lavoro di \textit{stage}} \\
+            \hline
+            
+            \textbf{Totale ore} & \multicolumn{1}{|c|}{\textbf{320}} \\ \hline
+        \end{tabularx}
+        \caption{Distribuzione delle ore di lavoro}
+    \end{table}
     
+    \vspace{0.5cm}
     Riporto di seguito il diagramma di \textit{Gantt} relativo al piano di lavoro previsto.
     \begin{figure}[H]
         \makebox[\textwidth][c]{\includegraphics[width=1.3\textwidth]{images/gantt5.png}}
@@ -195,14 +199,14 @@ La pianificazione, in termini di quantità di ore di lavoro, è stata così dist
 
 \section{Scelta del tirocinio}
 % In questa sezione descriverò le motivazioni che mi hanno portato a scegliere il progetto di tirocinio curricolare, indicando punti a favore e punti a sfavore a monte della scelta.
-La scelta del progetto di tirocinio curricolare offerto da \textit{\textbf{Trizeta}} è stata dettata dalle seguenti motivazioni:
+La scelta del progetto di tirocinio curricolare offerto da \textit{\textbf{Trizeta}}:
 \begin{itemize}
     \item \textbf{Introduzione al mondo del lavoro (ambito informatico)}: nonostante i tirocini curricolari sostenuti nel corso della mia carriera scolastica, prima di questo \textit{stage} non avevo mai avuto occasione di lavorare in ambito informatico, 
             probabilmente per timore di non essere in grado di affrontare le sfide dello sviluppo di prodotti \textit{software};
     \item \textbf{Desiderio di conoscenza di una realtà locale}: avendo frequentato un istituto di istruzione superiore limitrofo alla sede aziendale, ho sempre sentito nominare \textit{\textbf{Trizeta}} dai docenti e dai compagni di studi dato il suo 
         coinvolgimento in attività didattiche organizzate dall'istituto scolastico;
     \item \textbf{Curiosità per lo sviluppo \textit{frontend}}: nel corso della mia esperienza universitaria, la progettazione e la realizzazione di interfacce grafiche sono state piuttosto scarne e non si sono mai confrontate con vere e proprie
-        richieste da parte di utenti finali o \glslink{stakeholder}{\textit{stakeholders}} che avessero ben chiari i bisogni e le esigenze a cui dare risposta.
+        richieste da parte di utenti finali o persone interessate nella buona riuscita del progetto (\glslink{stakeholder}{\textit{stakeholders}}) che avessero ben chiari i bisogni e le esigenze a cui dare risposta.
 \end{itemize}
 
 \begin{figure}[H]
@@ -214,7 +218,7 @@ La scelta del progetto di tirocinio curricolare offerto da \textit{\textbf{Trize
 
 Queste motivazioni (ed il contesto personale in cui ho svolto le attività lavorative) mi hanno consentito di definire una serie di obiettivi personali per quanto riguarda la scelta dell'azienda, il tema delle attività e l'acquisizione di conoscenze e competenze:
 \begin{itemize}
-    \item Capire come convertire una \textit{web application} in una \glslink{pwa}{Progressive Web App};
+    \item Capire come convertire una \textit{web application} in una \glslink{pwa}{\textit{Progressive Web App}}, ovvero un'applicazione che coniuga caratteristiche di un'applicazione nativa (quali l'installazione e l'aspetto grafico) e caratteristiche di un'applicazione \textit{web} (come la possibilità di utilizzo tramite \textit{browser});
     \item Sviluppare un'interfaccia grafica che si adatti a \textit{desktop}, \textit{tablet} e \textit{smartphone};
     \item Comprendere come rendere fruibile in più lingue un prodotto \textit{software};
     \item Capire come si possono gestire diversi temi grafici (tipicamente identificati come "tema chiaro" e "tema scuro") in un'interfaccia grafica \textit{web};
