@@ -145,13 +145,163 @@ e la definizione di "ciò che deve svolgere il prodotto" per soddisfare tali bis
 Ho iniziato le attività di analisi con un incontro sincrono, insieme al tutor aziendale, relativo all'infrastruttura aziendale esistente (contesto delle attività produttive) e al ruolo che il prodotto da sviluppare (di nome \textit{ADeQA}) ricopre in questo contesto. \\
 La contestualizzazione delle mie attività di \textit{stage} è stata seguita da una spiegazione dei bisogni da soddisfare: sono stati necessari più passi di raffinazione (descritti in seguito) dei bisogni espressi per arrivare a definire i requisiti del prodotto.
 
-\subsection*{Casi d'uso}
+\subsection{Casi d'uso}
 Con "caso d'uso" si intende un'astrazione utilizzata per catturare, descrivere e definire le interazioni tra un prodotto e gli attori (utenti o altri \textit{software}) che interagiscono con esso. \\
 Un caso d'uso è una rappresentazione (narrativa e/o schematica) di uno scenario che descrive come il sistema risponde alle richieste degli utenti in determinate circostanze. \\
-I casi d’uso qui presenti mirano a dare comprensione di come sono stati modellati i principali requisiti utente, pertanto non vengono riportati tutti i requisiti identificati in sede di \textit{stage}; 
-essi sono identificati da una sigla alfanumerica così composta: \textbf{UC[Tipologia]-[Codice]}
+I casi d’uso qui presenti mirano a dare comprensione di come sono stati modellati i principali requisiti utente, pertanto non vengono riportati tutti i requisiti identificati in sede di \textit{stage}.
+\subsubsection*{Nomenclatura}
+ 
+I casi d'uso sono identificati da una sigla alfanumerica così composta:
+\begin{center}
+    \textbf{UC[Tipologia]-[Codice]}
+\end{center}
 
-\subsection*{Requisiti}
+\begin{itemize}
+    \item \textbf{UC}: abbreviativo di \textit{Use Case};
+    \item \textbf{Tipologia}: tipologia del caso d'uso:
+        \begin{itemize}
+            \item \textbf{F}: funzionale, descrive una funzionalità;
+            \item \textbf{E}: errore, descrive cosa deve accadere in caso di un determinato errore.
+        \end{itemize}
+    \item \textbf{Codice}: identificativo numerico del caso d’uso, può identificare dei sotto-casi d’uso / generalizzazioni qualora si presentasse in forma \textbf{[caso].[identificativo]}.
+\end{itemize}
+
+\subsubsection*{Attori primari}
+L’applicazione presenta due attori primari, ovvero due tipologie di utente finale:
+\begin{itemize}
+    \item \textbf{Utente non autenticato}: utente che non ha ancora effettuato l’autenticazione, avrà funzionalità limitate rispetto ad un utente autenticato;
+    \item \textbf{Utente autenticato}: utente che ha effettuato l’autenticazione alla piattaforma tramite le proprie credenziali (nome utente, password e pin); ha accesso ad ogni funzionalità messa a disposizione.
+\end{itemize}
+
+\subsubsection*{Lista dei principali casi d'uso}
+
+    \textbf{UCF-2: Visualizzazione delle fasi}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.9\textwidth]{usecase/UCF-2.png}
+            \caption{Diagramma dei casi d'uso UCF-2 e UCE-3.}
+        \end{figure}
+        \begin{itemize}
+            \item \textbf{Descrizione:} l’utente vuole visualizzare le fasi di lavorazione della filiera produttiva;
+            \item \textbf{Scenario:}
+                \begin{enumerate}
+                    \item L’utente visualizza le fasi di lavorazione.
+                \end{enumerate}
+            \item \textbf{Estensioni:} si presenta un errore lato server alla lettura delle fasi di produzione (\textbf{UCE-3}).
+            \item \textbf{Attore principale:} utente autenticato;
+            \item \textbf{Precondizioni:} l’utente è autenticato;
+            \item \textbf{Postcondizioni:} l’utente visualizza le fasi di produzione.
+        \end{itemize}
+
+        \textbf{UCF-4: Visualizzazione degli attributi}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.9\textwidth]{usecase/UCF-4.png}
+            \caption{Diagramma dei casi d'uso UCF-4 e UCE-4.}
+        \end{figure}
+        \begin{itemize}
+            \item \textbf{Descrizione:} l’utente vuole visualizzare gli attributi della fase di lavorazione selezionata;
+            \item \textbf{Scenario:}
+                \begin{enumerate}
+                    \item L’utente sta visualizzando le fasi di lavorazione;
+                    \item L’utente seleziona una fase di lavorazione.
+                \end{enumerate}
+            \item \textbf{Estensioni:} si presenta un errore lato server alla lettura degli attributi della fase di produzione selezionata (\textbf{UCE-4});
+            \item \textbf{Attore principale:} utente autenticato;
+            \item \textbf{Precondizioni:} l’utente sta visualizzando le fasi di produzione;
+            \item \textbf{Postcondizioni:} l’utente visualizza gli attributi della fase di produzione che ha selezionato.
+        \end{itemize}
+
+
+        \textbf{UCF-5: Valorizzazione degli attributi}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.9\textwidth]{usecase/UCF-5.png}
+            \caption{Diagramma dei casi d'uso UCF-5 e UCE-5.}
+        \end{figure}
+        \begin{itemize}
+            \item \textbf{Descrizione:} l’utente vuole inserire manualmente un valore per gli attributi della fase di lavorazione selezionata, creando un \textit{log} di controllo qualità;
+            \item \textbf{Scenario:}
+                \begin{enumerate}
+                    \item L’utente visualizza gli attributi della fase di lavorazione selezionata;
+                    \item L'utente assegna un valore agli attributi visualizzati;
+                    \item L'utente conferma la scelta.
+                \end{enumerate}
+            \item \textbf{Estensioni:} si presenta un errore lato server all’inserimento del valore degli attributi della fase di produzione selezionata (\textbf{UCE-5});
+            \item \textbf{Attore principale:} utente autenticato;
+            \item \textbf{Precondizioni:} l’utente sta visualizzando gli attributi (\textbf{UCF-4});
+            \item \textbf{Postcondizioni:} l’utente assegna un valore agli attributi di una fase di produzione che ha selezionato.
+        \end{itemize}
+
+
+        \textbf{UCF-7: Visualizzazione dei dati di qualità registrati}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.9\textwidth]{usecase/UCF-7.png}
+            \caption{Diagramma dei casi d'uso UCF-7 e UCE-7.}
+        \end{figure}
+        \begin{itemize}
+            \item \textbf{Descrizione:} l’utente vuole visualizzare i dati di controllo qualità inseriti;
+            \item \textbf{Scenario:}
+                \begin{enumerate}
+                    \item L’utente seleziona una fase di produzione;
+                    \item L’utente visualizza i \textit{log} per la fase selezionata.
+                \end{enumerate}
+            \item \textbf{Estensioni:} si presenta un errore lato server durante il tentativo di acquisire i log di controllo qualità (\textbf{UCE-7});
+            \item \textbf{Attore principale:} utente autenticato;
+            \item \textbf{Precondizioni:} l’utente è autenticato;
+            \item \textbf{Postcondizioni:} l’utente visualizza i dati di controllo qualità inseriti per la fase selezionata.
+        \end{itemize}
+
+        \textbf{UCE-3: Visualizzazione errore lato \textit{server} all’acquisizione delle fasi di lavorazione}
+        \begin{itemize}
+            \item \textbf{Descrizione:} l’utente vuole visualizzare le fasi di lavorazione e il \textit{server} ritorna un errore;
+            \item \textbf{Scenario:}
+                \begin{enumerate}
+                    \item L’utente visualizza un messaggio di errore.
+                \end{enumerate}
+            \item \textbf{Attore principale:} utente autenticato;
+            \item \textbf{Precondizioni:} l’utente vuole visualizzare le fasi di lavorazione (\textbf{UCF-2});
+            \item \textbf{Postcondizioni:} l’utente visualizza un messaggio di errore relativo all’avvenimento di un errore lato \textit{server} all’acquisizione delle fasi di lavorazione.
+        \end{itemize}
+
+        \textbf{UCE-4: Visualizzazione errore lato \textit{server} all’acquisizione degli attributi delle fasi di lavorazione}
+        \begin{itemize}
+            \item \textbf{Descrizione:} l’utente vuole visualizzare gli attributi delle fasi di lavorazione e il \textit{server} ritorna un errore;
+            \item \textbf{Scenario:}
+                \begin{enumerate}
+                    \item L’utente visualizza un messaggio di errore.
+                \end{enumerate}
+            \item \textbf{Attore principale:} utente autenticato;
+            \item \textbf{Precondizioni:} l’utente vuole visualizzare le fasi di lavorazione (\textbf{UCF-2});
+            \item \textbf{Postcondizioni:} l’utente visualizza un messaggio di errore relativo all’avvenimento di un errore lato \textit{server} all’acquisizione delle fasi di lavorazione.
+        \end{itemize}
+
+        \textbf{UCE-5: Visualizzazione errore lato \textit{server} alla valorizzazione degli attributi delle fasi di lavorazione}
+        \begin{itemize}
+            \item \textbf{Descrizione:} l’utente vuole assegnare un valore agli attributi della fase di lavorazione selezionata e il \textit{server} ritorna un errore;
+            \item \textbf{Scenario:}
+                \begin{enumerate}
+                    \item L’utente visualizza un messaggio di errore.
+                \end{enumerate}
+            \item \textbf{Attore principale:} utente autenticato;
+            \item \textbf{Precondizioni:} l’utente vuole assegnare un valore agli attributi della fase di lavorazione selezionata (\textbf{UCF-5});
+            \item \textbf{Postcondizioni:} l’utente visualizza un messaggio di errore relativo all’avvenimento di un errore lato \textit{server} all’assegnazione di un valore agli attributi della fase di lavorazione selezionata.
+        \end{itemize}
+
+        \textbf{UCE-7: Visualizzazione errore lato \textit{server} all’acquisizione dei dati di controllo qualità}
+        \begin{itemize}
+            \item \textbf{Descrizione:} l’utente vuole visualizzare i \textit{log} di controllo qualità per la fase selezionata;
+            \item \textbf{Scenario:}
+                \begin{enumerate}
+                    \item L’utente visualizza un messaggio di errore.
+                \end{enumerate}
+            \item \textbf{Attore principale:} utente autenticato;
+            \item \textbf{Precondizioni:} l’utente vuole visualizzare i dati di controllo qualità per la fase selezionata (\textbf{UCF-7});
+            \item \textbf{Postcondizioni:} l’utente visualizza un messaggio di errore relativo all’avvenimento di un errore lato \textit{server} alla visualizzazione dei dati di controllo qualità.
+        \end{itemize}
+
+\subsection{Requisiti}
 
 
 \section{Progettazione}
