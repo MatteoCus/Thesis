@@ -173,8 +173,8 @@ L’applicazione presenta due attori primari, ovvero due tipologie di utente fin
     \item \textbf{Utente autenticato}: utente che ha effettuato l’autenticazione alla piattaforma tramite le proprie credenziali (nome utente, password e pin); ha accesso ad ogni funzionalità messa a disposizione.
 \end{itemize}
 
+\label{subsubsec:casi-d'uso}
 \subsubsection*{Lista dei principali casi d'uso}
-
     \textbf{UCF-2: Visualizzazione delle fasi}
         \begin{figure}[H]
             \centering
@@ -187,7 +187,7 @@ L’applicazione presenta due attori primari, ovvero due tipologie di utente fin
                 \begin{enumerate}
                     \item L’utente visualizza le fasi di lavorazione.
                 \end{enumerate}
-            \item \textbf{Estensioni:} si presenta un errore lato server alla lettura delle fasi di produzione (\textbf{UCE-3}).
+            \item \textbf{Estensioni:} si presenta un errore lato server alla lettura delle fasi di produzione (\textbf{UCE-3});
             \item \textbf{Attore principale:} utente autenticato;
             \item \textbf{Precondizioni:} l’utente è autenticato;
             \item \textbf{Postcondizioni:} l’utente visualizza le fasi di produzione.
@@ -445,10 +445,58 @@ I requisiti qui presenti sono identificati da una sigla alfanumerica così compo
     \caption{Requisiti prestazionali}
 \end{longtable}
 
-\section{Progettazione}
+\subsubsection*{Riepilogo}
+Di seguito, due tabelle riassuntive relative a:
+\begin{itemize}
+    \item Classificazione dei requisiti;
+    \item Numero di requisiti individuati per ogni tipologia.
+\end{itemize}
 
+\rowcolors{2}{white}{gray!25}
+\begin{longtable}{>{\centering\arraybackslash}m{0.25\textwidth}>{\centering\arraybackslash}m{0.25\textwidth}}
+    \hline
+    \rowcolor{black}
+    \color{white}\textbf{Classificazione requisiti} & \color{white}\textbf{Quantità} \\
+    \hline
+    \endhead % This line indicates the end of the header and the start of the repeated heading on subsequent pages
+    Obbligatori & 32 \\
+    \hline
+    Desiderabili & 3 \\
+    \hline
+    Facoltativi & 2 \\
+    \hline
+    \caption{Tabella riassuntiva delle classificazioni dei requisiti}
+\end{longtable}
+
+\rowcolors{2}{gray!25}{white}
+\begin{longtable}{>{\centering\arraybackslash}m{0.25\textwidth}>{\centering\arraybackslash}m{0.25\textwidth}}
+    \hline
+    \rowcolor{black}
+    \color{white}\textbf{Tipologia requisiti} & \color{white}\textbf{Quantità} \\
+    \hline
+    \endhead % This line indicates the end of the header and the start of the repeated heading on subsequent pages
+    Funzionali & 27 \\
+    \hline
+    Di qualità & 2 \\
+    \hline
+    Prestazionali & 2 \\
+    \hline
+    Di vincolo & 6 \\
+    \hline
+    \caption{Tabella riassuntiva dei requisiti}
+\end{longtable}
+
+\section{Progettazione}
 % In questa sezione descriverò lo scopo della progettazione in un progetto, le problematiche riscontrate e mostrerò le classi (e le loro dipendenze, quando utile e possibile, tramite il linguaggio UML) relative ai principali requisiti analizzati nella sezione precedente in modo da dare riscontro effettivo del passaggio da "requisito" a "scelta progettuale".
 % In questa sezione includerò anche la progettazione dell'interfaccia grafica relativa alle classi sopra indicate.
+Le attività di progettazione hanno come scopo l'ideazione della struttura del prodotto (a livello di programmazione, a livello di interfaccia, a livello di interazioni con l'utente e con altri sistemi) tramite delle scelte effettuate in base a determinati obiettivi (qualità del codice) ed ai requisiti individuati. \\
+L'\textit{output} della progettazione è costituito da uno o più documenti di specifica, ovvero documenti contenenti dettagli su come il \textit{software} dovrebbe essere implementato. \\
+Di seguito, si approfondiscono le scelte effettuate per:
+\begin{itemize}
+    \item La fruizione in multipli linguaggi dell'applicazione;
+    \item Definire l'interfaccia grafica;
+    \item Specificare l'implementazione per i casi d'uso riportati nella sezione \hyperref[subsubsec:casi-d'uso]{§3.3.1}.
+\end{itemize} 
 
 % fare commenti su internazionalizzazione e localizzazione
 \section{Codifica}
