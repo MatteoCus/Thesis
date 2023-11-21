@@ -157,7 +157,7 @@ I casi d'uso sono identificati da una sigla alfanumerica così composta:
 \end{center}
 
 \begin{itemize}
-    \item \textbf{UC}: abbreviativo di \textit{Use Case};
+    \item \textbf{UC}: abbreviativo di "\textit{Use Case}";
     \item \textbf{Tipologia}: tipologia del caso d'uso:
         \begin{itemize}
             \item \textbf{F}: funzionale, descrive una funzionalità;
@@ -302,6 +302,90 @@ L’applicazione presenta due attori primari, ovvero due tipologie di utente fin
         \end{itemize}
 
 \subsection{Requisiti}
+
+\subsubsection*{Nomenclatura}
+ 
+I requisiti qui presenti sono identificati da una sigla alfanumerica così composta:
+\begin{center}
+    \textbf{R[Tipologia]-[Codice]}
+\end{center}
+
+\begin{itemize}
+    \item \textbf{R}: abbreviativo di "requisito";
+    \item \textbf{Tipologia}: tipologia del requisito:
+        \begin{itemize}
+            \item \textbf{F}: funzionale, descrive una funzionalità (ciò che un prodotto consente di fare all'utente);
+            \item \textbf{Q}: di qualità, indica una caratteristica delle modalità di sviluppo;
+            \item \textbf{P}: prestazionale, indica alcune caratteristiche che il prodotto deve avere durante l'esecuzione (non ciò che consente di fare);
+            \item \textbf{V}: di vincolo, ovvero riguardante una caratteristica del prodotto stabilita prima del suo sviluppo.
+        \end{itemize}
+    \item \textbf{Codice}: identificativo numerico del requisito, può identificare dei sotto-requisiti qualora si presentasse in forma \textbf{[requisito].[sotto-requisito]}; i requisiti funzionali relativi a casi d’uso di errore presentano forma \textbf{E[requisito].[sotto-requisito]}.
+\end{itemize}
+
+\subsubsection*{Requisiti funzionali}
+\vspace{0cm}
+\begin{longtable}{>{\centering\arraybackslash}m{0.13\textwidth}>{\centering\arraybackslash}m{0.66\textwidth}>{\centering\arraybackslash}m{0.20\textwidth}>{\centering\arraybackslash}m{0.15\textwidth}}
+    \hline
+    \rowcolor{black}
+    \color{white}\textbf{Codice} & \color{white}\textbf{Descrizione} & \color{white}\textbf{Classificazione} \\
+    \hline
+    \endhead % This line indicates the end of the header and the start of the repeated heading on subsequent pages
+    RF-1 & L’utente deve poter inserire i propri dati per effettuare il \textit{login} & Obbligatorio \\
+    \hline
+    RF-1.1 & L’utente deve poter inserire la coppia “nome utente, \textit{password}” per effettuare il \textit{login} & Obbligatorio \\
+    \hline
+    RF-1.2 & L’utente deve poter inserire il \textit{pin} per effettuare il \textit{login} & Obbligatorio \\
+    \hline
+    RF-2 & L’utente deve poter visualizzare le fasi di produzione della propria filiera & Obbligatorio \\
+    \hline
+    RF-3 & L’utente deve poter filtrare le fasi di produzione della propria filiera & Obbligatorio \\
+    \hline
+    RF-3.1 & L’utente deve poter filtrare le fasi di produzione della propria filiera in base al codice dell’ordine & Obbligatorio \\
+    \hline
+    RF-3.2 & L’utente deve poter filtrare le fasi di produzione della propria filiera in base al nome del cliente & Obbligatorio \\
+    \hline
+    RF-4 & L’utente deve poter visualizzare gli attributi della fase di produzione selezionata & Obbligatorio \\
+    \hline
+    RF-5 & L’utente deve poter assegnare un valore agli attributi della fase di produzione selezionata & Obbligatorio \\
+    \hline
+    RF-5.1 & L’utente deve poter visualizzare un messaggio positivo in caso l’assegnazione di valori agli attributi avvenga correttamente & Obbligatorio \\
+    \hline
+    RF-6 & L’utente deve potersi disconnettere, uscendo dalla propria area riservata & Obbligatorio \\
+    \hline
+    RF-6.1 & L’utente deve potersi disconnettere relativamente all’operatore a cui ha eseguito l’autenticazione & Obbligatorio \\
+    \hline
+    RF-6.2 & L’utente deve potersi disconnettere da ogni accesso eseguito: operatore e azienda & Obbligatorio \\
+    \hline
+    RF-7 & L’utente deve poter visualizzare i dati di controllo qualità relativi alla fase selezionata & Obbligatorio \\
+    \hline
+    RF-8 & L’utente deve poter modificare i dati di controllo qualità relativi alla fase selezionata & Obbligatorio \\
+    \hline
+    RF-9 & L’utente deve poter eliminare i dati di controllo qualità relativi alla fase selezionata & Obbligatorio \\
+    \hline
+    RF-E1 & L’utente deve poter visualizzare un messaggio di errore in caso le credenziali inserite all’autenticazione siano errate & Obbligatorio \\
+    \hline
+    RF-E1.1 & L’utente deve poter visualizzare un errore in caso la coppia “nome utente, \textit{password}” inserita all’autenticazione sia errata & Obbligatorio \\
+    \hline
+    RF-E1.2 & L’utente deve poter visualizzare un errore in caso il \textit{pin} inserito all’autenticazione sia errato & Obbligatorio \\
+    \hline
+    RF-E2 & L’utente deve poter visualizzare un messaggio di errore in caso avvenga un errore lato \textit{server} all’autenticazione & Obbligatorio \\
+    \hline
+    RF-E3 & L’utente deve poter visualizzare un messaggio di errore in caso vi sia un errore lato \textit{backend} all’acquisizione delle fasi & Obbligatorio \\
+    \hline
+    RF-E4 & L’utente deve poter visualizzare un messaggio di errore in caso vi sia un errore lato \textit{backend} all’acquisizione degli attributi della fase di lavorazione selezionata & Obbligatorio \\
+    \hline
+    RF-E5 & L’utente deve poter visualizzare un messaggio di errore in caso vi sia un errore lato \textit{backend} all’inserimento dei valori per gli attributi della fase di lavorazione selezionata & Obbligatorio \\
+    \hline
+    RF-E6 & L’utente deve poter visualizzare un messaggio di errore in caso vi sia un errore lato \textit{backend} alla disconnessione & Obbligatorio \\
+    \hline
+    RF-E7 & L’utente deve poter visualizzare un messaggio di errore in caso vi sia un errore lato backend all’acquisizione dei \textit{log} di controllo qualità della fase di lavorazione selezionata & Obbligatorio \\
+    \hline
+    RF-E8 & L’utente deve poter visualizzare un messaggio di errore in caso vi sia un errore lato \textit{backend} all’aggiornamento dei dati di controllo qualità della fase di lavorazione selezionata & Obbligatorio \\
+    \hline
+    RF-E9 & L’utente deve poter visualizzare un messaggio di errore in caso vi sia un errore lato backend all’eliminazione dei dati di controllo qualità della fase di lavorazione selezionata & Obbligatorio \\
+    \hline
+    \caption{Requisiti funzionali}
+\end{longtable}
 
 
 \section{Progettazione}
