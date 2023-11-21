@@ -496,7 +496,65 @@ Di seguito, si approfondiscono le scelte effettuate per:
     \item La fruizione in multipli linguaggi dell'applicazione;
     \item Definire l'interfaccia grafica;
     \item Specificare l'implementazione per i casi d'uso riportati nella sezione \hyperref[subsubsec:casi-d'uso]{§3.3.1}.
-\end{itemize} 
+\end{itemize}
+
+\subsection{Internazionalizzazione e localizzazione}
+Per poter capire le scelte progettuali occorre prima dare delle definizioni ai seguenti termini:
+\begin{itemize}
+    \item \textbf{Internazionalizzazione}: è il processo di progettazione e sviluppo di un prodotto in modo tale da ridurre la difficoltà di adattarlo per renderlo fruibile da persone appartenenti a culture diverse;
+    \item \textbf{Localizzazione}: è il processo di adattamento di un prodotto in base alle esigenze culturali di una particolare area / di un particolare mercato.
+\end{itemize}
+Per quanto riguarda l’internazionalizzazione e la localizzazione del contenuto statico dell’applicazione, si è scelto di usare la libreria \textit{ngx-translate} al posto del pacchetto \textit{@angular/localize}, nativamente supportato da \textit{Angular}. \\
+Di seguito, una breve analisi sulle potenzialità e sulle carenze di entrambe le tecnologie, identificate tramite ricerche personali\footnote{\href{https://medium.com/holisticon-consultants/angular-i18n-picking-the-right-tool-for-the-job-b543460801db}{https://medium.com}} \footnote{\href{https://stackoverflow.com/questions/44923138/differences-ngx-translate-vs-i18n}{https://stackoverflow.com}} e la costruzione di applicazioni \textit{ad hoc}.
+
+\vspace{0.5cm}
+\textbf{@angular/localize}
+\begin{itemize}
+    \item [Vantaggi]:
+        \begin{itemize}
+            \item Supportato nativamente dal \textit{framework Angular};
+            \item Velocità di esecuzione delle applicazioni che la usano;
+            \item Supporto concreto per progetti di grandi dimensioni, data la scalabilità offerta (ovvero la capacità di gestire un aumento del carico di lavoro o delle risorse senza subire un degrado delle prestazioni).
+        \end{itemize}
+    \item [Svantaggi]:
+        \begin{itemize}
+            \item Necessita di una compilazione manuale per aggiornare le traduzioni;
+            \item Necessita di un passaggio manuale di dati per aggiornare ogni traduzione;
+            \item Presenza di multiple versioni dell’applicazione (una per ogni traduzione);
+            \item Ogni versione necessita del proprio processo di compilazione;
+            \item Ogni cambio di lingua si traduce nel caricamento di una versione diversa della stessa applicazione (con conseguente caricamento di una nuova pagina).
+        \end{itemize}
+\end{itemize}
+
+\vspace{0.5cm}
+\textbf{ngx-translate}
+\begin{itemize}
+    \item [Vantaggi]:
+        \begin{itemize}
+            \item Di facile utilizzo e apprendimento;
+            \item Utilizzo di file \textit{JSON}, facilmente gestibili e modificabili;
+            \item Consente di gestire la mancanza di traduzione;
+            \item Consente un cambio di linguaggio di traduzione senza necessità di ricaricare la pagina.
+        \end{itemize}
+    \item [Svantaggi]:
+        \begin{itemize}
+            \item È una libreria nata come soluzione temporanea ai problemi di internazionalizzazione del \textit{framework Angular} (\href{https://github.com/ngx-translate/core/issues/495}{https://github.com/ngx-translate/core/issues/495}) e quindi non è frequentemente aggiornata;
+            \item Appesantisce l’esecuzione dell’applicazione.
+        \end{itemize}
+\end{itemize}
+
+La scelta di \textit{ngx-translate} è stata dettata dalle ridotte dimensioni del prodotto e dalle sue esigenze, in particolare:
+\begin{enumerate}
+    \item \textbf{Integrazione in un \texttt{<iframe>}}: dato che la \textit{web app} deve essere in grado di eseguire all’interno di un \texttt{<iframe>} e l’applicazione “contenitore” utilizza tale libreria, si vuole garantire una traduzione
+    uniforme all’interno della schermata visualizzata, evitando di ricaricare l’applicazione all’interno della porzione di schermo delimitata dall’\texttt{<iframe>};
+    \item \textbf{Semplicità di sviluppo}: l’applicazione non ha dimensioni tali da prendere in considerazione misure di traduzione scalabili; questo consente di prediligere un approccio orientato alla semplicità di utilizzo durante lo sviluppo e la manutenzione del prodotto;
+    \item \textbf{Semplicità di \textit{test}}: il tempo dedicato al \textit{testing} delle traduzioni deve essere proporzionale all’apporto di tale funzionalità ed alle dimensioni dell’applicazione.
+\end{enumerate}
+
+\subsection{Interfaccia grafica}
+La progettazione dell'interfaccia grafica si è basata su colori e componenti grafiche già presenti nel \textit{software ADeMES}: la vera problematica da risolvere in queste attività era l'adattamento dell'interfaccia grafica a dispositivi con schermo di dimensioni ridotte (\textit{tablet} e \textit{smartphone}).
+
+\subsection{Lista di diagrammi delle classi}
 
 % fare commenti su internazionalizzazione e localizzazione
 \section{Codifica}
