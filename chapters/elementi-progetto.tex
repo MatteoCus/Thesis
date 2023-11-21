@@ -138,7 +138,7 @@ Per tutta la durata delle attività di \textit{stage}, sono stato affiancato in 
                 È sviluppato dalla comunità di sviluppatori di \textit{The Document Foundation} ed è una delle alternative più popolari e complete a \textit{suite} di produttività come \textit{Microsoft Office}.
 \end{itemize}
 
-\section{Analisi dei requisiti utente}
+\section{Analisi dei requisiti}
 % In questa sezione descriverò lo scopo dell'analisi dei requisiti in un progetto, le problematiche riscontrate e mostrerò i principali casi d'uso ed i principali requisiti elaborati.
 Le attività di \textbf{analisi dei requisiti} hanno come scopo la comprensione dei bisogni espressi dall'utente finale, detti "requisiti utente" (o da chi vuole risolvere tali bisogni all'utente finale, talvolta nemmeno noti all'utente finale \footnote{Fonte: \href{https://www.mountaingoatsoftware.com/articles/i-didnt-know-i-needed-that}{https://www.mountaingoatsoftware.com}}) 
 e la definizione di "ciò che deve svolgere il prodotto" per soddisfare tali bisogni, detti "requisiti del prodotto". \\
@@ -148,7 +148,7 @@ La contestualizzazione delle mie attività di \textit{stage} è stata seguita da
 \subsection{Casi d'uso}
 Con "caso d'uso" si intende un'astrazione utilizzata per catturare, descrivere e definire le interazioni tra un prodotto e gli attori (utenti o altri \textit{software}) che interagiscono con esso. \\
 Un caso d'uso è una rappresentazione (narrativa e/o schematica) di uno scenario che descrive come il sistema risponde alle richieste degli utenti in determinate circostanze. \\
-I casi d’uso qui presenti mirano a dare comprensione di come sono stati modellati i principali requisiti utente, pertanto non vengono riportati tutti i requisiti identificati in sede di \textit{stage}.
+I casi d’uso qui presenti mirano a dare comprensione dei requisiti utente principali, pertanto non vengono riportati tutti i casi d'uso identificati in sede di \textit{stage}.
 \subsubsection*{Nomenclatura}
  
 I casi d'uso sono identificati da una sigla alfanumerica così composta:
@@ -303,6 +303,9 @@ L’applicazione presenta due attori primari, ovvero due tipologie di utente fin
 
 \subsection{Requisiti}
 
+Con "requisito" si intende una specifica di ciò che un sistema software deve fare o possedere al fine di soddisfare un determinato obiettivo o risolvere un particolare problema; i requisiti sono le basi per la progettazione, lo sviluppo e la verifica di un \textit{software}. \\
+La lista di requisiti sotto riportata, a differenza della lista dei casi d'uso, è completa: serve per dare una visione completa del lavoro di analisi e offrire una base per la comprensione degli esempi di progettazione e codifica. \\
+I casi d'uso \textit{UCF-2}, \textit{UCF-4}, \textit{UCF-5} e \textit{UCF-7} sono associati rispettivamente ai requisiti \textit{RF-2}, \textit{RF-4}, \textit{RF-5} e \textit{RF-7} della tabella dei \hyperref[tab:requisiti-funzionali]{requisiti funzionali}.
 \subsubsection*{Nomenclatura}
  
 I requisiti qui presenti sono identificati da una sigla alfanumerica così composta:
@@ -323,7 +326,8 @@ I requisiti qui presenti sono identificati da una sigla alfanumerica così compo
 \end{itemize}
 
 \subsubsection*{Requisiti funzionali}
-\vspace{0cm}
+
+\rowcolors{2}{white}{gray!25}
 \begin{longtable}{>{\centering\arraybackslash}m{0.13\textwidth}>{\centering\arraybackslash}m{0.66\textwidth}>{\centering\arraybackslash}m{0.20\textwidth}>{\centering\arraybackslash}m{0.15\textwidth}}
     \hline
     \rowcolor{black}
@@ -338,11 +342,11 @@ I requisiti qui presenti sono identificati da una sigla alfanumerica così compo
     \hline
     RF-2 & L’utente deve poter visualizzare le fasi di produzione della propria filiera & Obbligatorio \\
     \hline
-    RF-3 & L’utente deve poter filtrare le fasi di produzione della propria filiera & Obbligatorio \\
+    RF-3 & L’utente deve poter filtrare le fasi di produzione della propria filiera & Desiderabile \\
     \hline
-    RF-3.1 & L’utente deve poter filtrare le fasi di produzione della propria filiera in base al codice dell’ordine & Obbligatorio \\
+    RF-3.1 & L’utente deve poter filtrare le fasi di produzione della propria filiera in base al codice dell’ordine & Desiderabile \\
     \hline
-    RF-3.2 & L’utente deve poter filtrare le fasi di produzione della propria filiera in base al nome del cliente & Obbligatorio \\
+    RF-3.2 & L’utente deve poter filtrare le fasi di produzione della propria filiera in base al nome del cliente & Desiderabile \\
     \hline
     RF-4 & L’utente deve poter visualizzare gli attributi della fase di produzione selezionata & Obbligatorio \\
     \hline
@@ -385,13 +389,66 @@ I requisiti qui presenti sono identificati da una sigla alfanumerica così compo
     RF-E9 & L’utente deve poter visualizzare un messaggio di errore in caso vi sia un errore lato backend all’eliminazione dei dati di controllo qualità della fase di lavorazione selezionata & Obbligatorio \\
     \hline
     \caption{Requisiti funzionali}
+    \label{tab:requisiti-funzionali}
 \end{longtable}
 
+\subsubsection*{Requisiti di qualità}
+\rowcolors{2}{gray!25}{white}
+\begin{longtable}{>{\centering\arraybackslash}m{0.13\textwidth}>{\centering\arraybackslash}m{0.66\textwidth}>{\centering\arraybackslash}m{0.20\textwidth}>{\centering\arraybackslash}m{0.15\textwidth}}
+    \hline
+    \rowcolor{black}
+    \color{white}\textbf{Codice} & \color{white}\textbf{Descrizione} & \color{white}\textbf{Classificazione} \\
+    \hline
+    \endhead % This line indicates the end of the header and the start of the repeated heading on subsequent pages
+    RQ-1 & Deve essere fornito un manuale utente per l’utilizzo & Obbligatorio \\
+    \hline
+    RQ-2 & Il codice sorgente deve essere presente in \textit{GitHub} & Obbligatorio \\
+    \hline
+    \caption{Requisiti di qualità}
+\end{longtable}
+
+\subsubsection*{Requisiti prestazionali}
+\rowcolors{2}{gray!25}{white}
+\begin{longtable}{>{\centering\arraybackslash}m{0.13\textwidth}>{\centering\arraybackslash}m{0.66\textwidth}>{\centering\arraybackslash}m{0.20\textwidth}>{\centering\arraybackslash}m{0.15\textwidth}}
+    \hline
+    \rowcolor{black}
+    \color{white}\textbf{Codice} & \color{white}\textbf{Descrizione} & \color{white}\textbf{Classificazione} \\
+    \hline
+    \endhead % This line indicates the end of the header and the start of the repeated heading on subsequent pages
+    RP-1 & L’interfaccia utente deve adattarsi a dispositivi \textit{tablet} & Obbligatorio \\
+    \hline
+    RP-2 & L’interfaccia utente deve adattarsi a smartphone & Facoltativo \\
+    \hline
+    \caption{Requisiti prestazionali}
+\end{longtable}
+
+\subsubsection*{Requisiti di vincolo}
+\rowcolors{2}{gray!25}{white}
+\begin{longtable}{>{\centering\arraybackslash}m{0.13\textwidth}>{\centering\arraybackslash}m{0.66\textwidth}>{\centering\arraybackslash}m{0.20\textwidth}>{\centering\arraybackslash}m{0.15\textwidth}}
+    \hline
+    \rowcolor{black}
+    \color{white}\textbf{Codice} & \color{white}\textbf{Descrizione} & \color{white}\textbf{Classificazione} \\
+    \hline
+    \endhead % This line indicates the end of the header and the start of the repeated heading on subsequent pages
+    RV-1 & L’applicazione deve essere sviluppata usando il \textit{framework Angular} alla versione 16 & Obbligatorio \\
+    \hline
+    RV-2 & L’applicazione deve sfruttare i servizi messi a disposizione dal \textit{software} di \textit{backend} aziendale & Obbligatorio \\
+    \hline
+    RV-3 & L’applicazione deve essere integrabile in un \texttt{<iframe>} \textit{HTML} dell’applicativo \textit{ADeMES} (\textit{suite} aziendale) & Obbligatorio \\
+    \hline
+    RV-4 & L’applicazione deve essere una \glslink{pwag}{Progressive Web App} & Obbligatorio \\
+    \hline
+    RV-5 & L’applicazione deve essere fruibile in inglese & Obbligatorio \\
+    \hline
+    RV-6 & L’applicazione deve essere fruibile in spagnolo & Facoltativo \\
+    \hline
+    \caption{Requisiti prestazionali}
+\end{longtable}
 
 \section{Progettazione}
 
-In questa sezione descriverò lo scopo della progettazione in un progetto, le problematiche riscontrate e mostrerò le classi (e le loro dipendenze, quando utile e possibile, tramite il linguaggio UML) relative ai principali requisiti analizzati nella sezione precedente in modo da dare riscontro effettivo del passaggio da "requisito" a "scelta progettuale".
-In questa sezione includerò anche la progettazione dell'interfaccia grafica relativa alle classi sopra indicate.
+% In questa sezione descriverò lo scopo della progettazione in un progetto, le problematiche riscontrate e mostrerò le classi (e le loro dipendenze, quando utile e possibile, tramite il linguaggio UML) relative ai principali requisiti analizzati nella sezione precedente in modo da dare riscontro effettivo del passaggio da "requisito" a "scelta progettuale".
+% In questa sezione includerò anche la progettazione dell'interfaccia grafica relativa alle classi sopra indicate.
 
 % fare commenti su internazionalizzazione e localizzazione
 \section{Codifica}
