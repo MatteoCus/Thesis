@@ -1,0 +1,88 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="559.58642578125"
+    height="220">
+    <defs />
+    <g>
+        <g transform="translate(-62,-270) scale(1,1)">
+            <rect fill="#ffffff" stroke="none" x="248" y="280" width="168" height="32" />
+        </g>
+        <g transform="translate(-62,-270) scale(1,1)">
+            <path fill="none" stroke="#000000" d="M 248 280 L 416 280 L 416 312 L 248 312 L 248 280 Z Z"
+                stroke-miterlimit="10" />
+        </g>
+        <g transform="translate(-62,-270) scale(1,1)">
+            <g>
+                <path fill="none" stroke="none" /><text fill="#000000" stroke="none" font-family="Arial"
+                    font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="258.32275390625"
+                    y="297.5">AuthInformationService</text>
+            </g>
+        </g>
+        <g transform="translate(-62,-270) scale(1,1)">
+            <rect fill="#ffffff" stroke="none" x="72" y="448" width="127" height="32" />
+        </g>
+        <g transform="translate(-62,-270) scale(1,1)">
+            <path fill="none" stroke="#000000" d="M 72 448 L 199 448 L 199 480 L 72 480 L 72 448 Z Z"
+                stroke-miterlimit="10" />
+        </g>
+        <g transform="translate(-62,-270) scale(1,1)">
+            <g>
+                <path fill="none" stroke="none" /><text fill="#000000" stroke="none" font-family="Arial"
+                    font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="76.628662109375"
+                    y="465.5">PhasesComponent</text>
+            </g>
+        </g>
+        <g transform="translate(-62,-270) scale(1,1)">
+            <rect fill="#ffffff" stroke="none" x="256" y="448" width="146.71240234375" height="32" />
+        </g>
+        <g transform="translate(-62,-270) scale(1,1)">
+            <path fill="none" stroke="#000000"
+                d="M 256 448 L 402.71240234375 448 L 402.71240234375 480 L 256 480 L 256 448 Z Z"
+                stroke-miterlimit="10" />
+        </g>
+        <g transform="translate(-62,-270) scale(1,1)">
+            <g>
+                <path fill="none" stroke="none" /><text fill="#000000" stroke="none" font-family="Arial"
+                    font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="260.5"
+                    y="465.5">LogViewerComponent</text>
+            </g>
+        </g>
+        <g transform="translate(-62,-270) scale(1,1)">
+            <rect fill="#ffffff" stroke="none" x="456" y="448" width="155.58642578125" height="32" />
+        </g>
+        <g transform="translate(-62,-270) scale(1,1)">
+            <path fill="none" stroke="#000000"
+                d="M 456 448 L 611.58642578125 448 L 611.58642578125 480 L 456 480 L 456 448 Z Z"
+                stroke-miterlimit="10" />
+        </g>
+        <g transform="translate(-62,-270) scale(1,1)">
+            <g>
+                <path fill="none" stroke="none" /><text fill="#000000" stroke="none" font-family="Arial"
+                    font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="460.5"
+                    y="465.5">LogModifierComponent</text>
+            </g>
+        </g>
+        <g transform="translate(-62,-270) scale(1,1)">
+            <path fill="none" stroke="#000000" d="M 155 447 L 312 313" stroke-miterlimit="10" />
+        </g>
+        <g transform="translate(-62,-270) scale(1,1)">
+            <path fill="none" stroke="#000000"
+                d="M 307.00283106541235 322.7994031777038 L 312 313 L 301.5372435210829 316.3956923981537"
+                stroke-miterlimit="10" />
+        </g>
+        <g transform="translate(-62,-270) scale(1,1)">
+            <path fill="none" stroke="#000000" d="M 329 447 L 332 313" stroke-miterlimit="10" />
+        </g>
+        <g transform="translate(-62,-270) scale(1,1)">
+            <path fill="none" stroke="#000000"
+                d="M 335.9809976213632 323.25434824543714 L 332 313 L 327.56407123295645 323.0659095949504"
+                stroke-miterlimit="10" />
+        </g>
+        <g transform="translate(-62,-270) scale(1,1)">
+            <path fill="none" stroke="#000000" d="M 513 447 L 352 313" stroke-miterlimit="10" />
+        </g>
+        <g transform="translate(-62,-270) scale(1,1)">
+            <path fill="none" stroke="#000000"
+                d="M 362.504048806992 316.26572482924246 L 352 313 L 357.11826796909185 322.7367003135851"
+                stroke-miterlimit="10" />
+        </g>
+    </g>
+</svg>

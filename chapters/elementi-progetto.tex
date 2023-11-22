@@ -456,7 +456,7 @@ Di seguito, due tabelle riassuntive relative a:
 \begin{longtable}{>{\centering\arraybackslash}m{0.25\textwidth}>{\centering\arraybackslash}m{0.25\textwidth}}
     \hline
     \rowcolor{black}
-    \color{white}\textbf{Classificazione requisiti} & \color{white}\textbf{Quantità} \\
+    \color{white}\textbf{Classificazione} & \color{white}\textbf{Quantità} \\
     \hline
     \endhead % This line indicates the end of the header and the start of the repeated heading on subsequent pages
     Obbligatori & 32 \\
@@ -472,7 +472,7 @@ Di seguito, due tabelle riassuntive relative a:
 \begin{longtable}{>{\centering\arraybackslash}m{0.25\textwidth}>{\centering\arraybackslash}m{0.25\textwidth}}
     \hline
     \rowcolor{black}
-    \color{white}\textbf{Tipologia requisiti} & \color{white}\textbf{Quantità} \\
+    \color{white}\textbf{Tipologia} & \color{white}\textbf{Quantità} \\
     \hline
     \endhead % This line indicates the end of the header and the start of the repeated heading on subsequent pages
     Funzionali & 27 \\
@@ -599,12 +599,12 @@ Questa pagina appare dopo l'autenticazione ed è contraddistinta dai seguenti el
 	\centering
 	\begin{subfigure}[t]{.5\textwidth}
 	  \centering
-	  \fbox{\includegraphics[height=11cm]{ui-design/mobile.png}}
+	  \includegraphics[height=10cm]{ui-design/mobile.png}
 	  \caption{Visualizzazione principale - \textit{tablet}}
 	\end{subfigure}%
 	\begin{subfigure}[t]{.5\textwidth}
 	  \centering
-	  \fbox{\includegraphics[height=11cm]{ui-design/smartphone.png}}
+	  \includegraphics[height=10cm]{ui-design/smartphone.png}
 	  \caption{Visualizzazione principale - \textit{smartphone}}
 	\end{subfigure}
 	\caption{Visualizzazione principale adattata a dispositivi mobili}
@@ -618,9 +618,63 @@ Questa pagina appare dopo l'autenticazione ed è contraddistinta dai seguenti el
     \caption{Visualizzazione principale con colori chiari}
 \end{figure}
 
-\subsection{Lista di diagrammi delle classi}
+\subsection{Architettura}
+L'architettura del prodotto si basa sui concetti di "servizio" e "componente" \textit{Angular}:
+\begin{itemize}
+    \item \textbf{Componente}: un componente del \textit{framework Angular} è una parte riutilizzabile e autonoma dell'interfaccia utente, associata a una porzione specifica della pagina \textit{web} o dell'applicazione. \\
+            Un componente \textit{Angular} è composto da un \textit{file TypeScript} che definisce la logica del componente, un \textit{file HTML} che definisce la struttura grafica, un \textit{file} di stile \textit{CSS} per la presentazione e un \textit{file} di \textit{test} per la verifica dell'implementazione;
+    \item \textbf{Servizio}: un servizio del \textit{framework Angular} è una classe \textit{singleton} (ovvero della quale esiste una sola istanza in tutto il \textit{software}, durante la sua esecuzione) che consente di avere funzionalità specifiche o dati condivisi all'interno di un'applicazione. \\
+            I servizi in \textit{Angular} sono ideati per fornire una separazione delle responsabilità e consentono di manipolare dati, facilitare la comunicazione tra componenti ed effettuare richieste a \textit{software backend}.
+\end{itemize}
+Di seguito si riporta l'architettura delle classi relative ai casi d'uso fondamentali, indicati nella sezione \hyperref[subsubsec:casi-d'uso]{§3.3.1}.
 
-% fare commenti su internazionalizzazione e localizzazione
+\subsubsection*{Servizio di gestione delle informazioni riservate}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{class-design/auth.png}
+    \caption{Diagramma delle classi del servizio di autenticazione}
+\end{figure}
+
+Il servizio \textit{AuthInformationService} consente la gestione delle informazioni di autenticazione: nome utente, identificativo utente, tema grafico predefinito all'avvio e informazioni necessarie alla comunicazione con i servizi di \textit{backend} esposti.\\
+Classi relative a componenti \textit{Angular}:
+\begin{itemize}
+    \item \textit{PhasesComponent}: si occupa della gestione delle fasi di lavorazione;
+    \item \textit{LogViewerComponent}: si occupa della visualizzazione dei dati di controllo qualità;
+    \item \textit{LogModifierComponent}: si occupa delle operazioni sui dati di controllo qualità salvati.
+\end{itemize}
+
+\subsubsection*{Componente di gestione delle fasi}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{class-design/phases.png}
+    \caption{Diagramma delle classi del componente di gestione delle fasi}
+\end{figure}
+Classi relative a servizi \textit{Angular}:
+\begin{itemize}
+    \item \textit{QualityPhaseService}: servizio per l'ottenimento delle fasi di lavorazione;
+    \item \textit{ActivePhaseService}: servizio di gestione della fase selezionata dall'utente, serve per ottenere dinamicamente gli attributi per il controllo qualità.
+\end{itemize}
+
+\subsubsection*{Componente di modifica dei dati di controllo qualità}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{class-design/logmodifier.png}
+    \caption{Diagramma delle classi del componente di modifica dei dati di qualità}
+\end{figure}
+Classi relative a servizi \textit{Angular}:
+\begin{itemize}
+    \item \textit{QualitySaveLogService}: servizio per l'esecuzione di operazioni sui dati di controllo qualità;
+    \item \textit{QualityAttributeService}: servizio per l'ottenimento degli attributi per la fase di lavorazione attiva;
+    \item \textit{ActiveAttributesService}: servizio di gestione degli attributi del controllo qualità per la fase selezionata dall'utente.
+\end{itemize}
+
+\subsubsection*{Componente di visualizzazione dei dati di controllo qualità}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{class-design/logviewer.png}
+    \caption{Diagramma delle classi del componente di visualizzazione dei dati di qualità}
+\end{figure}
+
 \section{Codifica}
 
 In questa sezione descriverò lo scopo della codifica in un progetto ed indicherò le problematiche riscontrate.
