@@ -801,7 +801,7 @@ Di seguito si riporta il contenuto dei file \textit{TypeScript} relativi alle cl
 
 
 \subsection*{Visualizzazione e valorizzazione degli attributi}
-\begin{lstlisting}[language=JavaScript, caption={Visualizzazione e valorizzazione degli attributi - TypeScript}]
+\begin{lstlisting}[language=JavaScript, caption={Aggiornamento della tabella di aggiunta / modifica dei dati di controllo qualità}]
 
   /**
    * Metodo che consente di aggiornare la tabella ad ogni cambio degli attributi attivi (avviene quando si aggiorna la fase attiva)
@@ -859,6 +859,9 @@ Di seguito si riporta il contenuto dei file \textit{TypeScript} relativi alle cl
         this.loadingService.stopModifierLoading();
       });
   }
+\end{lstlisting}
+
+\begin{lstlisting}[language=JavaScript, caption={Aggiunta di dati di controllo qualità}]
 
     /**
     * Metodo per aggiungere un nuovo log relativo alla fase di qualita' attiva
@@ -878,7 +881,9 @@ Di seguito si riporta il contenuto dei file \textit{TypeScript} relativi alle cl
        error: (error) => this.openFailSnackBar("Errore " + error.status + " - " + error.error.description, "X")
      })
    }
+\end{lstlisting}
 
+\begin{lstlisting}[language=JavaScript, caption={Modifica di dati di controllo qualità}]
     /**
     * Metodo per aggiornare un log relativo alla fase di qualita' attiva
     */
@@ -996,8 +1001,8 @@ Di seguito si riporta il contenuto dei file \textit{TypeScript} relativi alle cl
     
 % \end{lstlisting}
 
-\subsection*{Modifica dei dati di qualità}
-\begin{lstlisting}[language=JavaScript, caption={Modifica dei dati di qualità - TypeScript}]
+\subsection*{Visualizzazione dei dati di qualità}
+\begin{lstlisting}[language=JavaScript, caption={Aggiornamento degli attributi caratterizzanti il controllo qualità}]
     /**
     * Metodo per ottenere colonne e log salvati per la fase attuale, indica quando il caricamento e' terminato (per far sparire lo splash-screen)
     */
@@ -1028,7 +1033,9 @@ Di seguito si riporta il contenuto dei file \textit{TypeScript} relativi alle cl
       }, 5500);
     });
   }
+\end{lstlisting}
 
+\begin{lstlisting}[language=JavaScript, caption={Aggiornamento della tabella di visualizzazione dei dati di controllo qualità}]
   /**
    * Metodo per aggiornare la tabella di visualizzazione dei log
    * @param phase Fase della quale ottenere i log di qualita'
