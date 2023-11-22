@@ -505,7 +505,8 @@ Per poter capire le scelte progettuali occorre prima dare delle definizioni ai s
     \item \textbf{Localizzazione}: è il processo di adattamento di un prodotto in base alle esigenze culturali di una particolare area / di un particolare mercato.
 \end{itemize}
 Per quanto riguarda l’internazionalizzazione e la localizzazione del contenuto statico dell’applicazione, si è scelto di usare la libreria \textit{ngx-translate} al posto del pacchetto \textit{@angular/localize}, nativamente supportato da \textit{Angular}. \\
-Di seguito, una breve analisi sulle potenzialità e sulle carenze di entrambe le tecnologie, identificate tramite ricerche personali\footnote{\href{https://medium.com/holisticon-consultants/angular-i18n-picking-the-right-tool-for-the-job-b543460801db}{https://medium.com}} \footnote{\href{https://stackoverflow.com/questions/44923138/differences-ngx-translate-vs-i18n}{https://stackoverflow.com}} e la costruzione di applicazioni \textit{ad hoc}.
+Di seguito, una breve analisi sulle potenzialità e sulle carenze di entrambe le tecnologie, identificate tramite ricerche personali\footnote{\href{https://medium.com/holisticon-consultants/angular-i18n-picking-the-right-tool-for-the-job-b543460801db}{https://medium.com}} \footnote{\href{https://stackoverflow.com/questions/44923138/differences-ngx-translate-vs-i18n}{https://stackoverflow.com}} 
+\footnote{\href{https://github.com/ngx-translate/core/issues/495}{https://github.com}} e la costruzione di applicazioni \textit{ad hoc}.
 
 \vspace{0.5cm}
 \textbf{@angular/localize}
@@ -538,7 +539,7 @@ Di seguito, una breve analisi sulle potenzialità e sulle carenze di entrambe le
         \end{itemize}
     \item [Svantaggi]:
         \begin{itemize}
-            \item È una libreria nata come soluzione temporanea ai problemi di internazionalizzazione del \textit{framework Angular} (\href{https://github.com/ngx-translate/core/issues/495}{https://github.com/ngx-translate/core/issues/495}) e quindi non è frequentemente aggiornata;
+            \item È una libreria nata come soluzione temporanea ai problemi di internazionalizzazione del \textit{framework Angular} e quindi non è frequentemente aggiornata;
             \item Appesantisce l’esecuzione dell’applicazione.
         \end{itemize}
 \end{itemize}
@@ -552,7 +553,70 @@ La scelta di \textit{ngx-translate} è stata dettata dalle ridotte dimensioni de
 \end{enumerate}
 
 \subsection{Interfaccia grafica}
-La progettazione dell'interfaccia grafica si è basata su colori e componenti grafiche già presenti nel \textit{software ADeMES}: la vera problematica da risolvere in queste attività era l'adattamento dell'interfaccia grafica a dispositivi con schermo di dimensioni ridotte (\textit{tablet} e \textit{smartphone}).
+La progettazione dell'interfaccia grafica si è basata su colori e componenti grafiche già presenti nel \textit{software ADeMES}: la vera problematica da risolvere in queste attività è stata l'adattamento dell'interfaccia grafica a dispositivi con schermo di dimensioni ridotte (\textit{tablet} e \textit{smartphone}).
+
+\subsubsection*{Login - passo 1}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{ui-design/login-1.png}
+    \caption{Interfaccia ideata per la prima schermata di autenticazione}
+\end{figure}
+L’interfaccia per il primo passo di accesso è minimale, essendo costituita dal logo dell’applicazione ed un \textit{form} contenente due caselle di testo ed un bottone.
+
+\subsubsection*{Login - passo 2}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{ui-design/login-2.png}
+    \caption{Interfaccia ideata per la seconda schermata di autenticazione}
+\end{figure}
+L’interfaccia per il secondo passo di accesso è molto simile all’interfaccia per il primo passo, con l’unica differenza di avere una “pulsantiera” per l’inserimento del \textit{pin}; tale scelta è stata effettuata per compatibilità con l’interfaccia grafica del software \textit{ADeMES}, nel quale \textit{ADeQA} dovrà integrarsi.
+
+\subsubsection*{Visualizzazione principale}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{ui-design/principale.png}
+    \caption{Interfaccia ideata per la visualizzazione principale}
+\end{figure}
+Questa pagina appare dopo l'autenticazione ed è contraddistinta dai seguenti elementi:
+\begin{itemize}
+    \item \textbf{Menù centrale}: contiene l’indicazione della data attuale (mese, anno e settimana corrente), un \textit{widget} per cambiare il tema dell’applicazione (chiaro / scuro), un \textit{widget} per cambiare lingua all’applicazione, il nome utente dell’utente che ha fatto l’accesso ed il logo aziendale;
+    \item \textbf{Menù laterale}: contiene il logo della \textit{suite} di prodotti aziendali ed un pulsante per eseguire il \textit{logout};
+    \item \textbf{Barra laterale}: contiene una lista delle fasi di lavorazione attive per l’organizzazione di cui fa parte l’utente che ha fatto l’accesso all’applicazione (con scorrimento verticale in caso eccedessero lo spazio verticale a disposizione); 
+                                in alto si trova uno strumento di ricerca / filtraggio atto a ridurre il numero di fasi visualizzate;
+    \item \textbf{Cornice principale}
+        \begin{itemize}
+            \item \textbf{Attributi}: questa porzione di schermo consente l’aggiunta e la modifica di informazioni relative al controllo qualità tramite una tabella avente numero di colonne variabile (in base al numero degli attributi);
+            \item \textbf{\textit{Log}}: questa porzione di schermo consente la visualizzazione delle informazioni di controllo qualità già inserite per la fase selezionata (oltre alla possibilità di eliminare e indicare la volontà di modificare tali informazioni).
+        \end{itemize}
+\end{itemize}
+
+\subsubsection*{Visualizzazione per dispositivi mobili}
+
+  \begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{.5\textwidth}
+	  \centering
+	  \fbox{\includegraphics[height=11cm]{ui-design/mobile.png}}
+	  \caption{Visualizzazione principale - \textit{tablet}}
+	\end{subfigure}%
+	\begin{subfigure}[t]{.5\textwidth}
+	  \centering
+	  \fbox{\includegraphics[height=11cm]{ui-design/smartphone.png}}
+	  \caption{Visualizzazione principale - \textit{smartphone}}
+	\end{subfigure}
+	\caption{Visualizzazione principale adattata a dispositivi mobili}
+\end{figure}
+
+\subsubsection*{Visualizzazione con tema chiaro}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{ui-design/tema-chiaro.png}
+    \caption{Visualizzazione principale con colori chiari}
+\end{figure}
 
 \subsection{Lista di diagrammi delle classi}
 
