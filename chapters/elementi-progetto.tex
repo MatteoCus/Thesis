@@ -1176,7 +1176,7 @@ In seguito all'accettazione del prodotto, ho potuto dedicare i restanti giorni a
 
 \section{Risultato finale}
 % In questa sezione descriverò i prodotti di progetto dal punto di vista della qualità (qui vi sarà particolare enfasi sul prodotto software) e della quantità.
-Riporto alcune statistiche di progetto, seguite da alcune schermate dell'applicazione \textit{ADeQA} spiegando, ove necessario, le differenze tra l'interfaccia grafica realizzata e l'interfaccia grafica progettata.
+Riporto alcune statistiche di progetto, seguite da schermate dell'applicazione \textit{ADeQA} e spiegazione, ove necessario, delle differenze tra l'interfaccia grafica realizzata e l'interfaccia grafica progettata.
 
 \subsection{Statistiche qualitative e quantitative}
 \subsubsection*{Requisiti soddisfatti}
@@ -1201,5 +1201,47 @@ Il prodotto sviluppato ricopre tutti i requisiti indicati nelle tabelle della se
 
 \subsubsection*{\textit{Code coverage}}
 Con "\textit{code coverage}" si fa riferimento a una metrica utilizzata nel campo dello sviluppo \textit{software} per valutare quanto del codice sorgente di un'applicazione è stato eseguito durante l'esecuzione di un insieme di \textit{test}; non garantisce necessariamente la qualità dei \textit{test} eseguiti 
-e può rilevare la presenza di malfunzionamenti, ma non dimostra la loro assenza (\textit{Djikstra} \footnote{Fonte: \href{https://vitolavecchia.altervista.org/tecniche-metodologie-test-software/}{https://vitolavecchia.altervista.org}}). \\
+e può rilevare la presenza di malfunzionamenti, ma non dimostra la loro assenza (\textit{Dijkstra} \footnote{Fonte: \href{https://vitolavecchia.altervista.org/tecniche-metodologie-test-software/}{https://vitolavecchia.altervista.org}}). \\
+Le metriche di \textit{code coverage} utilizzate nel progetto sono:
+\begin{itemize}
+  \item \textit{\textbf{Line coverage}}: indica la percentuale di linee di codice eseguite durante l'esecuzione dei \textit{test} rispetto al totale delle linee di codice sulle quali la prova viene eseguita;
+  \item \textit{\textbf{Branch coverage}}: percentuale di rami condizionali (decisioni) che sono stati attraversati durante l'esecuzione dei \textit{test} rispetto al totale dei rami presenti nel codice;
+  \item \textit{\textbf{Statement coverage}}: percentuale di istruzioni che sono state eseguite durante l'esecuzione dei \textit{test} rispetto al totale delle istruzioni nel codice;
+  \item \textit{\textbf{Function coverage}}: percentuale di funzioni che sono state "chiamate" durante l'esecuzione dei \textit{test} rispetto al totale delle funzioni nel codice.
+\end{itemize}
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{test.png}
+  \caption[\textit{Code coverage} di progetto]{\textit{Code coverage} di progetto}
+\end{figure}
+
+\subsubsection*{Quantità di prodotti}
+Nelle statistiche sotto riportate, si può notare che la voce "linee di codice" differisce dal totale delle linee di codice testate dell'immagine conclusiva della sezione precedente: il motivo si trova nel fatto che le linee di codice testate non comprendono 
+istruzioni di dichiarazione variabili, importazione di file e, in generale, tutto ciò che non è contenuto all'interno di un metodo.
+
+\rowcolors{2}{gray!25}{white}
+\begin{longtable}{>{\centering\arraybackslash}m{0.50\textwidth}>{\centering\arraybackslash}m{0.25\textwidth}}
+    \hline
+    \rowcolor{black}
+    \color{white}\textbf{Metrica} & \color{white}\textbf{Valore}\\
+    \hline
+    \endhead % This line indicates the end of the header and the start of the repeated heading on subsequent pages
+    Documenti prodotti & 3 \\
+    \hline
+    Pagine di documentazione & 69 \\
+    \hline
+    Componenti \textit{Angular} & 11 \\
+    \hline
+    Servizi \textit{Angular} & 9 \\
+    \hline
+    \textit{Pipes Angular} & 2 \\
+    \hline
+    Modelli \textit{TypeScript} & 1 \\
+    \hline
+    Linee di codice & 4582 \\
+    \hline
+    Numero di file & 67 \\
+    \hline
+    \caption{Tabella riassuntiva dei requisiti soddisfatti}
+\end{longtable}
