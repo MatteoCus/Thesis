@@ -98,7 +98,7 @@ Per tutta la durata delle attività di \textit{stage}, sono stato affiancato in 
     \begin{itemize}
         \item [\textit{Versione}:] 5.1.6
         \item [\textit{Descrizione}:] è un linguaggio di programmazione \textit{open-source} sviluppato da \textit{Microsoft}. \\
-                È una versione "\textit{superset}" di \textit{JavaScript}, il che significa che aggiunge nuove funzionalità e tipizzazione statica al linguaggio JavaScript.
+                È una versione "\textit{superset}" di \textit{JavaScript}, il che significa che aggiunge nuove funzionalità e tipizzazione statica al linguaggio \textit{JavaScript}.
     \end{itemize}
 
     \subsubsection*{Visual Studio Code}
@@ -170,7 +170,7 @@ I casi d'uso sono identificati da una sigla alfanumerica così composta:
 L’applicazione presenta due attori primari, ovvero due tipologie di utente finale:
 \begin{itemize}
     \item \textbf{Utente non autenticato}: utente che non ha ancora effettuato l’autenticazione, avrà funzionalità limitate rispetto ad un utente autenticato;
-    \item \textbf{Utente autenticato}: utente che ha effettuato l’autenticazione alla piattaforma tramite le proprie credenziali (nome utente, password e pin); ha accesso ad ogni funzionalità messa a disposizione.
+    \item \textbf{Utente autenticato}: utente che ha effettuato l’autenticazione alla piattaforma tramite le proprie credenziali (nome utente, \textit{password} e \textit{pin}); ha accesso ad ogni funzionalità messa a disposizione.
 \end{itemize}
 
 \label{subsubsec:casi-d'uso}
@@ -247,7 +247,7 @@ L’applicazione presenta due attori primari, ovvero due tipologie di utente fin
                     \item L’utente seleziona una fase di produzione;
                     \item L’utente visualizza i \textit{log} per la fase selezionata.
                 \end{enumerate}
-            \item \textbf{Estensioni:} si presenta un errore lato server durante il tentativo di acquisire i log di controllo qualità (\textbf{UCE-7});
+            \item \textbf{Estensioni:} si presenta un errore lato server durante il tentativo di acquisire i \textit{log} di controllo qualità (\textbf{UCE-7});
             \item \textbf{Attore principale:} utente autenticato;
             \item \textbf{Precondizioni:} l’utente è autenticato;
             \item \textbf{Postcondizioni:} l’utente visualizza i dati di controllo qualità inseriti per la fase selezionata.
@@ -556,7 +556,7 @@ La scelta di \textit{ngx-translate} è stata dettata dalle ridotte dimensioni de
 \subsection{Interfaccia grafica}
 La \textbf{progettazione} dell'interfaccia grafica si è basata su colori e componenti grafiche già presenti nel \textit{software ADeMES}: la vera problematica da risolvere in queste attività è stata l'adattamento dell'interfaccia grafica a dispositivi con schermo di dimensioni ridotte (\textit{tablet} e \textit{smartphone}).
 
-\subsubsection*{Login - passo 1}
+\subsubsection*{Autenticazione - passo 1}
 
 \begin{figure}[H]
     \centering
@@ -565,14 +565,14 @@ La \textbf{progettazione} dell'interfaccia grafica si è basata su colori e comp
 \end{figure}
 L’interfaccia per il primo passo di accesso è minimale, essendo costituita dal logo dell’applicazione ed un \textit{form} contenente due caselle di testo ed un bottone.
 
-\subsubsection*{Login - passo 2}
+\subsubsection*{Autenticazione - passo 2}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{ui-design/login-2.png}
     \caption{Interfaccia ideata per la seconda schermata di autenticazione}
 \end{figure}
-L’interfaccia per il secondo passo di accesso è molto simile all’interfaccia per il primo passo, con l’unica differenza di avere una “pulsantiera” per l’inserimento del \textit{pin}; tale scelta è stata effettuata per compatibilità con l’interfaccia grafica del software \textit{ADeMES}, nel quale \textit{ADeQA} dovrà integrarsi.
+L’interfaccia per il secondo passo di accesso è molto simile all’interfaccia per il primo passo, con l’unica differenza di avere una “pulsantiera” per l’inserimento del \textit{pin}; tale scelta è stata effettuata per compatibilità con l’interfaccia grafica del \textit{software ADeMES}, nel quale \textit{ADeQA} dovrà integrarsi.
 
 \subsubsection*{Visualizzazione principale}
 
@@ -583,7 +583,7 @@ L’interfaccia per il secondo passo di accesso è molto simile all’interfacci
 \end{figure}
 Questa pagina appare dopo l'autenticazione ed è contraddistinta dai seguenti elementi:
 \begin{itemize}
-    \item \textbf{Menù centrale}: contiene l’indicazione della data attuale (mese, anno e settimana corrente), un \textit{widget} per cambiare il tema dell’applicazione (chiaro / scuro), un \textit{widget} per cambiare lingua all’applicazione, il nome utente dell’utente che ha fatto l’accesso ed il logo aziendale;
+    \item \textbf{Menù centrale}: contiene l’indicazione della data attuale (mese, anno e settimana corrente), un \textit{widget} per cambiare il tema dell’applicazione (chiaro / scuro), un \textit{widget} per cambiare lingua all’applicazione, il nome utente dell’utente che ha eseguito l’accesso ed il logo aziendale;
     \item \textbf{Menù laterale}: contiene il logo della \textit{suite} di prodotti aziendali ed un pulsante per eseguire il \textit{logout};
     \item \textbf{Barra laterale}: contiene una lista delle fasi di lavorazione attive per l’organizzazione di cui fa parte l’utente che ha fatto l’accesso all’applicazione (con scorrimento verticale in caso eccedessero lo spazio verticale a disposizione);
                                 in alto si trova uno strumento di ricerca / filtraggio atto a ridurre il numero di fasi visualizzate;
@@ -1245,3 +1245,53 @@ istruzioni di dichiarazione variabili, importazione di file e, in generale, tutt
     \hline
     \caption{Tabella riassuntiva dei requisiti soddisfatti}
 \end{longtable}
+
+\subsection{Interfaccia grafica}
+\subsubsection*{Autenticazione}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{user-manual/login-username.png}
+  \caption{Schermata di autenticazione - passo 1}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{user-manual/login-pin.png}
+  \caption{Schermata di autenticazione - passo 2}
+\end{figure}
+Entrambe le schermate di autenticazione sono state realizzate rispettando le specifiche di progettazione grafica.
+
+\subsubsection*{Visualizzazione principale}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{user-manual/dashboard.png}
+  \caption{Schermata principale}
+\end{figure}
+Anche in questo caso, vi è un'importante somiglianza con l'interfaccia ideata nel processo di \textbf{progettazione}: dalle figure sottostanti, si possono capire quali sono state le modifiche apportate alle specifiche.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{user-manual/intestazione.png}
+  \caption{Intestazione - visualizzazione \textit{desktop}}
+\end{figure}
+Il \textit{widget} di intestazione è stato dotato, a sinistra, di un pulsante grafico che serve per mostrare / far scomparire la lista di fasi di lavorazione.
+
+\begin{figure}[H]
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[height=75mm]{user-manual/barra-laterale.png}
+    \caption{Barra laterale}
+  \end{minipage}%
+  \begin{minipage}{0.7\textwidth}
+    Per quanto riguarda la visualizzazione \textit{desktop}, la barra laterale contiene un pulsante di disconnessione in più rispetto alla progettazione: questo è stato concesso per evitare la ri-esecuzione del primo passo di autenticazione agli utenti che vogliono autenticarsi come fossero un altro operatore.
+  \end{minipage}
+  
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{user-manual/intestazione-mobile.png}
+  \caption{Intestazione - visualizzazione \textit{mobile}}
+\end{figure}
+Per quanto riguarda la visualizzazione per dispositivi mobili, la barra di intestazione (così come la barra laterale per la visualizzazione \textit{desktop}) contiene un pulsante di disconnessione in più rispetto alla progettazione.
