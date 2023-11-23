@@ -142,7 +142,7 @@ Per tutta la durata delle attività di \textit{stage}, sono stato affiancato in 
 % In questa sezione descriverò lo scopo dell'analisi dei requisiti in un progetto, le problematiche riscontrate e mostrerò i principali casi d'uso ed i principali requisiti elaborati.
 Le attività di \textbf{analisi dei requisiti} hanno come scopo la comprensione dei bisogni espressi dall'utente finale, detti "requisiti utente" (o da chi vuole risolvere tali bisogni all'utente finale, talvolta nemmeno noti all'utente finale \footnote{Fonte: \href{https://www.mountaingoatsoftware.com/articles/i-didnt-know-i-needed-that}{https://www.mountaingoatsoftware.com}})
 e la definizione di "ciò che deve svolgere il prodotto" per soddisfare tali bisogni, detti "requisiti del prodotto". \\
-Ho iniziato le attività di analisi con un incontro sincrono, insieme al tutor aziendale, relativo all'infrastruttura aziendale esistente (contesto delle attività produttive) e al ruolo che il prodotto da sviluppare (di nome \textit{ADeQA}) ricopre in questo contesto. \\
+Ho iniziato le attività di \textbf{analisi} con un incontro sincrono, insieme al tutor aziendale, relativo all'infrastruttura aziendale esistente (contesto delle attività produttive) e al ruolo che il prodotto da sviluppare (di nome \textit{ADeQA}) ricopre in questo contesto. \\
 La contestualizzazione delle mie attività di \textit{stage} è stata seguita da una spiegazione dei bisogni da soddisfare: sono stati necessari più passi di raffinazione (descritti in seguito) dei bisogni espressi per arrivare a definire i requisiti del prodotto.
 
 \subsection{Casi d'uso}
@@ -303,8 +303,8 @@ L’applicazione presenta due attori primari, ovvero due tipologie di utente fin
 
 \subsection{Requisiti}
 
-Con "requisito" si intende una specifica di ciò che un sistema software deve fare o possedere al fine di soddisfare un determinato obiettivo o risolvere un particolare problema; i requisiti sono le basi per la progettazione, lo sviluppo e la verifica di un \textit{software}. \\
-La lista di requisiti sotto riportata, a differenza della lista dei casi d'uso, è completa: serve per dare una visione completa del lavoro di analisi e offrire una base per la comprensione degli esempi di progettazione e codifica. \\
+Con "requisito" si intende una specifica di ciò che un sistema software deve fare o possedere al fine di soddisfare un determinato obiettivo o risolvere un particolare problema; i requisiti sono le basi per la \textbf{progettazione} e la \textbf{verifica} di un \textit{software}. \\
+La lista di requisiti sotto riportata, a differenza della lista dei casi d'uso, è completa: serve per dare una visione completa del lavoro di \textbf{analisi} e offrire una base per la comprensione degli esempi di \textbf{progettazione} e \textbf{codifica}. \\
 I casi d'uso \textit{UCF-2}, \textit{UCF-4}, \textit{UCF-5} e \textit{UCF-7} sono associati rispettivamente ai requisiti \textit{RF-2}, \textit{RF-4}, \textit{RF-5} e \textit{RF-7} della tabella dei \hyperref[tab:requisiti-funzionali]{requisiti funzionali}.
 \subsubsection*{Nomenclatura}
 
@@ -489,8 +489,8 @@ Di seguito, due tabelle riassuntive relative a:
 \section{Progettazione}
 % In questa sezione descriverò lo scopo della progettazione in un progetto, le problematiche riscontrate e mostrerò le classi (e le loro dipendenze, quando utile e possibile, tramite il linguaggio UML) relative ai principali requisiti analizzati nella sezione precedente in modo da dare riscontro effettivo del passaggio da "requisito" a "scelta progettuale".
 % In questa sezione includerò anche la progettazione dell'interfaccia grafica relativa alle classi sopra indicate.
-Le attività di progettazione hanno come scopo l'ideazione della struttura del prodotto (a livello di programmazione, a livello di interfaccia, a livello di interazioni con l'utente e con altri sistemi) tramite delle scelte effettuate in base a determinati obiettivi (qualità del codice) ed ai requisiti individuati. \\
-L'\textit{output} della progettazione è costituito da uno o più documenti di specifica, ovvero documenti contenenti dettagli su come il \textit{software} dovrebbe essere implementato. \\
+Le attività di \textbf{progettazione} hanno come scopo l'ideazione della struttura del prodotto (a livello di programmazione, a livello di interfaccia, a livello di interazioni con l'utente e con altri sistemi) tramite delle scelte effettuate in base a determinati obiettivi (qualità del codice) ed ai requisiti individuati. \\
+L'\textit{output} della \textbf{progettazione} è costituito da uno o più documenti di specifica, ovvero documenti contenenti dettagli su come il \textit{software} dovrebbe essere implementato. \\
 Di seguito, si approfondiscono le scelte effettuate per:
 \begin{itemize}
     \item La fruizione in multipli linguaggi dell'applicazione;
@@ -501,7 +501,7 @@ Di seguito, si approfondiscono le scelte effettuate per:
 \subsection{Internazionalizzazione e localizzazione}
 Per poter capire le scelte progettuali occorre prima dare delle definizioni ai seguenti termini:
 \begin{itemize}
-    \item \textbf{Internazionalizzazione}: è il processo di progettazione e sviluppo di un prodotto in modo tale da ridurre la difficoltà di adattarlo per renderlo fruibile da persone appartenenti a culture diverse;
+    \item \textbf{Internazionalizzazione}: è il processo di \textbf{progettazione} e sviluppo di un prodotto in modo tale da ridurre la difficoltà di adattarlo per renderlo fruibile da persone appartenenti a culture diverse;
     \item \textbf{Localizzazione}: è il processo di adattamento di un prodotto in base alle esigenze culturali di una particolare area / di un particolare mercato.
 \end{itemize}
 Per quanto riguarda l’internazionalizzazione e la localizzazione del contenuto statico dell’applicazione, si è scelto di usare la libreria \textit{ngx-translate} al posto del pacchetto \textit{@angular/localize}, nativamente supportato da \textit{Angular}. \\
@@ -553,7 +553,7 @@ La scelta di \textit{ngx-translate} è stata dettata dalle ridotte dimensioni de
 \end{enumerate}
 
 \subsection{Interfaccia grafica}
-La progettazione dell'interfaccia grafica si è basata su colori e componenti grafiche già presenti nel \textit{software ADeMES}: la vera problematica da risolvere in queste attività è stata l'adattamento dell'interfaccia grafica a dispositivi con schermo di dimensioni ridotte (\textit{tablet} e \textit{smartphone}).
+La \textbf{progettazione} dell'interfaccia grafica si è basata su colori e componenti grafiche già presenti nel \textit{software ADeMES}: la vera problematica da risolvere in queste attività è stata l'adattamento dell'interfaccia grafica a dispositivi con schermo di dimensioni ridotte (\textit{tablet} e \textit{smartphone}).
 
 \subsubsection*{Login - passo 1}
 
@@ -679,7 +679,7 @@ Classi relative a servizi \textit{Angular}:
 
 \section{Codifica}
 % In questa sezione descriverò lo scopo della codifica in un progetto ed indicherò le problematiche riscontrate.
-Le attività di codifica hanno come scopo l'implementazione concreta del \textit{software} in base alla specifica fornita dalle attività di progettazione. \\
+Le attività di \textbf{codifica} hanno come scopo l'implementazione concreta del \textit{software} in base alla specifica fornita dalle attività di \textbf{progettazione}. \\
 Tra le difficoltà incontrate in queste attività, segnalo l'inversione della tabella per la visualizzazione tramite \textit{smartphone} (sezione \hyperref[subsubsec:mobile]{§3.4.2}): l'uso del \textit{framework} di componenti grafici \textit{Angular Material} consente di non doversi occupare
 dello sviluppo "da zero" di \textit{widget} grafici complessi al prezzo però di una ridotta possibilità di personalizzare i componenti predefiniti; la soluzione adottata sfrutta la possibilità di \textit{scroll} orizzontale del solo contenuto della tabella,
 "rompendo" parzialmente una delle regole di base dello sviluppo di interfacce grafiche \footnote{\href{https://mailchimp.com/resources/horizontal-scrolling/}{https://mailchimp.com}}. \\
@@ -1130,8 +1130,23 @@ Di seguito si riporta il contenuto dei file \textit{TypeScript} relativi alle cl
 % \end{lstlisting}
 
 \section{Verifica}
+% In questa sezione descriverò le modalità con le quali si è accertato che 
+Le attività di \textbf{verifica} hanno come scopo l'accertamento che:
+\begin{itemize}
+  \item Il prodotto \textit{software} in uscita dal processo di \textbf{codifica} soddisfi le specifiche stabilite nelle attività di \textbf{progettazione};
+  \item L’esecuzione delle attività di \textbf{analisi}, \textbf{progettazione} e \textbf{codifica} (per un determinato periodo di tempo) non abbia introdotto errori.
+\end{itemize}
 
-In questa sezione descriverò le modalità con le quali si è accertato che l’esecuzione delle attività (per un determinato periodo di tempo) non abbia introdotto errori.
+La \textbf{verifica} si svolge mediante l'uso di due approcci tra loro complementari:
+\begin{itemize}
+  \item \textbf{Analisi statica}: è un metodo di \textbf{verifica} che non prevede l'esecuzione del codice prodotto, si applica sia al codice sorgente sia alla documentazione prodotta e punta all'individuazione di errori nel prodotto quanto prima possibile rispetto all'inizio delle attività di sviluppo;
+  \item \textbf{Analisi dinamica}: è un metodo di \textbf{verifica} del corretto funzionamento del \textit{software} durante la sua esecuzione, identificando errori, problemi di prestazioni o comportamenti indesiderati attraverso l'esecuzione di \textit{test} specifici.
+\end{itemize}
+
+\subsection*{Analisi statica}
+Durante il periodo di \textit{stage}, ho eseguito attività di \textbf{analisi statica} manualmente (senza quindi avvalermi di strumenti \textit{software}) per quanto riguarda la documentazione di progetto, data l'assenza di direttive in relazione allo stile di scrittura del codice sorgente: 
+gli obiettivi di tali attività erano l'individuazione e la conseguente correzione di errori ortografici. \\
+Al termine della scrittura (o modifica) di una porzione di documento unitaria (una sezione o sottosezione di massimo due pagine), seguivano la rilettura e la correzione degli eventuali errori. 
 
 \section{Validazione}
 
