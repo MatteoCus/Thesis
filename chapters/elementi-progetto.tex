@@ -302,6 +302,7 @@ L’applicazione presenta due attori primari, ovvero due tipologie di utente fin
         \end{itemize}
 
 \subsection{Requisiti}
+\label{subsec:requisiti}
 
 Con "requisito" si intende una specifica di ciò che un sistema software deve fare o possedere al fine di soddisfare un determinato obiettivo o risolvere un particolare problema; i requisiti sono le basi per la \textbf{progettazione} e la \textbf{verifica} di un \textit{software}. \\
 La lista di requisiti sotto riportata, a differenza della lista dei casi d'uso, è completa: serve per dare una visione completa del lavoro di \textbf{analisi} e offrire una base per la comprensione degli esempi di \textbf{progettazione} e \textbf{codifica}. \\
@@ -442,7 +443,7 @@ I requisiti qui presenti sono identificati da una sigla alfanumerica così compo
     \hline
     RV-6 & L’applicazione deve essere fruibile in spagnolo & Facoltativo \\
     \hline
-    \caption{Requisiti prestazionali}
+    \caption{Requisiti di vincolo}
 \end{longtable}
 
 \subsubsection*{Riepilogo}
@@ -1162,13 +1163,43 @@ Durante le attività di tirocinio, ho eseguito prove (\textit{test}) di \textbf{
     \caption[Modello di sviluppo del prodotto adottato]{Modello di sviluppo adottato\footnotemark}
 \end{figure}
 \footnotetext{Fonte: \href{https://www.shiksha.com/online-courses/articles/v-model-software-engineering/}{https://www.shiksha.com}}
-
 Ho sviluppato del codice che concretizzasse in forma di \textit{software} i \textit{test} di unità e di integrazione tramite il \textit{framework Jasmine}: questo rende possibile la loro esecuzione, se l'ambiente di \textit{test} è ben configurato, in maniera ripetibile, automatizzata e rapida. \\
 Ho deciso di eseguire i \textit{test} di sistema manualmente data la poca esperienza con il \textit{framework Jasmine} ed il poco tempo rimasto per il completamento delle attività di progetto: ritengo valida questa scelta date le dimensioni ridotte del prodotto e la possibilità di automatizzare queste prove, data la presenza della documentazione necessaria.
+
 \section{Validazione}
+% In questa sezione descriverò le modalità con le quali si è accertato che il prodotto finito fosse conforme alle aspettative.
+Le attività di \textbf{validazione} hanno come scopo l'accertamento che il prodotto finito sia conforme alle aspettative di chi ha la visione dei bisogni da soddisfare con il prodotto (proponente). \\
+Viene effettuato un collaudo in presenza del committente, ovvero colui (persona fisica, azienda o ente) che ha interesse diretto nel risultato finale del progetto: nel mio caso, le figure del proponente e del committente sono rappresentate dal tutor aziendale \textit{Michele Rigo} ed il collaudo
+ha avuto luogo durante l'ultima settimana di attività. \\
+In seguito all'accettazione del prodotto, ho potuto dedicare i restanti giorni all'esecuzione di attività di integrazione e studio della libreria di componenti grafici \textit{DevExtreme}, come riportato nella sezione \hyperref[sec:innovazione]{§1.4}.
 
-In questa sezione descriverò le modalità con le quali si è accertato che il prodotto finito fosse conforme alle aspettative.
 
-\section{Statistiche qualitative e quantitative finali}
+\section{Risultato finale}
+% In questa sezione descriverò i prodotti di progetto dal punto di vista della qualità (qui vi sarà particolare enfasi sul prodotto software) e della quantità.
+Riporto alcune statistiche di progetto, seguite da alcune schermate dell'applicazione \textit{ADeQA} spiegando, ove necessario, le differenze tra l'interfaccia grafica realizzata e l'interfaccia grafica progettata.
 
-In questa sezione descriverò i prodotti di progetto dal punto di vista della qualità (qui vi sarà particolare enfasi sul prodotto software) e della quantità.
+\subsection{Statistiche qualitative e quantitative}
+\subsubsection*{Requisiti soddisfatti}
+Il prodotto sviluppato ricopre tutti i requisiti indicati nelle tabelle della sezione \hyperref[subsec:requisiti]{§3.3.2} tranne \textit{RF-3}, \textit{RF-3.1} e \textit{RF-3.2}: questo è dovuto alla mancata esposizione dei servizi necessari per il filtraggio delle fasi di lavorazione.
+\rowcolors{2}{gray!25}{white}
+\begin{longtable}{>{\centering\arraybackslash}m{0.25\textwidth}>{\centering\arraybackslash}m{0.25\textwidth}>{\centering\arraybackslash}m{0.25\textwidth}}
+    \hline
+    \rowcolor{black}
+    \color{white}\textbf{Tipologia} & \color{white}\textbf{Quantità} & \color{white}\textbf{Soddisfatti}\\
+    \hline
+    \endhead % This line indicates the end of the header and the start of the repeated heading on subsequent pages
+    Funzionali & 27 & 25 \\
+    \hline
+    Di qualità & 2 & 2\\
+    \hline
+    Prestazionali & 2 & 2 \\
+    \hline
+    Di vincolo & 6 & 6\\
+    \hline
+    \caption{Tabella riassuntiva dei requisiti soddisfatti}
+\end{longtable}
+
+\subsubsection*{\textit{Code coverage}}
+Con "\textit{code coverage}" si fa riferimento a una metrica utilizzata nel campo dello sviluppo \textit{software} per valutare quanto del codice sorgente di un'applicazione è stato eseguito durante l'esecuzione di un insieme di \textit{test}; non garantisce necessariamente la qualità dei \textit{test} eseguiti 
+e può rilevare la presenza di malfunzionamenti, ma non dimostra la loro assenza (\textit{Djikstra} \footnote{Fonte: \href{https://vitolavecchia.altervista.org/tecniche-metodologie-test-software/}{https://vitolavecchia.altervista.org}}). \\
+
