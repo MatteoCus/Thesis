@@ -1146,8 +1146,25 @@ La \textbf{verifica} si svolge mediante l'uso di due approcci tra loro complemen
 \subsection*{Analisi statica}
 Durante il periodo di \textit{stage}, ho eseguito attività di \textbf{analisi statica} manualmente (senza quindi avvalermi di strumenti \textit{software}) per quanto riguarda la documentazione di progetto, data l'assenza di direttive in relazione allo stile di scrittura del codice sorgente: 
 gli obiettivi di tali attività erano l'individuazione e la conseguente correzione di errori ortografici. \\
-Al termine della scrittura (o modifica) di una porzione di documento unitaria (una sezione o sottosezione di massimo due pagine), seguivano la rilettura e la correzione degli eventuali errori. 
+Al termine della scrittura (o modifica) di una porzione di documento unitaria (una sezione o sottosezione di massimo due pagine), seguivano la rilettura e la correzione degli eventuali errori.
 
+\subsection*{Analisi dinamica}
+Durante le attività di tirocinio, ho eseguito prove (\textit{test}) di \textbf{analisi dinamica} di tre tipologie distinte, seguendo di fatto le indicazioni del modello di sviluppo \textit{software} "a V":
+\begin{itemize}
+  \item \textbf{Test di unità}: un \textit{test} di unità si può identificare nel compito di controllare se l'esecuzione della più piccola parte utilmente verificabile del codice sorgente (unità) procede come previsto dalla specifica di \textbf{progettazione};
+  \item \textbf{Test di integrazione}: un \textit{test} di integrazione è il compito di verificare che l'interazione e combinazione delle diverse unità di codice avvenga come previsto dalle attività di \textbf{progettazione}, dopo che esse state messe alla prova singolarmente mediante \textit{test} di unità;
+  \item \textbf{Test di sistema}: un \textit{test} di sistema è il controllo delle funzionalità del codice sorgente nel suo complesso, accertando che soddisfi tutti i requisiti stabiliti nelle attività di \textbf{analisi}.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/v-model.jpg}
+    \caption[Modello di sviluppo del prodotto adottato]{Modello di sviluppo adottato\footnotemark}
+\end{figure}
+\footnotetext{Fonte: \href{https://www.shiksha.com/online-courses/articles/v-model-software-engineering/}{https://www.shiksha.com}}
+
+Ho sviluppato del codice che concretizzasse in forma di \textit{software} i \textit{test} di unità e di integrazione tramite il \textit{framework Jasmine}: questo rende possibile la loro esecuzione, se l'ambiente di \textit{test} è ben configurato, in maniera ripetibile, automatizzata e rapida. \\
+Ho deciso di eseguire i \textit{test} di sistema manualmente data la poca esperienza con il \textit{framework Jasmine} ed il poco tempo rimasto per il completamento delle attività di progetto: ritengo valida questa scelta date le dimensioni ridotte del prodotto e la possibilità di automatizzare queste prove, data la presenza della documentazione necessaria.
 \section{Validazione}
 
 In questa sezione descriverò le modalità con le quali si è accertato che il prodotto finito fosse conforme alle aspettative.
