@@ -7,7 +7,7 @@ a livello di documentazione, di codice scritto, \textit{test coverage} e obietti
 \section{Stile lavorativo}
 
 % In questa sezione descriverò il modo in cui ho lavorato nel corso del tirocinio, descrivendo attività esterne allo sviluppo, alla verifica ed alla validazione e descrivendo il modo in cui invece tali attività sono state ideate.
-Data la pianificazione a cadenza settimanale delle attività (sezione \hyperref[sec:pianificazione]{§2.5}), ho concordato con il tutor aziendale, il signor \textit{Michele Rigo}, l'organizzazione di una riunione di allineamento settimanale, programmata per ogni lunedì mattina. \\
+Data la pianificazione a cadenza settimanale delle attività (sezione \hyperref[sec:pianificazione]{§2.5}), ho concordato con il \textit{tutor} aziendale, il signor \textit{Michele Rigo}, l'organizzazione di una riunione di allineamento settimanale, programmata per ogni lunedì mattina. \\
 Tale incontro mirava a:
 \begin{itemize}
     \item Mostrare il lavoro svolto nel corso della settimana precedente alla riunione;
@@ -142,15 +142,16 @@ Per tutta la durata delle attività di \textit{stage}, sono stato affiancato in 
 % In questa sezione descriverò lo scopo dell'analisi dei requisiti in un progetto, le problematiche riscontrate e mostrerò i principali casi d'uso ed i principali requisiti elaborati.
 Le attività di \textbf{analisi dei requisiti} hanno come scopo la comprensione dei bisogni espressi dall'utente finale (o da chi vuole risolvere tali bisogni all'utente finale, talvolta nemmeno noti all'utente finale \footnote{Fonte: \href{https://www.mountaingoatsoftware.com/articles/i-didnt-know-i-needed-that}{https://www.mountaingoatsoftware.com}})
 detti "requisiti utente", e la definizione di "ciò che deve svolgere il prodotto" per soddisfare tali bisogni, detti "requisiti del prodotto". \\
-Ho iniziato le attività di \textbf{analisi} con un incontro sincrono, insieme al tutor aziendale, relativo all'infrastruttura aziendale esistente (contesto delle attività produttive) e al ruolo che il prodotto da sviluppare (di nome \textit{ADeQA}) ricopre in questo contesto. \\
-La contestualizzazione delle mie attività di \textit{stage} è stata seguita da una spiegazione dei bisogni da soddisfare: ho dovuto eseguire più passi di raffinazione dei bisogni espressi (descritti in seguito) per arrivare a definire i requisiti del prodotto.
+Ho iniziato le attività di \textbf{analisi} con un incontro sincrono, insieme al \textit{tutor} aziendale, relativo all'infrastruttura aziendale esistente (contesto delle attività produttive) e al ruolo che il prodotto da sviluppare (di nome \textit{ADeQA}) ricopre in questo contesto. \\
+In seguito alla contestualizzazione delle mie attività di \textit{stage}, il \textit{tutor} aziendale ed io abbiamo discusso dei bisogni da soddisfare: ho dovuto eseguire più passi di raffinazione dei bisogni espressi (descritti in seguito) per arrivare a definire i requisiti del prodotto.
 
 \subsection{Casi d'uso}
 Con "caso d'uso" si intende un'astrazione utilizzata per catturare, descrivere e definire le interazioni tra un prodotto e gli attori (utenti o altri \textit{software}) che interagiscono con esso. \\
-Un caso d'uso è una rappresentazione (narrativa e/o schematica) di uno scenario che descrive come il sistema risponde alle richieste degli utenti in determinate circostanze. \\
-I casi d’uso qui presenti mirano a dare comprensione dei requisiti utente principali, pertanto non vengono riportati tutti i casi d'uso identificati in sede di \textit{stage}.
-\subsubsection*{Nomenclatura}
+Un caso d'uso è una rappresentazione (narrativa e/o schematica) di uno scenario che descrive come il sistema deve rispondere alle richieste degli utenti in determinate circostanze: serve per eseguire una prima schematizzazione dei bisogni utente,
+specificandoli in una serie casi d'uso più dettagliati qualora ve ne fosse la possibilità. \\
+I casi d’uso qui presenti mirano a dare comprensione dei requisiti utente principali, pertanto non riporto tutti i casi d'uso identificati in sede di \textit{stage}.
 
+\subsubsection*{Nomenclatura}
 I casi d'uso sono identificati da una sigla alfanumerica così composta:
 \begin{center}
     \textbf{UC[Tipologia]-[Codice]}
@@ -192,26 +193,8 @@ L’applicazione presenta due attori primari, ovvero due tipologie di utente fin
             \item \textbf{Precondizioni:} l’utente è autenticato;
             \item \textbf{Postcondizioni:} l’utente visualizza le fasi di produzione.
         \end{itemize}
-
-        \textbf{UCF-4: Visualizzazione degli attributi}
-        \begin{figure}[H]
-            \centering
-            \includegraphics[width=0.9\textwidth]{usecase/UCF-4.png}
-            \caption{Diagramma dei casi d'uso UCF-4 e UCE-4.}
-        \end{figure}
-        \begin{itemize}
-            \item \textbf{Descrizione:} l’utente vuole visualizzare gli attributi della fase di lavorazione selezionata;
-            \item \textbf{Scenario:}
-                \begin{enumerate}
-                    \item L’utente sta visualizzando le fasi di lavorazione;
-                    \item L’utente seleziona una fase di lavorazione.
-                \end{enumerate}
-            \item \textbf{Estensioni:} si presenta un errore lato server alla lettura degli attributi della fase di produzione selezionata (\textbf{UCE-4});
-            \item \textbf{Attore principale:} utente autenticato;
-            \item \textbf{Precondizioni:} l’utente sta visualizzando le fasi di produzione;
-            \item \textbf{Postcondizioni:} l’utente visualizza gli attributi della fase di produzione che ha selezionato.
-        \end{itemize}
-
+      Questo caso d'uso schematizza la relazione che intercorre tra l'applicazione da sviluppare e l'utente (in questo caso, "utente autenticato") per quanto riguarda la visualizzazione delle fasi di lavorazione: questa relazione non è ulteriormente scomponibile in ulteriori sotto-relazioni (tramite sotto-casi d'uso) 
+      nè tantomeno è una generalizzazione, ovvero non è possibile individuare ereditarietà con altri casi d'uso.\\
 
         \textbf{UCF-5: Valorizzazione degli attributi}
         \begin{figure}[H]
@@ -233,80 +216,15 @@ L’applicazione presenta due attori primari, ovvero due tipologie di utente fin
             \item \textbf{Postcondizioni:} l’utente assegna un valore agli attributi di una fase di produzione che ha selezionato.
         \end{itemize}
 
-
-        \textbf{UCF-7: Visualizzazione dei dati di qualità registrati}
-        \begin{figure}[H]
-            \centering
-            \includegraphics[width=0.9\textwidth]{usecase/UCF-7.png}
-            \caption{Diagramma dei casi d'uso UCF-7 e UCE-7.}
-        \end{figure}
-        \begin{itemize}
-            \item \textbf{Descrizione:} l’utente vuole visualizzare i dati di controllo qualità inseriti;
-            \item \textbf{Scenario:}
-                \begin{enumerate}
-                    \item L’utente seleziona una fase di produzione;
-                    \item L’utente visualizza i \textit{log} per la fase selezionata.
-                \end{enumerate}
-            \item \textbf{Estensioni:} si presenta un errore lato server durante il tentativo di acquisire i \textit{log} di controllo qualità (\textbf{UCE-7});
-            \item \textbf{Attore principale:} utente autenticato;
-            \item \textbf{Precondizioni:} l’utente è autenticato;
-            \item \textbf{Postcondizioni:} l’utente visualizza i dati di controllo qualità inseriti per la fase selezionata.
-        \end{itemize}
-
-        \textbf{UCE-3: Visualizzazione errore lato \textit{server} all’acquisizione delle fasi di lavorazione}
-        \begin{itemize}
-            \item \textbf{Descrizione:} l’utente vuole visualizzare le fasi di lavorazione e il \textit{server} ritorna un errore;
-            \item \textbf{Scenario:}
-                \begin{enumerate}
-                    \item L’utente visualizza un messaggio di errore.
-                \end{enumerate}
-            \item \textbf{Attore principale:} utente autenticato;
-            \item \textbf{Precondizioni:} l’utente vuole visualizzare le fasi di lavorazione (\textbf{UCF-2});
-            \item \textbf{Postcondizioni:} l’utente visualizza un messaggio di errore relativo all’avvenimento di un errore lato \textit{server} all’acquisizione delle fasi di lavorazione.
-        \end{itemize}
-
-        \textbf{UCE-4: Visualizzazione errore lato \textit{server} all’acquisizione degli attributi delle fasi di lavorazione}
-        \begin{itemize}
-            \item \textbf{Descrizione:} l’utente vuole visualizzare gli attributi delle fasi di lavorazione e il \textit{server} ritorna un errore;
-            \item \textbf{Scenario:}
-                \begin{enumerate}
-                    \item L’utente visualizza un messaggio di errore.
-                \end{enumerate}
-            \item \textbf{Attore principale:} utente autenticato;
-            \item \textbf{Precondizioni:} l’utente vuole visualizzare le fasi di lavorazione (\textbf{UCF-2});
-            \item \textbf{Postcondizioni:} l’utente visualizza un messaggio di errore relativo all’avvenimento di un errore lato \textit{server} all’acquisizione delle fasi di lavorazione.
-        \end{itemize}
-
-        \textbf{UCE-5: Visualizzazione errore lato \textit{server} alla valorizzazione degli attributi delle fasi di lavorazione}
-        \begin{itemize}
-            \item \textbf{Descrizione:} l’utente vuole assegnare un valore agli attributi della fase di lavorazione selezionata e il \textit{server} ritorna un errore;
-            \item \textbf{Scenario:}
-                \begin{enumerate}
-                    \item L’utente visualizza un messaggio di errore.
-                \end{enumerate}
-            \item \textbf{Attore principale:} utente autenticato;
-            \item \textbf{Precondizioni:} l’utente vuole assegnare un valore agli attributi della fase di lavorazione selezionata (\textbf{UCF-5});
-            \item \textbf{Postcondizioni:} l’utente visualizza un messaggio di errore relativo all’avvenimento di un errore lato \textit{server} all’assegnazione di un valore agli attributi della fase di lavorazione selezionata.
-        \end{itemize}
-
-        \textbf{UCE-7: Visualizzazione errore lato \textit{server} all’acquisizione dei dati di controllo qualità}
-        \begin{itemize}
-            \item \textbf{Descrizione:} l’utente vuole visualizzare i \textit{log} di controllo qualità per la fase selezionata;
-            \item \textbf{Scenario:}
-                \begin{enumerate}
-                    \item L’utente visualizza un messaggio di errore.
-                \end{enumerate}
-            \item \textbf{Attore principale:} utente autenticato;
-            \item \textbf{Precondizioni:} l’utente vuole visualizzare i dati di controllo qualità per la fase selezionata (\textbf{UCF-7});
-            \item \textbf{Postcondizioni:} l’utente visualizza un messaggio di errore relativo all’avvenimento di un errore lato \textit{server} alla visualizzazione dei dati di controllo qualità.
-        \end{itemize}
+        Questo caso d'uso schematizza la relazione che intercorre tra l'applicazione da sviluppare e l'utente autenticato relativamente all'inserimento di dati di controllo qualità: come per il caso precedente, non è scomponibile in ulteriori sotto-relazioni e non è 
+        possibile individuare una generalizzazione, dato che i dati di qualità da inserire non sono noti a priori in numero nè in tipo.
 
 \subsection{Requisiti}
 \label{subsec:requisiti}
 
 Con "requisito" si intende una specifica di ciò che un sistema software deve fare o possedere al fine di soddisfare un determinato obiettivo o risolvere un particolare problema; i requisiti sono le basi per la \textbf{progettazione} e la \textbf{verifica} di un \textit{software}. \\
 La lista di requisiti (che riporto di seguito) offre una base per la comprensione degli esempi di \textbf{progettazione} e \textbf{codifica}. \\
-I casi d'uso \textit{UCF-2} e \textit{UCF-5} sono associati rispettivamente ai requisiti \textit{RF-2} e \textit{RF-5} della tabella dei \hyperref[tab:requisiti-funzionali]{requisiti funzionali}.
+I casi d'uso \textit{UCF-2} e \textit{UCF-5} sono associati rispettivamente ai requisiti \textit{RF-2} e \textit{RF-5} della tabella (parzialmente completa) dei \hyperref[tab:requisiti-funzionali]{requisiti funzionali}.
 \subsubsection*{Nomenclatura}
 
 I requisiti qui presenti sono identificati da una sigla alfanumerica così composta:
@@ -360,34 +278,6 @@ I requisiti qui presenti sono identificati da una sigla alfanumerica così compo
     RF-6.1 & L’utente deve potersi disconnettere relativamente all’operatore a cui ha eseguito l’autenticazione & Obbligatorio \\
     \hline
     RF-6.2 & L’utente deve potersi disconnettere da ogni accesso eseguito: operatore e azienda & Obbligatorio \\
-    \hline
-    RF-7 & L’utente deve poter visualizzare i dati di controllo qualità relativi alla fase selezionata & Obbligatorio \\
-    \hline
-    RF-8 & L’utente deve poter modificare i dati di controllo qualità relativi alla fase selezionata & Obbligatorio \\
-    \hline
-    RF-9 & L’utente deve poter eliminare i dati di controllo qualità relativi alla fase selezionata & Obbligatorio \\
-    \hline
-    RF-E1 & L’utente deve poter visualizzare un messaggio di errore in caso le credenziali inserite all’autenticazione siano errate & Obbligatorio \\
-    \hline
-    RF-E1.1 & L’utente deve poter visualizzare un errore in caso la coppia “nome utente, \textit{password}” inserita all’autenticazione sia errata & Obbligatorio \\
-    \hline
-    RF-E1.2 & L’utente deve poter visualizzare un errore in caso il \textit{pin} inserito all’autenticazione sia errato & Obbligatorio \\
-    \hline
-    RF-E2 & L’utente deve poter visualizzare un messaggio di errore in caso avvenga un errore lato \textit{server} all’autenticazione & Obbligatorio \\
-    \hline
-    RF-E3 & L’utente deve poter visualizzare un messaggio di errore in caso vi sia un errore lato \textit{backend} all’acquisizione delle fasi & Obbligatorio \\
-    \hline
-    RF-E4 & L’utente deve poter visualizzare un messaggio di errore in caso vi sia un errore lato \textit{backend} all’acquisizione degli attributi della fase di lavorazione selezionata & Obbligatorio \\
-    \hline
-    RF-E5 & L’utente deve poter visualizzare un messaggio di errore in caso vi sia un errore lato \textit{backend} all’inserimento dei valori per gli attributi della fase di lavorazione selezionata & Obbligatorio \\
-    \hline
-    RF-E6 & L’utente deve poter visualizzare un messaggio di errore in caso vi sia un errore lato \textit{backend} alla disconnessione & Obbligatorio \\
-    \hline
-    RF-E7 & L’utente deve poter visualizzare un messaggio di errore in caso vi sia un errore lato backend all’acquisizione dei \textit{log} di controllo qualità della fase di lavorazione selezionata & Obbligatorio \\
-    \hline
-    RF-E8 & L’utente deve poter visualizzare un messaggio di errore in caso vi sia un errore lato \textit{backend} all’aggiornamento dei dati di controllo qualità della fase di lavorazione selezionata & Obbligatorio \\
-    \hline
-    RF-E9 & L’utente deve poter visualizzare un messaggio di errore in caso vi sia un errore lato backend all’eliminazione dei dati di controllo qualità della fase di lavorazione selezionata & Obbligatorio \\
     \hline
     \caption{Requisiti funzionali}
     \label{tab:requisiti-funzionali}
@@ -684,89 +574,24 @@ dello sviluppo "da zero" di \textit{widget} grafici complessi al prezzo però di
 "rompendo" parzialmente una delle regole di base dello sviluppo di interfacce grafiche \footnote{\href{https://mailchimp.com/resources/horizontal-scrolling/}{https://mailchimp.com}}. \\
 Di seguito si riporta il contenuto dei file \textit{TypeScript} relativi alle classi derivate dai casi d'uso descritti nella sezione \hyperref[subsubsec:casi-d'uso]{§3.3.1}.
 
+\newpage
 \subsection*{Visualizzazione delle fasi}
-\begin{lstlisting}[language=JavaScript, caption={Visualizzazione delle fasi - TypeScript}]
-  /**
-   * Inizializzazione delle fasi: chiamata API per ottenere le fasi
-   */
-  ngOnInit() {
-
-    const token = this.authInfoService.Token;
-
-    // Dichiarazioni dettate dai modelli in /app/api/models
-    const start_plan = "start_plan";
-    const end_plan = "end_plan";
-    const status = "status";
-    const start_plan_operator = "greaterOrEqual";
-    const end_plan_operator = "lessOrEqual";
-    const status_operator = "greaterOrEqual";
-    const status_value = "I";
-
-    // Condizioni di fetch:
-    // -) start_plan_date: 30gg prima della data attuale
-    // -) end_plan_date: 30gg dopo la data attuale
-    // -) status_value: I, L (tutto tranne C)
-    const previousMonth: number = (new Date().getMonth() - 1) % 12;
-    const nextMonth: number = (new Date().getMonth() + 1) % 12;
-    const previousYear: number = previousMonth == 11 ? new Date().getFullYear() - 1 : new Date().getFullYear();
-    const nextYear: number = nextMonth == 0 ? new Date().getFullYear() + 1 : new Date().getFullYear();
-
-    const start_plan_date: Date = new Date();
-    const end_plan_date: Date = new Date();
-
-    start_plan_date.setMonth(previousMonth);
-    start_plan_date.setFullYear(previousYear);
-    end_plan_date.setMonth(nextMonth);
-    end_plan_date.setFullYear(nextYear);
-
-    const params = {
-      "AdesuiteToken": token,
-      "body": {
-        "startRow": 0,
-        "criteria": [
-          {
-            "fieldName": start_plan ,
-            "value": start_plan_date.toISOString().replace("T", " ").replace("Z", "").substring(0, 22),
-            "operator": start_plan_operator
-          },
-          {
-            "fieldName": end_plan ,
-            "value": end_plan_date.toISOString().replace("T", " ").replace("Z", "").substring(0, 22),
-            "operator": end_plan_operator
-          },
-          {
-            "fieldName": status,
-            "value": status_value,
-            "operator": status_operator
-          }
-        ],
-        "orderby": [
-          {
-            "columnname": "end_plan",
-            "direction": "ASC"
-          }
-        ],
-        "endRow": 100
+\begin{lstlisting}[language=JavaScript, caption={Visualizzazione delle fasi}]
+this.qualityPhaseService.fetch_2(params)
+  .subscribe({
+    next: (response) => {
+      (response.data != undefined && response.data != null && response.data.length != 0) ? this.phases = response.data : this.openSnackBar(this.translateService.instant("Errore: non ci sono fasi da visualizzare!"), "X");
+    },
+    error: (error) => {
+      const errorDescription = (error.error as ErrorModel) != null ? (error.error as ErrorModel).description : (error.status == 401 ? "Non autorizzato" : "Errore lato server");
+      this.openSnackBar(this.translateService.instant("Errore " + error.status + " - " + errorDescription), "X");
+      if (error.status == 401) {
+        this.logoutService.logout();
       }
-    };
-
-    this.qualityPhaseService.fetch_2(params)
-      .subscribe({
-        next: (response) => {
-          (response.data != undefined && response.data != null && response.data.length != 0) ? this.phases = response.data : this.openSnackBar(this.translateService.instant("Errore: non ci sono fasi da visualizzare!"), "X");
-        },
-        error: (error) => {
-          const errorDescription = (error.error as ErrorModel) != null ? (error.error as ErrorModel).description : (error.status == 401 ? "Non autorizzato" : "Errore lato server");
-          this.openSnackBar(this.translateService.instant("Errore " + error.status + " - " + errorDescription), "X");
-          if (error.status == 401) {
-            this.logoutService.logout();
-          }
-          this.loading = false;
-        },
-        complete: () => { this.loading = false; }
-      });
-
-  }
+      this.loading = false;
+    },
+    complete: () => { this.loading = false; }
+  });
 \end{lstlisting}
 
 % \begin{lstlisting}[language=HTML5, caption={Visualizzazione delle fasi - HTML}]
@@ -798,111 +623,96 @@ Di seguito si riporta il contenuto dei file \textit{TypeScript} relativi alle cl
 % </cdk-virtual-scroll-viewport>
 % \end{lstlisting}
 
-
+\newpage
 \subsection*{Visualizzazione e valorizzazione degli attributi}
-\begin{lstlisting}[language=JavaScript, caption={Aggiornamento della tabella di aggiunta / modifica dei dati di controllo qualità}]
+% \begin{lstlisting}[language=JavaScript, caption={Aggiornamento della tabella di aggiunta / modifica dei dati di controllo qualità}]
 
-  /**
-   * Metodo che consente di aggiornare la tabella ad ogni cambio degli attributi attivi (avviene quando si aggiorna la fase attiva)
-   */
-  ngOnInit() {
+%   /**
+%    * Metodo che consente di aggiornare la tabella ad ogni cambio degli attributi attivi (avviene quando si aggiorna la fase attiva)
+%    */
+%   ngOnInit() {
 
-    this.activePhaseService.getActivePhase().subscribe(phase => {
-      this.activePhase = phase;
-    });
+%     this.activePhaseService.getActivePhase().subscribe(phase => {
+%       this.activePhase = phase;
+%     });
 
-    this.mainViewCommunicationsService.viewUpdate.subscribe(() => this.clearDialog())
+%     this.mainViewCommunicationsService.viewUpdate.subscribe(() => this.clearDialog())
 
-    this.mainViewCommunicationsService.updateLog.subscribe((toUpdateLog) => {
-      this.logToUpdate = toUpdateLog;
-      this.updateDataSource = [];
+%     this.mainViewCommunicationsService.updateLog.subscribe((toUpdateLog) => {
+%       this.logToUpdate = toUpdateLog;
+%       this.updateDataSource = [];
 
-      const actualQualityValue: { type: string; value: string; } = toUpdateLog.qualityvalue! as any;
-      const json = JSON.parse(actualQualityValue.value);
-      this.form = new FormGroup({});
+%       const actualQualityValue: { type: string; value: string; } = toUpdateLog.qualityvalue! as any;
+%       const json = JSON.parse(actualQualityValue.value);
+%       this.form = new FormGroup({});
 
-      this.activeAttributes.forEach(value => {
-        this.defaultOption = [];
-        if (value.attributevaluetype == "L") {
-          json[value.attributevalue!] = (json[value.attributevalue!.toString() + '_id' as any] + " - " + json[value.attributevalue! as any]);
-          this.defaultOption.push(json[value.attributevalue!]);
-        } else {
-          this.defaultOption.push("");
-        }
+%       this.activeAttributes.forEach(value => {
+%         this.defaultOption = [];
+%         if (value.attributevaluetype == "L") {
+%           json[value.attributevalue!] = (json[value.attributevalue!.toString() + '_id' as any] + " - " + json[value.attributevalue! as any]);
+%           this.defaultOption.push(json[value.attributevalue!]);
+%         } else {
+%           this.defaultOption.push("");
+%         }
 
-        if (value.attributevaluetype == "Y") {
-          json[value.attributevalue!] = json[value.attributevalue!] == "true";
-        }
-      });
+%         if (value.attributevaluetype == "Y") {
+%           json[value.attributevalue!] = json[value.attributevalue!] == "true";
+%         }
+%       });
 
-      this.updateDataSource.push(json);
+%       this.updateDataSource.push(json);
 
-      this.activeAttributes.forEach((value, index) => {
+%       this.activeAttributes.forEach((value, index) => {
 
-        const formValue: any = this.updateDataSource.at(0)[value.attributevalue!];
-        if (value.attributevaluetype != undefined) {
-          this.form.addControl("control-" + index.toString(), new FormControl(formValue, Validators.required));
-        }
-      });
+%         const formValue: any = this.updateDataSource.at(0)[value.attributevalue!];
+%         if (value.attributevaluetype != undefined) {
+%           this.form.addControl("control-" + index.toString(), new FormControl(formValue, Validators.required));
+%         }
+%       });
 
 
-      this.addLog = false;
-    })
+%       this.addLog = false;
+%     })
 
-    this.activeAttributesService.getActiveAttributes()
-      .subscribe(attributes => {
-        this.addLog = true;
-        this.activeAttributes = attributes.slice();
-        this.displayedColumns = this.activeAttributes.map((attribute) => attribute.attributevalue!);
-        this.initializeForm();
-        this.loadingService.stopModifierLoading();
-      });
-  }
-\end{lstlisting}
+%     this.activeAttributesService.getActiveAttributes()
+%       .subscribe(attributes => {
+%         this.addLog = true;
+%         this.activeAttributes = attributes.slice();
+%         this.displayedColumns = this.activeAttributes.map((attribute) => attribute.attributevalue!);
+%         this.initializeForm();
+%         this.loadingService.stopModifierLoading();
+%       });
+%   }
+% \end{lstlisting}
 
 \begin{lstlisting}[language=JavaScript, caption={Aggiunta di dati di controllo qualità}]
-
-    /**
-    * Metodo per aggiungere un nuovo log relativo alla fase di qualita' attiva
-    */
-   public add(): void {
- 
-     const token: string = this.authInfoService.Token;
-     const qualityvalue: string = this.buildQualityValue();
- 
-     const params = this.prepareAddParams(token, this.activePhase.c_projectphase_id!, qualityvalue)
- 
-     this.qualitySaveLogService.Add(params).subscribe({
-       next: (log) => {
-         this.openSuccessSnackBar(this.translateService.instant("Inserimento avvenuto correttamente!"), "X");
-         this.mainViewCommunicationsService.viewUpdate.next(log);
-       },
-       error: (error) => this.openFailSnackBar("Errore " + error.status + " - " + error.error.description, "X")
-     })
-   }
+public add(): void {
+  const token: string = this.authInfoService.Token;
+  const qualityvalue: string = this.buildQualityValue();
+  const params = this.prepareAddParams(token, this.activePhase.c_projectphase_id!, qualityvalue)
+  this.qualitySaveLogService.Add(params).subscribe({
+    next: (log) => {
+      this.openSuccessSnackBar(this.translateService.instant("Inserimento avvenuto correttamente!"), "X");
+      this.mainViewCommunicationsService.viewUpdate.next(log);
+    },
+    error: (error) => this.openFailSnackBar("Errore " + error.status + " - " + error.error.description, "X")
+  })
+}
 \end{lstlisting}
 
 \begin{lstlisting}[language=JavaScript, caption={Modifica di dati di controllo qualità}]
-    /**
-    * Metodo per aggiornare un log relativo alla fase di qualita' attiva
-    */
-   public update(): void {
- 
-     const token: string = this.authInfoService.Token;
-     const qualityValue = this.buildQualityValue();
- 
-     const params = this.prepareUpdateParams(token, this.logToUpdate.c_projectphase_quality_log_id!, qualityValue);
- 
-     this.qualitySaveLogService.Update(params).subscribe({
-       next: (log) => {
-         this.openSuccessSnackBar(this.translateService.instant("Aggiornamento avvenuto correttamente!"), "X")
-         this.mainViewCommunicationsService.viewUpdate.next(log);
-       },
-       error: (error) => this.openFailSnackBar("Errore " + error.status + " - " + error.error.description, "X")
-     });
- 
-   }
-
+public update(): void {
+  const token: string = this.authInfoService.Token;
+  const qualityValue = this.buildQualityValue();
+  const params = this.prepareUpdateParams(token, this.logToUpdate.c_projectphase_quality_log_id!, qualityValue);
+  this.qualitySaveLogService.Update(params).subscribe({
+    next: (log) => {
+      this.openSuccessSnackBar(this.translateService.instant("Aggiornamento avvenuto correttamente!"), "X")
+      this.mainViewCommunicationsService.viewUpdate.next(log);
+    },
+    error: (error) => this.openFailSnackBar("Errore " + error.status + " - " + error.error.description, "X")
+  });
+}
 \end{lstlisting}
 
 % \begin{lstlisting}[language=HTML5, caption={Visualizzazione e valorizzazione degli attributi - HTML}]
@@ -1000,89 +810,49 @@ Di seguito si riporta il contenuto dei file \textit{TypeScript} relativi alle cl
     
 % \end{lstlisting}
 
+\newpage
 \subsection*{Visualizzazione dei dati di qualità}
 \begin{lstlisting}[language=JavaScript, caption={Aggiornamento degli attributi caratterizzanti il controllo qualità}]
-    /**
-    * Metodo per ottenere colonne e log salvati per la fase attuale, indica quando il caricamento e' terminato (per far sparire lo splash-screen)
-    */
-    ngOnInit(): void {
-
-    this.activeAttributesService.getActiveAttributes()
-      .subscribe(attributes => {
-        this.displayedColumns = attributes.map((attribute) => attribute.attributevalue!);
-        this.attributes = attributes.slice();
-        this.attributes.push({ attributename: 'Azioni', attributevalue: 'Actions' });
-
-        if (this.displayedColumns.length == 0) {
-          this.openFailSnackBar("Errore: non sono disponibili attributi per la fase selezionata!", "X");
-        }
-        else if (this.displayedColumns.findIndex(value => value == 'Actions') == -1) {
-          this.displayedColumns.push("Actions");
-        }
-      });
-
-    this.mainViewCommunicationsService.viewUpdate.subscribe((updatedLog) => {
-      this.highlighted = {};
-      this.updateTable(this.lastPhase);
-      this.blinkLogId = updatedLog.c_projectphase_quality_log_id!;
-
-      // Rimuove dopo 5 secondi la classe 'blink' (evita che ad ogni cambio di tema l'ultima fase aggiunta / modificata venga evidenziata)
-      setTimeout(() => {
-        this.blinkLogId = 0;
-      }, 5500);
+ngOnInit(): void {
+  this.activeAttributesService.getActiveAttributes()
+    .subscribe(attributes => {
+      this.displayedColumns = attributes.map((attribute) => attribute.attributevalue!);
+      this.attributes = attributes.slice();
+      this.attributes.push({ attributename: 'Azioni', attributevalue: 'Actions' });
+      if (this.displayedColumns.length == 0) {
+        this.openFailSnackBar("Errore: non sono disponibili attributi per la fase selezionata!", "X");
+      }
+      else if (this.displayedColumns.findIndex(value => value == 'Actions') == -1) {
+        this.displayedColumns.push("Actions");
+      }
     });
-  }
+  this.mainViewCommunicationsService.viewUpdate.subscribe((updatedLog) => {
+    this.highlighted = {};
+    this.updateTable(this.lastPhase);
+    this.blinkLogId = updatedLog.c_projectphase_quality_log_id!;
+    setTimeout(() => {
+      this.blinkLogId = 0;
+    }, 5500);
+  });
+}
 \end{lstlisting}
 
-\begin{lstlisting}[language=JavaScript, caption={Aggiornamento della tabella di visualizzazione dei dati di controllo qualità}]
-  /**
-   * Metodo per aggiornare la tabella di visualizzazione dei log
-   * @param phase Fase della quale ottenere i log di qualita'
-   */
-  private updateTable(phase: QualityphaseModel): void {
-
-    const token = this.authInfoService.Token;
-
-    const params = {
-      "AdesuiteToken": token,
-      "body": {
-        "startRow": 0,
-        "criteria": [
-          {
-            "fieldName": "c_projectphase_id",
-            "value": phase.c_projectphase_id?.toString(),
-            "operator": "equals"
-          }
-        ],
-        "endRow": 100
-      }
-    };
-
-    this.qualitySaveLogService.fetch_1(params).subscribe({
-      next: (response) => {
-
-        let logs: any[] = [];
-        this.activeLogs = response.data!;
-        response.data?.forEach((log) => {
-
-          const actualQualityValue: { type: string; value: string; } = log.qualityvalue! as any;
-          let aux = JSON.parse(actualQualityValue.value);
-          aux.Actions = "";
-          aux.c_projectphase_quality_log_id = log.c_projectphase_quality_log_id;
-          logs.push(aux);
-        });
-
-        logs.sort((firstLog, secondLog) => { return secondLog.c_projectphase_quality_log_id - firstLog.c_projectphase_quality_log_id })
-
-        this.logs.next(logs);
-      },
-      error: (error) => {
-        this.openFailSnackBar("Errore " + error.status + " - " + error.error.description, "X");
-      }
-    });
-
-  }
-
+ \begin{lstlisting}[language=JavaScript, caption={Aggiornamento della tabella di visualizzazione dei dati di controllo qualità}]
+ this.qualitySaveLogService.fetch_1(params).subscribe({
+   next: (response) => {
+     let logs: any[] = [];
+     this.activeLogs = response.data!;
+     response.data?.forEach((log) => {
+       const actualQualityValue: { type: string; value: string; } = log.qualityvalue! as any;
+       let aux = JSON.parse(actualQualityValue.value);
+       aux.Actions = "";
+       aux.c_projectphase_quality_log_id = log.c_projectphase_quality_log_id;
+       logs.push(aux);
+     });
+     logs.sort((firstLog, secondLog) => { return secondLog.c_projectphase_quality_log_id - firstLog.c_projectphase_quality_log_id })
+     this.logs.next(logs);
+   }
+ });
 \end{lstlisting}
 
 % \begin{lstlisting}[language=HTML5, caption={Visualizzazione dei dati di qualità - HTML}]

@@ -453,3 +453,7 @@
     {ä}{{\"a}}1
     {ö}{{\"o}}1
 }
+
+% Change the caption label for listings
+\DeclareCaptionLabelFormat{listing}{\textbf{Frammento #2}}
+\captionsetup[lstlisting]{labelformat=listing, labelsep=colon}
