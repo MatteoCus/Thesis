@@ -478,6 +478,41 @@ La scelta di \textit{ngx-translate} è stata dettata dalle ridotte dimensioni de
 \subsection{Interfaccia grafica}
 La \textbf{progettazione} dell'interfaccia grafica si è basata su colori e componenti grafiche già presenti nel \textit{software ADeMES}: la vera problematica da risolvere in queste attività è stata l'adattamento dell'interfaccia grafica a dispositivi con schermo di dimensioni ridotte (\textit{tablet} e \textit{smartphone}).
 
+\subsubsection*{Schema dei colori}
+Riporto di seguito la tabella di tracciamento dei colori utilizzati nell'applicazione \textit{ADeMES} (in formato esadecimale\footnote{Fonte: \href{https://www.w3schools.com/colors/colors_hexadecimal.asp}{https://www.w3schools.com}}) per garantire massima somiglianza da parte di \textit{ADeQA}:
+\rowcolors{2}{white}{gray!25}
+\begin{longtable}{>{\centering\arraybackslash}m{0.50\textwidth}>{\centering\arraybackslash}m{0.25\textwidth}>{\centering\arraybackslash}m{0.25\textwidth}}
+    \hline
+    \rowcolor{black}
+    \color{white}\textbf{Componente} & \color{white}\textbf{Tema scuro} & \color{white}\textbf{Tema chiaro} \\
+    \hline
+    \endhead % This line indicates the end of the header and the start of the repeated heading on subsequent pages
+    Barra di intestazione & \#232F4E & \#0C2656 \\
+    \hline
+    Barra laterale & \#000000 & \#FFFFFF \\
+    \hline
+    Intestazione delle sezioni principali ("attributi" e "\textit{log}"), bordi delle fasi selezionate e bottone per il cambio tema & \#BF71FF & \#123A83 \\
+    \hline
+    Intestazione delle tabelle & \#452E60 & \#5560BB \\
+    \hline
+    Bottone di inserimento / aggiornamento dati di qualità & \#5560BB & \#1CBFFF \\
+    \hline
+    Sfondo delle tabelle & \#323347 & \#F3F5FD \\
+    \hline
+    Linee divisorie della visualizzazione principale & \#707286 & \#CED0DB \\
+    \hline
+    Sfondo del riquadro contenente la fase selezionata & \#452E60 & \#9070A6 \\
+    \hline
+    Sfondo dei riquadri non contenenti la fase selezionata & \#5560BB & \#5560BB \\
+    \hline
+    Bordi dei riquadri non contenenti la fase selezionata & \#7280F9 & \#6673DB \\
+    \hline
+    Sfondo della visualizzazione principale & \#1A1B2E & \#F3F5FD \\
+    \hline
+    \caption{Schema dei colori di \textit{ADeMES} e \textit{ADeQA}}
+    \label{tab:colors}
+\end{longtable}
+
 \subsubsection*{Autenticazione - passo 1}
 
 \begin{figure}[H]
