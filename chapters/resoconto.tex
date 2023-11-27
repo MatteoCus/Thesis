@@ -1,3 +1,4 @@
+\newpage \ \thispagestyle{empty} \newpage
 \chapter{Retrospettiva delle attività}
 \label{cap:resoconto}
 Questo capitolo si occupa di fornire una valutazione retrospettiva sulle attività svolte ed il risultato ottenuto, mettendo a confronto:
@@ -35,7 +36,7 @@ Gli obiettivi che riporto di seguito fanno riferimento alla sezione \hyperref[se
     \hline
     \textbf{O08}: il \textit{software} deve potersi integrare nel software ADeMES mediante un elemento \texttt{<iframe>} \textit{HTML} & SÌ & \hyperref[subsec:integrazione]{§3.5} Codifica - Integrazione dell'applicazione con \textit{ADeMES}\\
     \hline
-    \textbf{O09}: il \textit{software} deve poter essere eseguibile in modalità \textit{standalone} (in questo caso, in grado di funzionare anche senza l'ausilio del \textit{software ADeMES}) & SÌ & \hyperref[subsec:interfaccia-risultato]{§3.8.2}Risultato finale - interfaccia grafica \\
+    \textbf{O09}: il \textit{software} deve poter essere eseguibile in modalità \textit{standalone} (in questo caso, in grado di funzionare anche senza l'ausilio del \textit{software ADeMES}) & SÌ & \hyperref[subsec:interfaccia-risultato]{§3.8.2} Risultato finale - interfaccia grafica \\
     \hline
     \caption{Obiettivi di tirocinio - obbligatori}
 \end{longtable}
@@ -87,7 +88,7 @@ Gli obiettivi che riporto di seguito fanno riferimento alla sezione \hyperref[se
     \hline
     Comprendere come rendere fruibile in più lingue un prodotto \textit{software} & SÌ & \hyperref[subsec:internazionalizzazione]{§3.4.1} Internazionalizzazione e localizzazione \\
     \hline
-    Capire come si possono gestire diversi temi grafici (tipicamente identificati come "tema chiaro" e "tema scuro") in un'interfaccia grafica \textit{web} \textit{software} & SÌ & \hyperref[subsec:interfaccia-risultato]{§3.8.2}Risultato finale - interfaccia grafica \\
+    Capire come si possono gestire diversi temi grafici (tipicamente identificati come "tema chiaro" e "tema scuro") in un'interfaccia grafica \textit{web} \textit{software} & SÌ & \hyperref[subsec:interfaccia-risultato]{§3.8.2} Risultato finale - interfaccia grafica \\
     \hline
     Ideare un prodotto in grado di integrarsi con successo in un \textit{software} già esistente & SÌ & \hyperref[sec:validazione]{§3.7} Validazione \\
     \hline
@@ -99,9 +100,37 @@ Ho conseguito in modo soddisfacente quasi tutti gli obiettivi nel corso delle at
 sia per le modalità ed il clima di svolgimento delle attività.
 
 \section{Competenze e conoscenze acquisite}
+% In questa sezione descriverò le abilità e le conoscenze acquisite nel corso del tirocinio indicando (se necessario) i benefici ottenuti ed il loro grado di acquisizione.
+Durante le attività di tirocinio ho potuto affinare e acquisire alcune conoscenze e competenze inerenti allo sviluppo di prodotti \textit{software} incentrati sull'aspetto grafico (\glslink{frontend}{\textit{frontend}}) ed alle abilità non strettamente legate ad alcuna competenza tecnica (\textit{soft skills}).
+\subsection*{Ambito professionale}
+A livello di tecnologie e conoscenze di settore, ho potuto approfondire lo studio del \textit{framework Angular} (e tecnologie ad esso connesse) tramite:
+\begin{itemize}
+    \item \textbf{Attività di \textit{test}}: mi sono informato (tramite documentazione ufficiale\footnote{Fonte: \href{https://angular.io/guide/testing}{https://angular.io}} e \textit{forum online}) sul \textit{framework Jasmine}, strettamente accoppiato ad \textit{Angular};
+    \item \textbf{Utilizzo di componenti grafiche pronte all'uso}: ho utilizzato per la prima volta il \textit{framework Angular Material}, nato per supportare lo sviluppo di interfacce \textit{Angular};
+    \item \textbf{Gestione delle traduzioni}: non avendo mai affrontato il problema di gestione delle traduzioni del contenuto statico di un'applicazione \textit{web}, ho avuto l'opportunità di eseguire una ricerca sulle possibili tecnologie da adottare, scegliendo la libreria \hyperref[subsubsec:ngx]{\textit{ngx-translate}};
+    \item \textbf{Gestione del tema grafico}: questa esigenza mi ha consentito di studiare ed applicare una serie di funzionalità e pratiche messe a disposizione dal \textit{framework Angular Material} che, per quanto riguarda le mie ricerche in rete (tipicamente \textit{forum} come \textit{StackOverflow}\footnote{Fonte: \href{https://stackoverflow.com/}{https://stackoverflow.com/}})
+        non sono quasi mai incentivate nonostante siano la soluzione corretta per \textit{design}: ciò si deve al vantaggio che si acquisisce \textbf{sul breve periodo} nell'utilizzo di stratagemmi rapidi, ignorando l'impatto di questo approccio in un futuro più o meno lontano.
+\end{itemize}
 
-In questa sezione descriverò le abilità e le conoscenze acquisite nel corso del tirocinio indicando (se necessario) i benefici ottenuti ed il loro grado di acquisizione.
+\subsection*{Ambito personale}
+Complice il fatto che non avevo mai preso parte a processi aziendali (in aziende di settore informatico) ho potuto sperimentare direttamente l'importanza che la comunicazione tra individui ricopre nella buona riuscita di un progetto: l'errata comprensione di requisiti utente può produrre 
+un costo più che lineare rispetto al tempo impiegato prima di prendere provvedimenti per sistemare il difetto.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{requirement-error-cost.jpg}
+    \caption[Costo della risoluzione di un errore avvenuto durante le attività di \textbf{analisi}]{Costo della risoluzione di un errore avvenuto durante le attività di \textbf{analisi} \footnotemark}
+  \end{figure}
+  {\footnotetext{Fonte: \href{https://www.stickyminds.com/article/what-cost-requirement-error}{https://www.stickyminds.com}}}
+
+Nel mio caso, gli errori di comprensione sono stati risolti durante le attività di \textbf{analisi} stesse grazie alla volontà di tutte le parti di massimizzare il risultato in termini qualitativi e quantitativi, dato il vincolo di durata della mia esperienza lavorativa. \\
+Altra competenza che ho acquisito nel corso delle attività di \textit{stage} è la gestione del tempo:
+\begin{itemize}
+    \item \textbf{Tempo dedicato ad attività produttive}: è importante identificare gli obiettivi principali per un periodo di tempo sufficiente ampio da consentire un avanzamento tangibile (ma non troppo ampio, per evitare di inserire un numero di obiettivi non realistico) e, a partire da questi obiettivi, pianificare i compiti e le attività per il periodo in analisi;
+            la pianificazione dei compiti è ciò che consente di delineare una strategia di partenza e deve comprendere (per ogni compito) un periodo di tempo durante il quale il compito può essere in ritardo senza far tardare l'intero progetto di cui fa parte (\textit{slack time});
+    \item \textbf{Tempo dedicato ad attività extra-lavorative}: una serie di circostanze personali mi ha permesso di sperimentare esattamente metà delle attività lavorative vivendo da solo, dovendo provvedere ai miei bisogni primari: questa esperienza mi ha fatto capire l'importanza della pianificazione anche nelle attività quotidiane, perseguendo la ripetibilità (e quindi instaurando una \textit{routine}) nelle attività che lo consentono,
+            lasciando spazio e dando priorità quando possibile ad attività ricreative e sociali.
+\end{itemize}
 
 \section{Competenze curricolari e lavorative}
-
-In questa sezione discuterò della differenza tra le competenze acquisite ed erogate dal corso di studi e le competenze necessarie per lo svolgimento delle attività di tirocinio.
+% In questa sezione discuterò della differenza tra le competenze acquisite ed erogate dal corso di studi e le competenze necessarie per lo svolgimento delle attività di tirocinio.
