@@ -424,6 +424,7 @@ Di seguito, si approfondiscono le scelte effettuate per:
 \end{itemize}
 
 \subsection{Internazionalizzazione e localizzazione}
+\label{subsec:internazionalizzazione}
 Per poter capire le scelte progettuali occorre prima dare delle definizioni ai seguenti termini:
 \begin{itemize}
     \item \textbf{Internazionalizzazione}: è il processo di \textbf{progettazione} e sviluppo di un prodotto in modo tale da ridurre la difficoltà di adattarlo per renderlo fruibile da persone appartenenti a culture diverse;
@@ -476,6 +477,7 @@ La scelta di \textit{ngx-translate} è stata dettata dalle ridotte dimensioni de
 \end{enumerate}
 
 \subsection{Interfaccia grafica}
+\label{subsec:interfaccia}
 La \textbf{progettazione} dell'interfaccia grafica si è basata su colori e componenti grafiche già presenti nel \textit{software ADeMES}: la vera problematica da risolvere in queste attività è stata l'adattamento dell'interfaccia grafica a dispositivi con schermo di dimensioni ridotte (\textit{tablet} e \textit{smartphone}).
 
 \subsubsection*{Schema dei colori}
@@ -661,6 +663,27 @@ this.qualityPhaseService.fetch_2(params)
     },
     complete: () => { this.loading = false; }
   });
+\end{lstlisting}
+
+\subsection*{Integrazione dell'applicazione con \textit{ADeMES}}
+\label{subsec:integrazione}
+\begin{lstlisting}[language=JavaScript, caption="Integrazione dell'applicazione con \textit{ADeMES}]
+this.route.queryParams.pipe(take(1))
+    .subscribe(params => {
+      this.insideFrame = params['inside'] == "true"
+    });
+  if (this.insideFrame) {
+    window.addEventListener("message", (event) => {
+      if (event.source == parent) {
+        const data: Message = event.data as Message;
+        if (data == undefined ) {
+          this.insideFrame = false;
+        } else {
+          this.iframeInitService.initialize(data);
+        }
+      }
+    });
+  }
 \end{lstlisting}
 
 % \begin{lstlisting}[language=HTML5, caption={Visualizzazione delle fasi - HTML}]
@@ -1085,6 +1108,7 @@ istruzioni di dichiarazione variabili, importazione di file e, in generale, tutt
 \end{longtable}
 
 \subsection{Interfaccia grafica}
+\label{subsec:interfaccia-risultato}
 \subsubsection*{Autenticazione}
 
 \begin{figure}[H]
