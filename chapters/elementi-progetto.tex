@@ -185,7 +185,7 @@ Per tutta la durata delle attività di \textit{stage}, sono stato affiancato in 
 \label{sec:analisi}
 % In questa sezione descriverò lo scopo dell'analisi dei requisiti in un progetto, le problematiche riscontrate e mostrerò i principali casi d'uso ed i principali requisiti elaborati.
 Le attività di \textbf{analisi dei requisiti} hanno come scopo la comprensione dei bisogni espressi dall'utente finale (o da chi vuole risolvere tali bisogni all'utente finale, talvolta nemmeno noti all'utente finale \footnote{Fonte: \href{https://www.mountaingoatsoftware.com/articles/i-didnt-know-i-needed-that}{https://www.mountaingoatsoftware.com}})
-detti "requisiti utente", e la definizione di "ciò che deve svolgere il prodotto" per soddisfare tali bisogni, detti "requisiti del prodotto". \\
+detti "requisiti utente", e la definizione di "ciò che deve svolgere il prodotto" per soddisfare tali bisogni, i "requisiti del prodotto". \\
 Ho iniziato le attività di \textbf{analisi} con un incontro sincrono, insieme al \textit{tutor} aziendale, relativo all'infrastruttura aziendale esistente (contesto delle attività produttive) e al ruolo che il prodotto da sviluppare (di nome \textit{ADeQA}) ricopre in questo contesto. \\
 In seguito alla contestualizzazione delle mie attività di \textit{stage}, il \textit{tutor} aziendale ed io abbiamo discusso dei bisogni da soddisfare: ho dovuto eseguire più passi di raffinazione dei bisogni espressi (descritti in seguito) per arrivare a definire i requisiti del prodotto.
 
@@ -238,7 +238,8 @@ L’applicazione presenta due attori primari, ovvero due tipologie di utente fin
             \item \textbf{Postcondizioni:} l’utente visualizza le fasi di produzione.
         \end{itemize}
       Questo caso d'uso schematizza la relazione che intercorre tra l'applicazione da sviluppare e l'utente (in questo caso, "utente autenticato") per quanto riguarda la visualizzazione delle fasi di lavorazione: questa relazione non è ulteriormente scomponibile in ulteriori sotto-relazioni (tramite sotto-casi d'uso) 
-      nè tantomeno è una generalizzazione, ovvero non è possibile individuare ereditarietà con altri casi d'uso.\\
+      nè tantomeno è generalizzabile, ovvero non è possibile individuare ereditarietà con altri casi d'uso.
+      \newpage
         \textbf{UCF-5: Valorizzazione degli attributi}
         \begin{figure}[H]
             \centering
@@ -265,7 +266,7 @@ L’applicazione presenta due attori primari, ovvero due tipologie di utente fin
 \subsection{Requisiti}
 \label{subsec:requisiti}
 
-Con "requisito" si intende una specifica di ciò che un sistema software deve fare o possedere al fine di soddisfare un determinato obiettivo o risolvere un particolare problema; i requisiti sono le basi per la \textbf{progettazione} e la \textbf{verifica} di un \textit{software}. \\
+Con "requisito" si intende una specifica di ciò che un sistema \textit{software} deve fare o possedere al fine di soddisfare un determinato obiettivo o risolvere un particolare problema; i requisiti sono le basi per la \textbf{progettazione} e la \textbf{verifica} di un \textit{software}. \\
 La lista di requisiti (che riporto di seguito) offre una base per la comprensione degli esempi di \textbf{progettazione} e \textbf{codifica}. \\
 I casi d'uso \textit{UCF-2} e \textit{UCF-5} sono associati rispettivamente ai requisiti \textit{RF-2} e \textit{RF-5} della tabella (parzialmente completa) dei \hyperref[tab:requisiti-funzionali]{requisiti funzionali}.
 \subsubsection*{Nomenclatura}
@@ -345,7 +346,7 @@ I requisiti qui presenti sono identificati da una sigla alfanumerica così compo
     \endhead % This line indicates the end of the header and the start of the repeated heading on subsequent pages
     RP-1 & L’interfaccia utente deve adattarsi a dispositivi \textit{tablet} & Obbligatorio \\
     \hline
-    RP-2 & L’interfaccia utente deve adattarsi a smartphone & Facoltativo \\
+    RP-2 & L’interfaccia utente deve adattarsi a \textit{smartphone} & Facoltativo \\
     \hline
     \caption{Requisiti prestazionali}
 \end{longtable}
@@ -591,7 +592,7 @@ L'architettura del prodotto si basa sui concetti di "servizio" e "componente" \t
     \item \textbf{Servizio}: un servizio del \textit{framework Angular} è una classe \textit{singleton} (ovvero della quale esiste una sola istanza in tutto il \textit{software}, durante la sua esecuzione) che consente di avere funzionalità specifiche o dati condivisi all'interno di un'applicazione. \\
             I servizi in \textit{Angular} sono ideati per fornire una separazione delle responsabilità e consentono di manipolare dati, facilitare la comunicazione tra componenti ed effettuare richieste a \textit{software backend}.
 \end{itemize}
-Di seguito si riporta l'architettura delle classi relative ai casi d'uso fondamentali, indicati nella sezione \hyperref[subsubsec:casi-d'uso]{§3.3.1}.
+Di seguito riporto l'architettura delle classi relative ai casi d'uso fondamentali, indicati nella sezione \hyperref[subsubsec:casi-d'uso]{§3.3.1}.
 
 \subsubsection*{Servizio di gestione delle informazioni riservate}
 \begin{figure}[H]
@@ -646,7 +647,7 @@ Le attività di \textbf{codifica} hanno come scopo l'implementazione concreta de
 Tra le difficoltà incontrate in queste attività, segnalo l'inversione della tabella per la visualizzazione tramite \textit{smartphone} (sezione \hyperref[subsubsec:mobile]{§3.4.2}): l'uso del \textit{framework} di componenti grafici \textit{Angular Material} consente di non doversi occupare
 dello sviluppo "da zero" di \textit{widget} grafici complessi al prezzo però di una ridotta possibilità di personalizzare i componenti predefiniti; la soluzione adottata sfrutta la possibilità di \textit{scroll} orizzontale del solo contenuto della tabella,
 "rompendo" parzialmente una delle regole di base dello sviluppo di interfacce grafiche \footnote{\href{https://mailchimp.com/resources/horizontal-scrolling/}{https://mailchimp.com}}. \\
-Di seguito si riporta il contenuto dei file \textit{TypeScript} relativi alle classi derivate dai casi d'uso descritti nella sezione \hyperref[subsubsec:casi-d'uso]{§3.3.1}.
+Di seguito riporto il contenuto dei file \textit{TypeScript} relativi alle classi derivate dai casi d'uso descritti nella sezione \hyperref[subsubsec:casi-d'uso]{§3.3.1}.
 
 \newpage
 \subsection*{Visualizzazione delle fasi}
@@ -1008,7 +1009,7 @@ La \textbf{verifica} si svolge mediante l'uso di due approcci tra loro complemen
 \end{itemize}
 
 \subsection*{Analisi statica}
-Durante il periodo di \textit{stage}, ho eseguito attività di \textbf{analisi statica} manualmente (senza quindi avvalermi di strumenti \textit{software}) per quanto riguarda la documentazione di progetto, data l'assenza di direttive in relazione allo stile di scrittura del codice sorgente: 
+Durante il periodo di \textit{stage}, ho eseguito attività di \textbf{analisi statica} manualmente (senza quindi avvalermi di strumenti \textit{software}) per quanto riguarda la documentazione di progetto ed il codice sorgente, data l'assenza di direttive in relazione allo stile di scrittura: 
 gli obiettivi di tali attività erano l'individuazione e la conseguente correzione di errori ortografici. \\
 Al termine della scrittura (o modifica) di una porzione di documento unitaria (una sezione o sottosezione di massimo due pagine), seguivano la rilettura e la correzione degli eventuali errori.
 
@@ -1033,12 +1034,12 @@ Ho deciso di eseguire i \textit{test} di sistema manualmente data la poca esperi
 \label{sec:validazione}
 % In questa sezione descriverò le modalità con le quali si è accertato che il prodotto finito fosse conforme alle aspettative.
 Le attività di \textbf{validazione} servono per accertare che il prodotto finito sia conforme alle aspettative di chi ha la visione dei bisogni da soddisfare con il prodotto (proponente). \\
-Ho effettuato il collaudo durante l'ultima settimana di attività ed in presenza del committente, ovvero colui (persona fisica, azienda o ente) che ha interesse diretto nel risultato finale del progetto: nel mio caso, le figure del proponente e del committente sono rappresentate dal tutor aziendale. \\
+Ho effettuato il collaudo durante l'ultima settimana di attività in presenza del committente, ovvero colui (persona fisica, azienda o ente) che ha interesse diretto nel risultato finale del progetto: nel mio caso, le figure del proponente e del committente sono rappresentate dal \textit{tutor} aziendale. \\
 In seguito all'accettazione del prodotto, ho potuto dedicare i restanti giorni all'esecuzione di attività di integrazione e studio della libreria di componenti grafici \textit{DevExtreme}, come riportato nella sezione \hyperref[sec:innovazione]{§1.4}.
 
 
 \section{Risultato finale}
-% In questa sezione descriverò i prodotti di progetto dal punto di vista della qualità (qui vi sarà particolare enfasi sul prodotto software) e della quantità.
+% In questa sezione descriverò i prodotti di progetto dal punto di vista della qualità (qui vi sarà particolare enfasi sul prodotto \textit{software}) e della quantità.
 Riporto alcune statistiche di progetto, seguite da schermate dell'applicazione \textit{ADeQA} e spiegazione, ove necessario, delle differenze tra l'interfaccia grafica realizzata e l'interfaccia grafica progettata.
 
 \subsection{Statistiche qualitative e quantitative}
@@ -1063,7 +1064,7 @@ Il prodotto sviluppato ricopre tutti i requisiti indicati nelle tabelle della se
 \end{longtable}
 
 \subsubsection*{\textit{Code coverage}}
-Con "\textit{code coverage}" si fa riferimento a una metrica utilizzata nel campo dello sviluppo \textit{software} per valutare quanto del codice sorgente di un'applicazione è stato eseguito durante l'esecuzione di un insieme di \textit{test}; non garantisce necessariamente la qualità dei \textit{test} eseguiti 
+Con "\textit{code coverage}" si fa riferimento a una serie di metriche utilizzate nel campo dello sviluppo \textit{software} per valutare quanto del codice sorgente di un'applicazione è stato eseguito durante l'esecuzione di un insieme di \textit{test}; non garantisce necessariamente la qualità dei \textit{test} eseguiti 
 e può rilevare la presenza di malfunzionamenti, ma non dimostra la loro assenza (\textit{Dijkstra} \footnote{Fonte: \href{https://vitolavecchia.altervista.org/tecniche-metodologie-test-software/}{https://vitolavecchia.altervista.org}}). \\
 Le metriche di \textit{code coverage} utilizzate nel progetto sono:
 \begin{itemize}
@@ -1131,7 +1132,13 @@ Entrambe le schermate di autenticazione sono state realizzate rispettando le spe
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{user-manual/dashboard.png}
-  \caption{Schermata principale}
+  \caption{Schermata principale - tema scuro}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{user-manual/dashboard-light.png}
+  \caption{Schermata principale - tema chiaro}
 \end{figure}
 Anche in questo caso, vi è un'importante somiglianza con l'interfaccia ideata nel processo di \textbf{progettazione}: dalle figure sottostanti, si possono capire quali sono state le modifiche apportate alle specifiche.
 

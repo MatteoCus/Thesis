@@ -34,7 +34,7 @@ In base a quanto ho potuto osservare e capire durante il periodo di \textit{stag
 \end{itemize}
 \section{Problematiche poste in essere}
 
-% In questa sezione descriverò quali problemi, a livello macroscopico, il prodotto software da me sviluppato ha consentito di superare.
+% In questa sezione descriverò quali problemi, a livello macroscopico, il prodotto \textit{software} da me sviluppato ha consentito di superare.
 Scopo delle mie attività di \textit{stage} è la creazione di una \glslink{pwag}{\textit{Progressive Web App}}, ovvero un'applicazione \textit{web} che mette a disposizione funzionalità aggiuntive rispetto a quelle offerte da un sito \textit{web} (ad esempio, la fruizione dei servizi anche in modalità \textit{offline}) per la raccolta di dati relativi al controllo della qualità delle linee produttive di aziende manifatturiere. \\
 Ogni linea produttiva è costituita da un insieme di "fasi" di lavorazione: ogni fase di lavorazione è considerabile come una \textit{black-box}\footnote{\gls{black-box}}, ovvero un processo di cui si conoscono gli \textit{input} (materia prima o semilavorati in ingresso)
 e gli \textit{output} (semilavorati o prodotti finiti) ma non il funzionamento interno.
@@ -46,7 +46,7 @@ e gli \textit{output} (semilavorati o prodotti finiti) ma non il funzionamento i
 \footnotetext{Fonte: \href{https://www.quora.com/Machine-learning-classifier-is-a-black-box-Why-does-everyone-still-use-it-1}{https://www.quora.com}}
 Ogni fase è associata a un insieme di caratteristiche (dette "attributi") relative ai prodotti in uscita dalla stessa: esse sono di interesse per comprendere se la lavorazione ha prodotto articoli utilizzabili nelle fasi successive / nello stoccaggio degli stessi o meno. \\
 Non è noto a priori il numero nè il tipo di attributi associati a una determinata fase di lavorazione: sono tutte informazioni ottenibili tramite l'utilizzo di servizi \textit{backend}\footnote{\gls{backend}} (relativi alla struttura ed alla logica di persistenza) esposti dal \textit{tutor} aziendale con una
-serie di \textit{API\footnote{\gls{apig}} REST\footnote{\gls{restg}}} (astrazioni che consentono di eseguire operazioni sui dati di dominio in una architettura \textit{client - server}, con la possibilità di salvare le risposte ottenute, senza memorizzare lo stato del software \textit{client}). \\
+serie di \textit{API\footnote{\gls{apig}} REST\footnote{\gls{restg}}} (astrazioni che consentono di eseguire operazioni sui dati di dominio in una architettura \textit{client - server}, con la possibilità di salvare le risposte ottenute, senza memorizzare lo stato del \textit{software} \textit{client}). \\
 L'obiettivo del prodotto è consentire all'utente (operatore in linea di produzione) di inserire, modificare, eliminare e visualizzare dati di controllo qualità per le fasi desiderate (in gergo tecnico, eseguire le operazioni \textit{CRUD}, ovvero \textit{"Create", "Read", "Update" e"Delete"}, sui dati di qualità).
 
 \section{Obiettivi}
@@ -69,7 +69,7 @@ Di seguito, la lista degli obiettivi di tirocinio:
             \item \textbf{O05}: sviluppo di una versione di base dell'applicazione \textit{web} che consenta di eseguire le operazioni \textit{CRUD} sui dati di qualità; %validazione
             \item \textbf{O06}: \textit{live demo} della web application in un ambiente simulato; %validazione
             \item \textbf{O07}: studio e scelta (motivata) della tecnologia per la fruizione dell'applicazione in lingua inglese; %sezione 3.4.1
-            \item \textbf{O08}: il \textit{software} deve potersi integrare nel software ADeMES mediante un elemento \texttt{<iframe>} \textit{HTML}; %post-message nella stessa sezione
+            \item \textbf{O08}: il \textit{software} deve potersi integrare nel \textit{software} ADeMES mediante un elemento \texttt{<iframe>} \textit{HTML}; %post-message nella stessa sezione
             \item \textbf{O09}: il \textit{software} deve poter essere eseguibile in modalità \textit{standalone}\footnote{\gls{standalone}} (in questo caso, in grado di funzionare anche senza l'ausilio del \textit{software ADeMES}). %sezione 3.8.2
         \end{itemize}
     \item \textbf{Desiderabili}
